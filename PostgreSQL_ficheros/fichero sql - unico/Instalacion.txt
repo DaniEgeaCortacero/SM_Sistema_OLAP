@@ -1,0 +1,12 @@
+Instalación:
+
+- Opción 1: usando Docker (terminal)
+docker exec -i postgres_sm psql -U admin -d torquelab < bd.sql
+ó
+docker exec -i postgres_sm psql -U admin -d torquelab < backup.sql
+
+
+-Opción 2: usando pgAdmin
+1. Databases -> torquelab
+2. clic derecho -> Query Tool
+3. Abrir archivo ó Pegar contenido del fichero bd.
