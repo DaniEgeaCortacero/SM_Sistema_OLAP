@@ -1,2 +1,0 @@
--Crear base de datos "torquelab"
--Mediante pgAdmin, ejecutar sentencias por orden de fichero.

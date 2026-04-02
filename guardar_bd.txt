@@ -1,1 +1,0 @@
-docker exec -t postgres_sm pg_dump -U admin -d torquelab > backup.sql

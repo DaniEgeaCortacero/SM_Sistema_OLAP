@@ -6,7 +6,7 @@ conn = psycopg2.connect(
     host="localhost",
     database="torquelab",
     user="admin",
-    password="admin123"
+    password="root"
 )
 
 cur = conn.cursor()
