@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "TorqueLab PostgreSQL",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "torquelab",
+      "Username": "admin",
+      "SSLMode": "prefer"
+    }
+  }
+}
