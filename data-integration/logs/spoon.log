@@ -1,38 +1,237 @@
-2026-04-15 18:48:35.838 - Spoon - Transformaci?n abierta.
-2026-04-15 18:48:35.840 - Spoon - Ejecutando transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]...
-2026-04-15 18:48:35.840 - Spoon - Se ha iniciado la ejecuci?n de la transformaci?n.
-2026-04-15 18:48:36.395 - ETL Meteorológico – meteo ? staging ? olap_snow - Iniciado despacho de la transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]
-2026-04-15 18:48:36.441 - Carte - Installing timer to purge stale objects after 1440 minutes.
-2026-04-15 18:48:36.487 - 10 - Leer staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.488 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.488 - 10 - Leer staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [10 - Leer staging.observaciones_clean]
-2026-04-15 18:48:36.490 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [01 - Leer meteo.observaciones_diarias]
-2026-04-15 18:48:36.490 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Database connection is missing for step [04 - Lookup FK estacion (A6)]!
-2026-04-15 18:48:36.492 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [04 - Lookup FK estacion (A6)]
-2026-04-15 18:48:36.493 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.493 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
-2026-04-15 18:48:36.494 - LOG - FK huerfanas staging.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.494 - LOG - FK huerfanas staging.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [LOG - FK huerfanas staging]
-2026-04-15 18:48:36.494 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.495 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
-2026-04-15 18:48:36.495 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
-2026-04-15 18:48:36.496 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
-2026-04-15 18:48:36.496 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
-2026-04-15 18:48:36.497 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
-2026-04-15 18:48:36.498 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
-2026-04-15 18:48:36.498 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
-2026-04-15 18:48:36.499 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
-2026-04-15 18:48:36.500 - 10 - Leer staging.observaciones_clean.0 - Finished reading query, closing connection
-2026-04-15 18:48:36.501 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : ETL Meteorológico – meteo ? staging ? olap_snow: preparing transformation execution failed
-2026-04-15 18:48:36.502 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : org.pentaho.di.core.exception.KettleException: 
-2026-04-15 18:48:36.502 - Spoon - No se ha podido inicializar al menos un paso.  No se puede empezar la ejecuci?n!
-2026-04-15 18:48:36.502 - Spoon - 
-2026-04-15 18:48:36.502 - Spoon - 
-2026-04-15 18:48:36.502 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1338)
-2026-04-15 18:48:36.502 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:803)
-2026-04-15 18:48:36.502 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$30.run(TransGraph.java:4257)
-2026-04-15 18:48:36.502 - Spoon - 	at java.base/java.lang.Thread.run(Thread.java:842)
-2026-04-15 18:48:36.503 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
-2026-04-15 18:48:36.653 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
-2026-04-15 19:25:03.369 - Spoon - Spoon  ha terminado.
+2026-04-22 19:18:19.770 - Spoon - Transformaci?n abierta.
+2026-04-22 19:18:19.776 - Spoon - Ejecutando transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]...
+2026-04-22 19:18:19.777 - Spoon - Se ha iniciado la ejecuci?n de la transformaci?n.
+2026-04-22 19:18:20.561 - ETL Meteorológico – meteo ? staging ? olap_snow - Iniciado despacho de la transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]
+2026-04-22 19:18:20.605 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2026-04-22 19:18:20.639 - 10 - Leer staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.639 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.640 - 10 - Leer staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-22 19:18:20.640 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-22 19:18:20.641 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-22 19:18:20.641 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-22 19:18:20.642 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.642 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.642 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-22 19:18:20.643 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-22 19:18:20.643 - LOG - FK huerfanas staging.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.644 - LOG - FK huerfanas staging.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-22 19:18:20.644 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-22 19:18:20.644 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-22 19:18:20.646 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-22 19:18:20.646 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-22 19:18:20.646 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-22 19:18:20.646 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-22 19:18:20.647 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
+2026-04-22 19:18:20.647 - 10 - Leer staging.observaciones_clean.0 - Finished reading query, closing connection
+2026-04-22 19:18:20.648 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : ETL Meteorológico – meteo ? staging ? olap_snow: preparing transformation execution failed
+2026-04-22 19:18:20.648 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2026-04-22 19:18:20.648 - Spoon - No se ha podido inicializar al menos un paso.  No se puede empezar la ejecuci?n!
+2026-04-22 19:18:20.648 - Spoon - 
+2026-04-22 19:18:20.648 - Spoon - 
+2026-04-22 19:18:20.648 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1338)
+2026-04-22 19:18:20.648 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:803)
+2026-04-22 19:18:20.648 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$30.run(TransGraph.java:4257)
+2026-04-22 19:18:20.648 - Spoon - 	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-04-22 19:18:20.649 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-04-22 19:18:20.811 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-04-22 19:19:45.873 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow]
+org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT
+    observacion_id,
+    fecha,
+    ciudad,
+    estacion_id,
+    temp_max,
+    temp_min,
+    temp_media,
+    precipitacion_mm,
+    humedad_pct,
+    velocidad_viento_kmh,
+    condicion_climatica
+FROM meteo.observaciones_diarias
+ORDER BY observacion_id
+ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error desconocido
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseException: 
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - An error occurred executing SQL: 
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - SELECT
+    observacion_id,
+    fecha,
+    ciudad,
+    estacion_id,
+    temp_max,
+    temp_min,
+    temp_media,
+    precipitacion_mm,
+    humedad_pct,
+    velocidad_viento_kmh,
+    condicion_climatica
+FROM meteo.observaciones_diarias
+ORDER BY observacion_id
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - Caused by: org.postgresql.util.PSQLException: ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+2026-04-22 19:19:47.106 - 01 - Leer meteo.observaciones_diarias.0 - 	... 4 more
+2026-04-22 19:19:47.108 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
+2026-04-22 19:19:47.115 - 01 - Leer meteo.observaciones_diarias.0 - Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-04-22 19:19:47.120 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - Transformaci?n detectada 
+2026-04-22 19:19:47.121 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - Transformaci?n est? matando los otros pasos!
+2026-04-22 19:20:47.160 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow]
+org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT
+    observacion_id,
+    fecha,
+    ciudad,
+    estacion_id,
+    temp_max,
+    temp_min,
+    temp_media,
+    precipitacion_mm,
+    humedad_pct,
+    velocidad_viento_kmh,
+    condicion_climatica
+FROM meteo.observaciones_diarias
+ORDER BY observacion_id
+ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+2026-04-22 19:20:47.183 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error desconocido
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseException: 
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - An error occurred executing SQL: 
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - SELECT
+    observacion_id,
+    fecha,
+    ciudad,
+    estacion_id,
+    temp_max,
+    temp_min,
+    temp_media,
+    precipitacion_mm,
+    humedad_pct,
+    velocidad_viento_kmh,
+    condicion_climatica
+FROM meteo.observaciones_diarias
+ORDER BY observacion_id
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - Caused by: org.postgresql.util.PSQLException: ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+2026-04-22 19:20:47.184 - 01 - Leer meteo.observaciones_diarias.0 - 	... 4 more
+2026-04-22 19:20:47.185 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
+2026-04-22 19:20:47.186 - 01 - Leer meteo.observaciones_diarias.0 - Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-04-22 19:20:47.187 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - Transformaci?n detectada 
+2026-04-22 19:20:47.188 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - Transformaci?n est? matando los otros pasos!
+2026-04-22 19:23:29.663 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow]
+2026-04-22 19:23:30.171 - dummy.0 - Procesamiento finalizado (I=0, O=0, R=780, W=779, U=0, E=0)
+2026-04-22 19:23:30.171 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
+2026-04-22 19:23:30.212 - 01 - Leer meteo.observaciones_diarias.0 - Procesamiento finalizado (I=1003, O=0, R=0, W=1001, U=0, E=0)
+2026-04-22 19:23:40.567 - Spoon - Transformaci?n abierta.
+2026-04-22 19:23:40.567 - Spoon - Ejecutando transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]...
+2026-04-22 19:23:40.567 - Spoon - Se ha iniciado la ejecuci?n de la transformaci?n.
+2026-04-22 19:23:40.644 - ETL Meteorológico – meteo ? staging ? olap_snow - Iniciado despacho de la transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]
+2026-04-22 19:23:40.659 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.661 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-22 19:23:40.661 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-22 19:23:40.661 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-22 19:23:40.663 - LOG - FK huerfanas staging.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.663 - LOG - FK huerfanas staging.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-22 19:23:40.663 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.663 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.663 - 10 - Leer staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.664 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-22 19:23:40.665 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-22 19:23:40.665 - 10 - Leer staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-22 19:23:40.665 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-22 19:23:40.665 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-22 19:23:40.665 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-22 19:23:40.667 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-22 19:23:40.667 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-22 19:23:40.667 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-22 19:23:40.667 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
+2026-04-22 19:23:40.667 - 10 - Leer staging.observaciones_clean.0 - Finished reading query, closing connection
+2026-04-22 19:23:40.667 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : ETL Meteorológico – meteo ? staging ? olap_snow: preparing transformation execution failed
+2026-04-22 19:23:40.667 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2026-04-22 19:23:40.667 - Spoon - No se ha podido inicializar al menos un paso.  No se puede empezar la ejecuci?n!
+2026-04-22 19:23:40.667 - Spoon - 
+2026-04-22 19:23:40.667 - Spoon - 
+2026-04-22 19:23:40.667 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1338)
+2026-04-22 19:23:40.667 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:803)
+2026-04-22 19:23:40.667 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$30.run(TransGraph.java:4257)
+2026-04-22 19:23:40.667 - Spoon - 	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-04-22 19:23:40.667 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-04-22 19:23:40.669 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-04-22 19:25:49.654 - Spoon - Spoon  ha terminado.
 stopping

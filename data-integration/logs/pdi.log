@@ -1,23 +1,138 @@
-2026-04-15 18:48:36.403 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]
-2026-04-15 18:48:36.488 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-32)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.489 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-32)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
-2026-04-15 18:48:36.489 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-21)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.490 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-21)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [01 - Leer meteo.observaciones_diarias]
-2026-04-15 18:48:36.492 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-24)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
-2026-04-15 18:48:36.492 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-24)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
-2026-04-15 18:48:36.493 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-31)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.493 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-31)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
-2026-04-15 18:48:36.494 ERROR <init of LOG - FK huerfanas staging.0 (Thread-29)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.494 ERROR <init of LOG - FK huerfanas staging.0 (Thread-29)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
-2026-04-15 18:48:36.495 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-33)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-15 18:48:36.495 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-33)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
-2026-04-15 18:48:36.496 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
-2026-04-15 18:48:36.496 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
-2026-04-15 18:48:36.497 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
-2026-04-15 18:48:36.497 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
-2026-04-15 18:48:36.498 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
-2026-04-15 18:48:36.498 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
-2026-04-15 18:48:36.499 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
-2026-04-15 18:48:36.500 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
-2026-04-15 18:48:36.504 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
-2026-04-15 18:48:36.653 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-22 19:18:20.569 INFO  <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]
+2026-04-22 19:18:20.640 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-34)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.640 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-34)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-22 19:18:20.640 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-23)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.641 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-23)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-22 19:18:20.641 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-26)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-22 19:18:20.641 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-26)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-22 19:18:20.642 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-33)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.642 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-35)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.643 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-33)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-22 19:18:20.643 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-35)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-22 19:18:20.644 ERROR <init of LOG - FK huerfanas staging.0 (Thread-31)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.644 ERROR <init of LOG - FK huerfanas staging.0 (Thread-31)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-22 19:18:20.644 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-22 19:18:20.647 INFO  <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-22 19:18:20.647 INFO  <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-22 19:18:20.649 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-22 19:18:20.811 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-22 19:19:45.874 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow]
+2026-04-22 19:19:47.106 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Error desconocido
+2026-04-22 19:19:47.107 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT
+    observacion_id,
+    fecha,
+    ciudad,
+    estacion_id,
+    temp_max,
+    temp_min,
+    temp_media,
+    precipitacion_mm,
+    humedad_pct,
+    velocidad_viento_kmh,
+    condicion_climatica
+FROM meteo.observaciones_diarias
+ORDER BY observacion_id
+ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-04-22 19:19:47.108 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Finished reading query, closing connection
+2026-04-22 19:19:47.116 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-04-22 19:19:47.120 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Transformaci?n detectada 
+2026-04-22 19:19:47.121 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Transformaci?n est? matando los otros pasos!
+2026-04-22 19:20:47.161 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow]
+2026-04-22 19:20:47.184 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Error desconocido
+2026-04-22 19:20:47.184 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT
+    observacion_id,
+    fecha,
+    ciudad,
+    estacion_id,
+    temp_max,
+    temp_min,
+    temp_media,
+    precipitacion_mm,
+    humedad_pct,
+    velocidad_viento_kmh,
+    condicion_climatica
+FROM meteo.observaciones_diarias
+ORDER BY observacion_id
+ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-04-22 19:20:47.185 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Finished reading query, closing connection
+2026-04-22 19:20:47.187 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-04-22 19:20:47.188 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Transformaci?n detectada 
+2026-04-22 19:20:47.188 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Transformaci?n est? matando los otros pasos!
+2026-04-22 19:23:29.666 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow]
+2026-04-22 19:23:30.174 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=780, W=779, U=0, E=0)
+2026-04-22 19:23:30.207 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Finished reading query, closing connection
+2026-04-22 19:23:30.214 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo ? staging ? olap_snow.ktr]  Procesamiento finalizado (I=1003, O=0, R=0, W=1001, U=0, E=0)
+2026-04-22 19:23:40.647 INFO  <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]
+2026-04-22 19:23:40.661 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-54)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.661 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-57)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-22 19:23:40.661 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-54)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-22 19:23:40.663 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-57)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-22 19:23:40.663 ERROR <init of LOG - FK huerfanas staging.0 (Thread-62)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.664 ERROR <init of LOG - FK huerfanas staging.0 (Thread-62)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-22 19:23:40.664 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-64)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.664 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-66)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.665 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-65)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.665 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-64)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-22 19:23:40.665 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-66)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-22 19:23:40.665 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-65)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-22 19:23:40.665 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-22 19:23:40.665 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-22 19:23:40.667 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-22 19:23:40.667 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-22 19:23:40.667 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-22 19:23:40.667 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-22 19:23:40.667 INFO  <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-22 19:23:40.667 INFO  <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-22 19:23:40.669 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-22 19:23:40.669 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
