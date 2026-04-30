@@ -494,3 +494,218 @@ Error connecting to database [PracticasSM]
 2026-04-30 18:30:29.584 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 07 - Unique Rows dedup (fecha, ciudad)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=18247, U=0, E=0)
 2026-04-30 18:30:40.271 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18247, W=18247, U=0, E=0)
 2026-04-30 18:30:42.278 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 11 - InsertUpdate olap_snow.dim_clima> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=10001, O=0, R=10001, W=10001, U=0, E=0)
+2026-04-30 18:46:49.748 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
+2026-04-30 18:46:49.766 ERROR <init of 01 - Leer raw.ventas_sucias.0 (Thread-21)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-30 18:46:49.766 ERROR <init of 01 - Leer raw.ventas_sucias.0 (Thread-21)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Error inicializando paso [01 - Leer raw.ventas_sucias]
+2026-04-30 18:46:49.766 ERROR <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  No se ha podido inicializar el paso [01 - Leer raw.ventas_sucias.0]!
+2026-04-30 18:46:49.767 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 18:47:12.036 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
+2026-04-30 18:47:12.081 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 18:47:12.084 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 18:47:12.085 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Procesamiento finalizado (I=9, O=0, R=0, W=9, U=0, E=0)
+2026-04-30 18:52:04.643 INFO  <ModalContext> [/02 - Limpieza JS - PREVIEW.ktr]  Iniciado despacho de la transformaci�n [/02 - Limpieza JS - PREVIEW]
+2026-04-30 18:52:04.647 INFO  </02 - Limpieza JS - PREVIEW - ## TEST DATA ##> [/02 - Limpieza JS - PREVIEW.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=10, U=0, E=0)
+2026-04-30 18:52:04.651 INFO  </02 - Limpieza JS - PREVIEW - dummy> [/02 - Limpieza JS - PREVIEW.ktr]  Procesamiento finalizado (I=0, O=0, R=10, W=10, U=0, E=0)
+2026-04-30 20:26:21.083 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
+2026-04-30 20:26:21.136 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:22:32.205 INFO  <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 22:22:32.220 ERROR <init of LOG - FK huerfanas staging.0 (Thread-255)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-30 22:22:32.220 ERROR <init of LOG - FK huerfanas staging.0 (Thread-255)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-30 22:22:32.230 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-30 22:22:32.230 INFO  <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:22:32.231 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  No se ha podido terminar transacci�n(s):org.pentaho.di.core.exception.KettleDatabaseException: 
+Error comitting connection
+
+Unable to get database metadata from this database connection
+
+Error connecting to database [torquelab]
+
+
+
+2026-04-30 22:22:32.231 INFO  <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:22:32.231 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  No se ha podido terminar transacci�n(s):org.pentaho.di.core.exception.KettleDatabaseException: 
+Error comitting connection
+
+Unable to get database metadata from this database connection
+
+Error connecting to database [torquelab]
+
+
+
+2026-04-30 22:22:32.231 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:22:32.539 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:50:22.203 INFO  <Thread-266> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 22:50:22.208 INFO  <init of LOG - FK huerfanas staging.0 (Thread-280)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 22:50:22.404 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:50:22.405 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:50:22.406 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 22:50:22.434 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 22:50:22.569 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 22:50:22.573 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 22:50:22.574 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 22:50:22.584 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:50:22.602 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:50:22.622 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:50:22.624 ERROR <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error desconocido
+2026-04-30 22:50:22.625 ERROR <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  java.lang.ClassCastException: class java.util.Date cannot be cast to class java.sql.Timestamp (java.util.Date is in module java.base of loader 'bootstrap'; java.sql.Timestamp is in module java.sql of loader 'platform')
+	at org.pentaho.di.core.row.value.ValueMetaTimestamp.getTimestamp(ValueMetaTimestamp.java:132)
+	at org.pentaho.di.core.row.value.ValueMetaTimestamp.getString(ValueMetaTimestamp.java:121)
+	at org.pentaho.di.core.row.RowMeta.getString(RowMeta.java:320)
+	at org.pentaho.di.core.row.RowMeta.getString(RowMeta.java:855)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:381)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.processRow(TableOutput.java:122)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-04-30 22:50:22.625 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:50:22.625 INFO  <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-04-30 22:50:22.625 WARN  <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n detectada 
+2026-04-30 22:50:22.626 WARN  <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-30 22:50:22.627 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=0, U=0, E=0)
+2026-04-30 22:50:22.935 ERROR <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:50:22.936 ERROR <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:50:22.946 ERROR <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:55:56.379 INFO  <Thread-312> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 22:55:56.385 INFO  <init of LOG - FK huerfanas staging.0 (Thread-328)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 22:55:56.463 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:55:56.464 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:55:56.465 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 22:55:56.465 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:55:56.466 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 22:55:56.489 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 22:55:56.492 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 22:55:56.496 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 22:55:56.500 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:55:56.515 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:55:56.529 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:55:56.531 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:55:56.533 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-04-30 22:55:56.533 ERROR <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error desconocido
+2026-04-30 22:55:56.534 ERROR <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'fecha', so I can't delete it.
+
+
+Unable to find value metadata with name 'fecha', so I can't delete it.
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:373)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:357)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'fecha', so I can't delete it.
+
+	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:791)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:371)
+	... 3 more
+
+2026-04-30 22:55:56.534 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-04-30 22:55:56.534 WARN  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n detectada 
+2026-04-30 22:55:56.534 WARN  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-30 22:55:56.536 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=2, U=0, E=0)
+2026-04-30 22:55:56.863 ERROR <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:55:56.865 ERROR <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:55:56.876 ERROR <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:01:51.352 INFO  <Thread-353> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:01:51.360 INFO  <init of LOG - FK huerfanas staging.0 (Thread-369)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:01:51.437 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:01:51.437 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:01:51.437 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:01:51.438 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:01:51.438 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:01:51.459 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:01:51.462 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:01:51.464 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 23:01:51.471 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:01:51.486 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:01:51.501 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:01:51.504 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:01:51.506 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-04-30 23:01:51.509 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=3, U=0, E=0)
+2026-04-30 23:01:51.512 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-30 23:01:51.527 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=3, R=3, W=3, U=0, E=0)
+2026-04-30 23:05:10.177 INFO  <Thread-394> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:05:10.181 INFO  <init of LOG - FK huerfanas staging.0 (Thread-410)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:05:10.258 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:05:10.258 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:05:10.258 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:05:10.259 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:05:10.259 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:05:10.259 ERROR <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error desconocido
+2026-04-30 23:05:10.259 ERROR <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+No se ha podido encontrar el campo []!
+
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:245)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-04-30 23:05:10.260 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-04-30 23:05:10.260 WARN  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n detectada 
+2026-04-30 23:05:10.260 WARN  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-30 23:05:10.260 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-04-30 23:05:10.268 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=0)
+2026-04-30 23:05:10.590 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:05:10.590 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:05:10.599 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:07:41.250 INFO  <Thread-434> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:07:41.254 INFO  <init of LOG - FK huerfanas staging.0 (Thread-450)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:07:41.332 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:07:41.332 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:07:41.332 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:07:41.333 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:07:41.333 ERROR <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error desconocido
+2026-04-30 23:07:41.334 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:07:41.334 ERROR <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+No se ha podido encontrar el campo []!
+
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:245)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-04-30 23:07:41.334 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-04-30 23:07:41.334 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-04-30 23:07:41.334 WARN  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n detectada 
+2026-04-30 23:07:41.335 WARN  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-30 23:07:41.342 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=0)
+2026-04-30 23:07:41.661 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:07:41.663 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:07:41.675 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:10:15.572 INFO  <Thread-477> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:10:15.576 INFO  <init of LOG - FK huerfanas staging.0 (Thread-493)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:10:15.649 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:10:15.649 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:10:15.650 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:10:15.651 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:10:15.652 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:10:15.654 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-04-30 23:10:15.667 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:10:15.669 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=3, W=3, U=1, E=0)
+2026-04-30 23:10:15.671 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:10:15.673 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 23:10:15.679 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:10:15.696 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:10:15.711 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:10:15.713 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:10:15.716 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-04-30 23:10:15.720 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=3, U=0, E=0)
+2026-04-30 23:10:15.722 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-30 23:10:15.734 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=3, R=3, W=3, U=0, E=0)
+2026-04-30 23:17:39.517 INFO  <Thread-512> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:17:39.522 INFO  <init of LOG - FK huerfanas staging.0 (Thread-528)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:17:39.619 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:17:39.622 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:17:39.623 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:17:39.623 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:17:39.624 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:17:39.637 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:17:39.640 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:17:39.642 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 23:17:39.652 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:17:39.667 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:17:39.682 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:17:39.684 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:17:39.686 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-04-30 23:17:39.689 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=3, U=0, E=0)
+2026-04-30 23:17:39.691 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-30 23:17:39.700 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=3, R=3, W=3, U=0, E=0)

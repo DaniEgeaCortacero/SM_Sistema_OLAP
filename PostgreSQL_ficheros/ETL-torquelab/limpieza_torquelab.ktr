@@ -448,8 +448,8 @@ A8: duplicados → deduplicación
 A9: vocabulario inválido → “Desconocido”</note>
       <xloc>96</xloc>
       <yloc>112</yloc>
-      <width>264</width>
-      <heigth>153</heigth>
+      <width>304</width>
+      <heigth>176</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
       <fontbold>N</fontbold>
@@ -502,7 +502,7 @@ olap_snow.dim_clima
       <xloc>1632</xloc>
       <yloc>112</yloc>
       <width>300</width>
-      <heigth>110</heigth>
+      <heigth>115</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
       <fontbold>N</fontbold>
@@ -527,57 +527,72 @@ olap_snow.dim_clima
     </hop>
     <hop>
       <from>02 - Limpieza JS</from>
-      <to>03 - Filtrar filas nulas (A7)</to>
+      <to>03 - Filtrar filas nulas</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>03 - Filtrar filas nulas (A7)</from>
-      <to>04 - Lookup FK estacion (A6)</to>
+      <from>03 - Filtrar filas nulas</from>
+      <to>04 - Lookup FK componente</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>03 - Filtrar filas nulas (A7)</from>
+      <from>03 - Filtrar filas nulas</from>
       <to>DESCARTE - filas nulas</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>04 - Lookup FK estacion (A6)</from>
-      <to>05 - Separar FK validas vs huerfanas</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>05 - Separar FK validas vs huerfanas</from>
-      <to>06 - Ordenar (fecha, ciudad, obs_id)</to>
+      <to>06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>05 - Separar FK validas vs huerfanas</from>
-      <to>LOG - FK huerfanas staging</to>
+      <from>06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)</from>
+      <to>07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>06 - Ordenar (fecha, ciudad, obs_id)</from>
-      <to>07 - Unique Rows dedup (fecha, ciudad)</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>07 - Unique Rows dedup (fecha, ciudad)</from>
+      <from>07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)</from>
       <to>08 - Select Values (columnas finales)</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>08 - Select Values (columnas finales)</from>
-      <to>09 - InsertUpdate staging.observaciones_clean</to>
+      <to>09 - InsertUpdate staging.ventas_clean</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>09 - InsertUpdate staging.observaciones_clean</from>
-      <to>10 - Leer staging.observaciones_clean</to>
+      <from>09 - InsertUpdate staging.ventas_clean</from>
+      <to>10 - Leer staging.ventas_clean</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>10 - Leer staging.observaciones_clean</from>
-      <to>11 - InsertUpdate olap_snow.dim_clima</to>
+      <from>10 - Leer staging.ventas_clean</from>
+      <to>11 - InsertUpdate olap.fact_ventas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>04 - Lookup FK componente</from>
+      <to>04 - Lookup FK cliente</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>04 - Lookup FK cliente</from>
+      <to>04 - Lookup FK fecha</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>04 - Lookup FK fecha</from>
+      <to>05 - Separar FK validas vs huerfanas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>05 - Separar FK validas vs huerfanas</from>
+      <to>Select LOG huerfanas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select LOG huerfanas</from>
+      <to>LOG - FK huerfanas staging</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -592,19 +607,30 @@ olap_snow.dim_clima
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>PostgreSQL_Torquelab</connection>
+    <connection>PostgresSQL_Torquelab</connection>
     <sql>SELECT 
     id_venta,
     fecha,
     id_cliente,
+
     TRIM(nombre) AS nombre,
     TRIM(apellido) AS apellido,
-    email,
-    TRIM(ciudad) AS ciudad,
+
+    LOWER(TRIM(email)) AS email,
+
+    INITCAP(TRIM(ciudad)) AS ciudad,
+
     id_producto,
-    TRIM(producto) AS producto,
-    TRIM(categoria) AS categoria,
-    cantidad
+
+    INITCAP(TRIM(producto)) AS producto,
+
+    LOWER(TRIM(categoria)) AS categoria,
+
+    cantidad,
+
+    TRIM(precio) AS precio,
+    TRIM(coste) AS coste
+
 FROM raw.ventas_sucias;</sql>
     <limit>0</limit>
     <lookup/>
@@ -619,11 +645,11 @@ FROM raw.ventas_sucias;</sql>
         <name>id_venta</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>id_venta</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -642,11 +668,11 @@ FROM raw.ventas_sucias;</sql>
         <name>fecha</name>
         <length>50</length>
         <precision>-1</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>fecha</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -665,11 +691,11 @@ FROM raw.ventas_sucias;</sql>
         <name>id_cliente</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>id_cliente</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -688,11 +714,11 @@ FROM raw.ventas_sucias;</sql>
         <name>nombre</name>
         <length>2147483647</length>
         <precision>-1</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>nombre</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -711,11 +737,11 @@ FROM raw.ventas_sucias;</sql>
         <name>apellido</name>
         <length>2147483647</length>
         <precision>-1</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>apellido</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -734,11 +760,11 @@ FROM raw.ventas_sucias;</sql>
         <name>email</name>
         <length>150</length>
         <precision>-1</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>email</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -757,11 +783,11 @@ FROM raw.ventas_sucias;</sql>
         <name>ciudad</name>
         <length>2147483647</length>
         <precision>-1</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>ciudad</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -780,11 +806,11 @@ FROM raw.ventas_sucias;</sql>
         <name>id_producto</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>id_producto</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -803,11 +829,11 @@ FROM raw.ventas_sucias;</sql>
         <name>producto</name>
         <length>2147483647</length>
         <precision>-1</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>producto</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -826,11 +852,11 @@ FROM raw.ventas_sucias;</sql>
         <name>categoria</name>
         <length>2147483647</length>
         <precision>-1</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>categoria</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -849,11 +875,11 @@ FROM raw.ventas_sucias;</sql>
         <name>cantidad</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>01 - Leer </origin>
+        <origin>01 - Leer raw.ventas_sucias</origin>
         <comments>cantidad</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -911,7 +937,7 @@ if (apellido != null) {
 
 // E2: email inválido → NULL
 if (email != null) {
-  email = email.trim();
+  email = email.trim().toLowerCase();
   var emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
   if (!emailRegex.test(email)) {
     email = null;
@@ -921,101 +947,185 @@ if (email != null) {
 // E3: fecha inválida → NULL
 if (fecha != null) {
   try {
-    // intenta parsear fecha
-    fecha = new Date(fecha);
-    if (isNaN(fecha.getTime())) {
-      fecha = null;
-    }
+    var sdf = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    sdf.setLenient(false);
+    fecha = sdf.parse(fecha);
   } catch (e) {
     fecha = null;
   }
 }
 
+// Campo auxiliar para lookup con dim_tiempo.fecha DATE
+var fecha_solo_dia = null;
+
+if (fecha != null) {
+  var cal = java.util.Calendar.getInstance();
+  cal.setTime(fecha);
+
+  fecha_solo_dia = new java.sql.Date(
+    cal.get(java.util.Calendar.YEAR) - 1900,
+    cal.get(java.util.Calendar.MONTH),
+    cal.get(java.util.Calendar.DAY_OF_MONTH)
+  );
+}
+
 // E4: normalizar textos
 if (ciudad != null) {
   ciudad = ciudad.trim().toLowerCase();
-  ciudad = ciudad.charAt(0).toUpperCase() + ciudad.slice(1);
+  if (ciudad.length == 0) ciudad = null;
+  else ciudad = ciudad.charAt(0).toUpperCase() + ciudad.slice(1);
 }
 
 if (producto != null) {
-  producto = producto.trim();
+  producto = producto.trim().toLowerCase();
+  if (producto.length == 0) producto = null;
+  else producto = producto.charAt(0).toUpperCase() + producto.slice(1);
 }
 
 if (categoria != null) {
   categoria = categoria.trim().toLowerCase();
 
-  // normalización de categorías
   if (categoria == "motor") categoria = "Motor";
   else if (categoria == "mantenimiento") categoria = "Mantenimiento";
-  else if (categoria == "freno") categoria = "Frenos";
+  else if (categoria == "freno" || categoria == "frenos") categoria = "Frenos";
   else if (categoria == "chasis") categoria = "Chasis";
-  else categoria = "Desconocido"; // A9
+  else categoria = null;
 }
 
-// E5: Cantidad inválida → NULL
+// E5: cantidad inválida → NULL
 if (cantidad != null) {
-  if (cantidad &lt;= 0) {
-    cantidad = null;
+  if (cantidad &lt;= 0) cantidad = null;
+}
+
+// E6: precio inválido → NULL
+if (precio != null) {
+  precio = precio.trim().replace(",", ".");
+  if (precio.length == 0 || isNaN(parseFloat(precio))) {
+    precio = null;
+  } else {
+    precio = parseFloat(precio);
   }
+}
+
+// E7: coste inválido → NULL
+if (coste != null) {
+  coste = coste.trim().replace(",", ".");
+  if (coste.length == 0 || isNaN(parseFloat(coste))) {
+    coste = null;
+  } else {
+    coste = parseFloat(coste);
+  }
+}
+
+// Convertir a importes totales
+if (precio != null &amp;&amp; coste != null &amp;&amp; cantidad != null) {
+  precio = precio * cantidad;
+  coste = coste * cantidad;
+}
+
+// E8: beneficio
+var beneficio = null;
+if (precio != null &amp;&amp; coste != null) {
+  beneficio = precio - coste;
 }</jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
       <field>
-        <name>ciudad</name>
-        <rename>ciudad</rename>
+        <name>nombre</name>
+        <rename>nombre</rename>
         <type>String</type>
-        <length>80</length>
+        <length>100</length>
         <precision>-1</precision>
         <replace>Y</replace>
       </field>
       <field>
-        <name>temp_max</name>
-        <rename>temp_max</rename>
-        <type>Number</type>
-        <length>5</length>
-        <precision>1</precision>
+        <name>apellido</name>
+        <rename>apellido</rename>
+        <type>String</type>
+        <length>100</length>
+        <precision>-1</precision>
         <replace>Y</replace>
       </field>
       <field>
-        <name>temp_min</name>
-        <rename>temp_min</rename>
-        <type>Number</type>
-        <length>5</length>
-        <precision>1</precision>
+        <name>email</name>
+        <rename>email</rename>
+        <type>String</type>
+        <length>150</length>
+        <precision>-1</precision>
         <replace>Y</replace>
       </field>
       <field>
-        <name>temp_media</name>
-        <rename>temp_media</rename>
-        <type>Number</type>
-        <length>5</length>
-        <precision>1</precision>
+        <name>ciudad</name>
+        <rename>ciudad</rename>
+        <type>String</type>
+        <length>100</length>
+        <precision>-1</precision>
         <replace>Y</replace>
       </field>
       <field>
-        <name>precipitacion_mm</name>
-        <rename>precipitacion_mm</rename>
-        <type>Number</type>
-        <length>6</length>
-        <precision>1</precision>
+        <name>producto</name>
+        <rename>producto</rename>
+        <type>String</type>
+        <length>100</length>
+        <precision>-1</precision>
         <replace>Y</replace>
       </field>
       <field>
-        <name>humedad_pct</name>
-        <rename>humedad_pct</rename>
+        <name>categoria</name>
+        <rename>categoria</rename>
+        <type>String</type>
+        <length>100</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>cantidad</name>
+        <rename>cantidad</rename>
         <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>fecha</name>
+        <rename>fecha</rename>
+        <type>Timestamp</type>
         <length>-1</length>
         <precision>-1</precision>
         <replace>Y</replace>
       </field>
       <field>
-        <name>condicion_climatica</name>
-        <rename>condicion_climatica</rename>
-        <type>String</type>
-        <length>50</length>
+        <name>precio</name>
+        <rename>precio</rename>
+        <type>Number</type>
+        <length>-1</length>
         <precision>-1</precision>
         <replace>Y</replace>
+      </field>
+      <field>
+        <name>coste</name>
+        <rename>coste</rename>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>beneficio</name>
+        <rename>beneficio</rename>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>fecha_solo_dia</name>
+        <rename>fecha_solo_dia</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
       </field>
     </fields>
     <attributes/>
@@ -1033,7 +1143,7 @@ if (cantidad != null) {
     </GUI>
   </step>
   <step>
-    <name>03 - Filtrar filas nulas (A7)</name>
+    <name>03 - Filtrar filas nulas</name>
     <type>FilterRows</type>
     <description>Elimina registros donde temp_max, temp_min y precipitacion_mm son todos NULL</description>
     <distribute>Y</distribute>
@@ -1043,7 +1153,7 @@ if (cantidad != null) {
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>04 - Lookup FK estacion (A6)</send_true_to>
+    <send_true_to>04 - Lookup FK componente</send_true_to>
     <send_false_to>DESCARTE - filas nulas</send_false_to>
     <compare>
       <condition>
@@ -1051,21 +1161,49 @@ if (cantidad != null) {
         <conditions>
           <condition>
             <negated>N</negated>
-            <leftvalue>temp_max</leftvalue>
+            <leftvalue>fecha</leftvalue>
             <function>IS NOT NULL</function>
             <rightvalue/>
           </condition>
           <condition>
             <negated>N</negated>
-            <operator>OR</operator>
-            <leftvalue>temp_min</leftvalue>
+            <operator>AND</operator>
+            <leftvalue>id_cliente</leftvalue>
             <function>IS NOT NULL</function>
             <rightvalue/>
           </condition>
           <condition>
             <negated>N</negated>
-            <operator>OR</operator>
-            <leftvalue>precipitacion_mm</leftvalue>
+            <operator>AND</operator>
+            <leftvalue>id_producto</leftvalue>
+            <function>IS NOT NULL</function>
+            <rightvalue/>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>cantidad</leftvalue>
+            <function>IS NOT NULL</function>
+            <rightvalue/>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>coste</leftvalue>
+            <function>IS NOT NULL</function>
+            <rightvalue/>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>categoria</leftvalue>
+            <function>IS NOT NULL</function>
+            <rightvalue/>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>precio</leftvalue>
             <function>IS NOT NULL</function>
             <rightvalue/>
           </condition>
@@ -1087,7 +1225,7 @@ if (cantidad != null) {
     </GUI>
   </step>
   <step>
-    <name>04 - Lookup FK estacion (A6)</name>
+    <name>04 - Lookup FK cliente</name>
     <type>DBLookup</type>
     <description>Verifica que estacion_id existe en meteo.estaciones_meteorologicas</description>
     <distribute>Y</distribute>
@@ -1097,25 +1235,73 @@ if (cantidad != null) {
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection/>
+    <connection>PostgresSQL_Torquelab</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
-      <schema>meteo</schema>
-      <table>estaciones_meteorologicas</table>
+      <schema>oltp_ventas</schema>
+      <table>cliente</table>
       <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>estacion_id</name>
-        <field>estacion_id</field>
+        <name>id_cliente</name>
+        <field>id_cliente</field>
         <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>estacion_id</name>
-        <rename>lkp_estacion</rename>
+        <name>id_cliente</name>
+        <rename>lkp_cliente</rename>
+        <default>-1</default>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>04 - Lookup FK componente</name>
+    <type>DBLookup</type>
+    <description>Verifica que estacion_id existe en meteo.estaciones_meteorologicas</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PostgresSQL_Torquelab</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>olap</schema>
+      <table>dim_componente</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>id_producto</name>
+        <field>id_componente_dw</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id_componente_dw</name>
+        <rename>lkp_componente</rename>
         <default>-1</default>
         <type>Integer</type>
       </value>
@@ -1145,23 +1331,60 @@ if (cantidad != null) {
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>06 - Ordenar (fecha, ciudad, obs_id)</send_true_to>
-    <send_false_to>LOG - FK huerfanas staging</send_false_to>
+    <send_true_to>06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)</send_true_to>
+    <send_false_to>Select LOG huerfanas</send_false_to>
     <compare>
       <condition>
         <negated>N</negated>
-        <leftvalue>lkp_estacion</leftvalue>
-        <function>&lt;></function>
-        <rightvalue/>
-        <value>
-          <name>constant</name>
-          <type>Integer</type>
-          <text>-1</text>
-          <length>-1</length>
-          <precision>0</precision>
-          <isnull>N</isnull>
-          <mask>#</mask>
-        </value>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <leftvalue>lkp_componente</leftvalue>
+            <function>&lt;></function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>Integer</type>
+              <text>-1</text>
+              <length>-1</length>
+              <precision>0</precision>
+              <isnull>N</isnull>
+              <mask>#</mask>
+            </value>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>lkp_cliente</leftvalue>
+            <function>&lt;></function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>Integer</type>
+              <text>-1</text>
+              <length>-1</length>
+              <precision>0</precision>
+              <isnull>N</isnull>
+              <mask>####0;-####0</mask>
+            </value>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>lkp_fecha</leftvalue>
+            <function>&lt;></function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>Integer</type>
+              <text>-1</text>
+              <length>-1</length>
+              <precision>0</precision>
+              <isnull>N</isnull>
+              <mask>####0;-####0</mask>
+            </value>
+          </condition>
+        </conditions>
       </condition>
     </compare>
     <attributes/>
@@ -1173,13 +1396,13 @@ if (cantidad != null) {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>960</xloc>
-      <yloc>336</yloc>
+      <xloc>1328</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>06 - Ordenar (fecha, ciudad, obs_id)</name>
+    <name>06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)</name>
     <type>SortRows</type>
     <description>Ordena para que UniqueRows conserve el observacion_id más bajo</description>
     <distribute>Y</distribute>
@@ -1190,7 +1413,7 @@ if (cantidad != null) {
       <schema_name/>
     </partitioning>
     <directory>%%java.io.tmpdir%%</directory>
-    <prefix>sort_meteo_</prefix>
+    <prefix>sort_raw_</prefix>
     <sort_size>1000000</sort_size>
     <free_memory/>
     <compress>N</compress>
@@ -1198,7 +1421,7 @@ if (cantidad != null) {
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>fecha</name>
+        <name>lkp_fecha</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1206,7 +1429,7 @@ if (cantidad != null) {
         <presorted>N</presorted>
       </field>
       <field>
-        <name>ciudad</name>
+        <name>lkp_cliente</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1214,7 +1437,7 @@ if (cantidad != null) {
         <presorted>N</presorted>
       </field>
       <field>
-        <name>observacion_id</name>
+        <name>lkp_componente</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1231,13 +1454,13 @@ if (cantidad != null) {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1168</xloc>
+      <xloc>1600</xloc>
       <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>07 - Unique Rows dedup (fecha, ciudad)</name>
+    <name>07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)</name>
     <type>Unique</type>
     <description>Elimina duplicados (fecha, ciudad) conservando el primer registro – A8</description>
     <distribute>Y</distribute>
@@ -1253,11 +1476,15 @@ if (cantidad != null) {
     <error_description>Duplicate row</error_description>
     <fields>
       <field>
-        <name>fecha</name>
+        <name>lkp_fecha</name>
         <case_insensitive>N</case_insensitive>
       </field>
       <field>
-        <name>ciudad</name>
+        <name>lkp_cliente</name>
+        <case_insensitive>N</case_insensitive>
+      </field>
+      <field>
+        <name>lkp_componente</name>
         <case_insensitive>N</case_insensitive>
       </field>
     </fields>
@@ -1270,8 +1497,8 @@ if (cantidad != null) {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1392</xloc>
-      <yloc>448</yloc>
+      <xloc>1840</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1288,47 +1515,40 @@ if (cantidad != null) {
     </partitioning>
     <fields>
       <field>
-        <name>observacion_id</name>
+        <name>id_venta</name>
+        <rename/>
       </field>
       <field>
-        <name>fecha</name>
+        <name>fecha_solo_dia</name>
+        <rename>fecha</rename>
       </field>
       <field>
-        <name>ciudad</name>
+        <name>lkp_fecha</name>
+        <rename>id_fecha</rename>
       </field>
       <field>
-        <name>estacion_id</name>
+        <name>lkp_cliente</name>
+        <rename>id_cliente</rename>
       </field>
       <field>
-        <name>temp_max</name>
-        <length>5</length>
-        <precision>1</precision>
+        <name>lkp_componente</name>
+        <rename>id_componente</rename>
       </field>
       <field>
-        <name>temp_min</name>
-        <length>5</length>
-        <precision>1</precision>
+        <name>cantidad</name>
+        <rename>unidades</rename>
       </field>
       <field>
-        <name>temp_media</name>
-        <length>5</length>
-        <precision>1</precision>
+        <name>precio</name>
+        <rename/>
       </field>
       <field>
-        <name>precipitacion_mm</name>
-        <length>6</length>
-        <precision>1</precision>
+        <name>coste</name>
+        <rename/>
       </field>
       <field>
-        <name>humedad_pct</name>
-      </field>
-      <field>
-        <name>velocidad_viento_kmh</name>
-        <length>5</length>
-        <precision>1</precision>
-      </field>
-      <field>
-        <name>condicion_climatica</name>
+        <name>beneficio</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1341,13 +1561,13 @@ if (cantidad != null) {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
-      <yloc>416</yloc>
+      <xloc>2064</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>09 - InsertUpdate staging.observaciones_clean</name>
+    <name>09 - InsertUpdate staging.ventas_clean</name>
     <type>InsertUpdate</type>
     <description>UPSERT en staging.observaciones_clean – clave (fecha, ciudad)</description>
     <distribute>Y</distribute>
@@ -1357,77 +1577,61 @@ if (cantidad != null) {
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection/>
+    <connection>PostgresSQL_Torquelab</connection>
     <commit>1000</commit>
     <update_bypassed>N</update_bypassed>
     <lookup>
       <schema>staging</schema>
-      <table>observaciones_clean</table>
+      <table>ventas_clean</table>
       <key>
-        <name>fecha</name>
-        <field>fecha</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>ciudad</name>
-        <field>ciudad</field>
+        <name>id_venta</name>
+        <field>id_venta</field>
         <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>observacion_id</name>
-        <rename>observacion_id</rename>
-        <update>Y</update>
+        <name>id_venta</name>
+        <rename>id_venta</rename>
+        <update>N</update>
       </value>
       <value>
         <name>fecha</name>
         <rename>fecha</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>ciudad</name>
-        <rename>ciudad</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>estacion_id</name>
-        <rename>estacion_id</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>temp_max</name>
-        <rename>temp_max</rename>
+        <name>id_fecha</name>
+        <rename>id_fecha</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>temp_min</name>
-        <rename>temp_min</rename>
+        <name>id_cliente</name>
+        <rename>id_cliente</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>temp_media</name>
-        <rename>temp_media</rename>
+        <name>id_componente</name>
+        <rename>id_componente</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>precipitacion_mm</name>
-        <rename>precipitacion_mm</rename>
+        <name>unidades</name>
+        <rename>unidades</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>humedad_pct</name>
-        <rename>humedad_pct</rename>
+        <name>precio</name>
+        <rename>precio</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>velocidad_viento_kmh</name>
-        <rename>velocidad_viento_kmh</rename>
+        <name>coste</name>
+        <rename>coste</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>condicion_climatica</name>
-        <rename>condicion_climatica</rename>
+        <name>beneficio</name>
+        <rename>beneficio</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -1440,13 +1644,13 @@ if (cantidad != null) {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1840</xloc>
+      <xloc>2304</xloc>
       <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>10 - Leer staging.observaciones_clean</name>
+    <name>10 - Leer staging.ventas_clean</name>
     <type>TableInput</type>
     <description>Relée datos limpios de staging para calcular columnas derivadas y cargar el DW</description>
     <distribute>Y</distribute>
@@ -1456,39 +1660,393 @@ if (cantidad != null) {
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection/>
+    <connection>PostgresSQL_Torquelab</connection>
     <sql>SELECT
-    oc.observacion_id,
-    oc.fecha,
-    oc.ciudad,
-    oc.estacion_id,
-    oc.temp_max,
-    oc.temp_min,
-    oc.temp_media,
-    oc.precipitacion_mm,
-    oc.humedad_pct,
-    oc.velocidad_viento_kmh,
-    oc.condicion_climatica,
-    EXTRACT(YEAR  FROM oc.fecha)::INT AS anio,
-    EXTRACT(MONTH FROM oc.fecha)::INT AS mes,
-    EXTRACT(DOY   FROM oc.fecha)::INT AS dia_del_anio,
-    CASE WHEN oc.precipitacion_mm > 1.0 THEN true ELSE false END AS es_dia_lluvia,
-    CASE
-        WHEN oc.temp_media IS NULL  THEN 'Desconocida'
-        WHEN oc.temp_media &lt; 0   THEN 'Muy fria'
-        WHEN oc.temp_media &lt; 10  THEN 'Fria'
-        WHEN oc.temp_media &lt; 20  THEN 'Templada'
-        ELSE 'Calurosa'
-    END AS categoria_temperatura
-FROM staging.observaciones_clean oc
-ORDER BY oc.fecha, oc.ciudad</sql>
+    id_fecha,
+    id_cliente,
+    id_componente,
+    unidades,
+    precio,
+    coste,
+    beneficio
+FROM staging.ventas_clean
+ORDER BY id_fecha, id_cliente, id_componente;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
     <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta/>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_venta</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>01 - Leer raw.ventas_sucias</origin>
+        <comments>id_venta</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>fecha</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>08 - Select Values (columnas finales)</origin>
+        <comments/>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_fecha</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>08 - Select Values (columnas finales)</origin>
+        <comments>id_fecha</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_cliente</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>08 - Select Values (columnas finales)</origin>
+        <comments>id_cliente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_componente</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>08 - Select Values (columnas finales)</origin>
+        <comments>id_componente_dw</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>unidades</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>08 - Select Values (columnas finales)</origin>
+        <comments>cantidad</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>precio</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>precio</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>coste</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>coste</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>beneficio</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments/>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_fecha_1</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean</origin>
+        <comments>id_fecha</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_cliente_1</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean</origin>
+        <comments>id_cliente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_componente_1</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean</origin>
+        <comments>id_componente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>unidades_1</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean</origin>
+        <comments>unidades</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>precio_1</name>
+        <length>12</length>
+        <precision>2</precision>
+        <origin>10 - Leer staging.ventas_clean</origin>
+        <comments>precio</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>coste_1</name>
+        <length>12</length>
+        <precision>2</precision>
+        <origin>10 - Leer staging.ventas_clean</origin>
+        <comments>coste</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>beneficio_1</name>
+        <length>12</length>
+        <precision>2</precision>
+        <origin>10 - Leer staging.ventas_clean</origin>
+        <comments>beneficio</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1498,13 +2056,13 @@ ORDER BY oc.fecha, oc.ciudad</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1840</xloc>
+      <xloc>2304</xloc>
       <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>11 - InsertUpdate olap_snow.dim_clima</name>
+    <name>11 - InsertUpdate olap.fact_ventas</name>
     <type>InsertUpdate</type>
     <description>Carga final en olap_snow.dim_clima – UPSERT por (fecha, ciudad)</description>
     <distribute>Y</distribute>
@@ -1514,82 +2072,63 @@ ORDER BY oc.fecha, oc.ciudad</sql>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection/>
+    <connection>PostgresSQL_Torquelab</connection>
     <commit>1000</commit>
     <update_bypassed>N</update_bypassed>
     <lookup>
-      <schema>olap_snow</schema>
-      <table>dim_clima</table>
+      <schema>olap</schema>
+      <table>fact_ventas</table>
       <key>
-        <name>fecha</name>
-        <field>fecha</field>
+        <name>id_fecha</name>
+        <field>id_fecha</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>ciudad</name>
-        <field>ciudad</field>
+        <name>id_cliente</name>
+        <field>id_cliente</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>id_componente</name>
+        <field>id_componente</field>
         <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>fecha</name>
-        <rename>fecha</rename>
+        <name>id_fecha</name>
+        <rename>id_fecha</rename>
         <update>N</update>
       </value>
       <value>
-        <name>ciudad</name>
-        <rename>ciudad</rename>
+        <name>id_cliente</name>
+        <rename>id_cliente</rename>
         <update>N</update>
       </value>
       <value>
-        <name>anio</name>
-        <rename>anio</rename>
+        <name>id_componente</name>
+        <rename>id_componente</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>unidades</name>
+        <rename>unidades</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>mes</name>
-        <rename>mes</rename>
+        <name>precio</name>
+        <rename>precio</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>dia_del_anio</name>
-        <rename>dia_del_anio</rename>
+        <name>coste</name>
+        <rename>coste</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>temp_max</name>
-        <rename>temp_max</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>temp_min</name>
-        <rename>temp_min</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>temp_media</name>
-        <rename>temp_media</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>precipitacion_mm</name>
-        <rename>precipitacion_mm</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>humedad_pct</name>
-        <rename>humedad_pct</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>velocidad_viento_kmh</name>
-        <rename>velocidad_viento_kmh</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>condicion_climatica</name>
-        <rename>condicion_climatica</rename>
+        <name>beneficio</name>
+        <rename>beneficio</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -1602,7 +2141,7 @@ ORDER BY oc.fecha, oc.ciudad</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2048</xloc>
+      <xloc>2512</xloc>
       <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1643,7 +2182,7 @@ ORDER BY oc.fecha, oc.ciudad</sql>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection/>
+    <connection>PostgresSQL_Torquelab</connection>
     <schema>staging</schema>
     <table>etl_log_fk_huerfanas</table>
     <commit>100</commit>
@@ -1671,8 +2210,675 @@ ORDER BY oc.fecha, oc.ciudad</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>960</xloc>
-      <yloc>512</yloc>
+      <xloc>1328</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>04 - Lookup FK fecha</name>
+    <type>DBLookup</type>
+    <description>Verifica que estacion_id existe en meteo.estaciones_meteorologicas</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PostgresSQL_Torquelab</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>olap</schema>
+      <table>dim_tiempo</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>fecha_solo_dia</name>
+        <field>fecha</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id_fecha</name>
+        <rename>lkp_fecha</rename>
+        <default>-1</default>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select LOG huerfanas</name>
+    <type>TableInput</type>
+    <description>Relée datos limpios de staging para calcular columnas derivadas y cargar el DW</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PostgresSQL_Torquelab</connection>
+    <sql>SELECT
+    id_venta,
+    fecha,
+    id_cliente,
+    id_producto,
+    lkp_fecha,
+    lkp_cliente,
+    lkp_componente
+FROM staging.log_fk_huerfanas
+ORDER BY id_venta;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_venta</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>01 - Leer raw.ventas_sucias</origin>
+        <comments>id_venta</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>fecha</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>fecha</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_cliente</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>01 - Leer raw.ventas_sucias</origin>
+        <comments>id_cliente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>nombre</name>
+        <length>100</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>nombre</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>apellido</name>
+        <length>100</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>apellido</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>email</name>
+        <length>150</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>email</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>ciudad</name>
+        <length>100</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>ciudad</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_producto</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>01 - Leer raw.ventas_sucias</origin>
+        <comments>id_producto</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>producto</name>
+        <length>100</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>producto</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>categoria</name>
+        <length>100</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>categoria</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>cantidad</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>cantidad</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>precio</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>precio</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>coste</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments>coste</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>beneficio</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments/>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>fecha_solo_dia</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>02 - Limpieza JS</origin>
+        <comments/>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>lkp_componente</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>04 - Lookup FK componente</origin>
+        <comments>id_componente_dw</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>lkp_cliente</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>04 - Lookup FK cliente</origin>
+        <comments>id_cliente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>lkp_fecha</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>04 - Lookup FK fecha</origin>
+        <comments>id_fecha</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_venta_1</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean 2</origin>
+        <comments>id_venta</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>fecha_1</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>10 - Leer staging.ventas_clean 2</origin>
+        <comments>fecha</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_cliente_1</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean 2</origin>
+        <comments>id_cliente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_producto_1</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean 2</origin>
+        <comments>id_producto</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>lkp_fecha_1</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean 2</origin>
+        <comments>lkp_fecha</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>lkp_cliente_1</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean 2</origin>
+        <comments>lkp_cliente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>lkp_componente_1</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>10 - Leer staging.ventas_clean 2</origin>
+        <comments>lkp_componente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Madrid</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1328</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
