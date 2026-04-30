@@ -1,47 +1,58 @@
-2026-04-29 18:21:41.060 - Spoon - Transformaci?n abierta.
-2026-04-29 18:21:41.063 - Spoon - Ejecutando transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]...
-2026-04-29 18:21:41.064 - Spoon - Se ha iniciado la ejecuci?n de la transformaci?n.
-2026-04-29 18:21:41.633 - ETL Meteorológico – meteo ? staging ? olap_snow - Iniciado despacho de la transformaci?n [ETL Meteorológico – meteo ? staging ? olap_snow]
-2026-04-29 18:21:41.674 - Carte - Installing timer to purge stale objects after 1440 minutes.
-2026-04-29 18:21:41.707 - 10 - Leer staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-29 18:21:41.707 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-29 18:21:41.708 - 01 - Leer meteo.observaciones_diarias.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [01 - Leer meteo.observaciones_diarias]
-2026-04-29 18:21:41.708 - 10 - Leer staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [10 - Leer staging.observaciones_clean]
-2026-04-29 18:21:41.709 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Database connection is missing for step [04 - Lookup FK estacion (A6)]!
-2026-04-29 18:21:41.710 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [04 - Lookup FK estacion (A6)]
-2026-04-29 18:21:41.710 - LOG - FK huerfanas staging.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-29 18:21:41.711 - LOG - FK huerfanas staging.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [LOG - FK huerfanas staging]
-2026-04-29 18:21:41.711 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-29 18:21:41.711 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-29 18:21:41.712 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
-2026-04-29 18:21:41.712 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
-2026-04-29 18:21:41.713 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
-2026-04-29 18:21:41.713 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
-2026-04-29 18:21:41.713 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
-2026-04-29 18:21:41.713 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
-2026-04-29 18:21:41.713 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
-2026-04-29 18:21:41.714 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
-2026-04-29 18:21:41.715 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
-2026-04-29 18:21:41.715 - 10 - Leer staging.observaciones_clean.0 - Finished reading query, closing connection
-2026-04-29 18:21:41.716 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : ETL Meteorológico – meteo ? staging ? olap_snow: preparing transformation execution failed
-2026-04-29 18:21:41.717 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : org.pentaho.di.core.exception.KettleException: 
-2026-04-29 18:21:41.717 - Spoon - No se ha podido inicializar al menos un paso.  No se puede empezar la ejecuci?n!
-2026-04-29 18:21:41.717 - Spoon - 
-2026-04-29 18:21:41.717 - Spoon - 
-2026-04-29 18:21:41.717 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1338)
-2026-04-29 18:21:41.717 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:803)
-2026-04-29 18:21:41.717 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$30.run(TransGraph.java:4257)
-2026-04-29 18:21:41.717 - Spoon - 	at java.base/java.lang.Thread.run(Thread.java:842)
-2026-04-29 18:21:41.717 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
-2026-04-29 18:21:41.871 - ETL Meteorológico – meteo ? staging ? olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
-2026-04-29 19:10:39.440 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
-2026-04-29 19:10:39.457 - 01 - Leer .0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : !BaseDatabaseStep.Init.ConnectionMissing!
-2026-04-29 19:10:39.457 - 01 - Leer .0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [01 - Leer ]
-2026-04-29 19:10:39.460 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [01 - Leer .0]!
-2026-04-29 19:10:39.460 - 01 - Leer .0 - Finished reading query, closing connection
-2026-04-29 19:11:05.338 - C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
-2026-04-29 19:11:05.559 - 01 - Leer .0 - Finished reading query, closing connection
-2026-04-29 19:11:05.573 - 01 - Leer .0 - Procesamiento finalizado (I=9, O=0, R=0, W=9, U=0, E=0)
-2026-04-29 19:11:05.576 - dummy.0 - Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
-2026-04-29 19:20:19.419 - Spoon - Spoon  ha terminado.
-stopping
+2026-04-30 18:28:48.737 - Spoon - Transformaciï¿½n abierta.
+2026-04-30 18:28:48.738 - Spoon - Ejecutando transformaciï¿½n [ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow]...
+2026-04-30 18:28:48.739 - Spoon - Se ha iniciado la ejecuciï¿½n de la transformaciï¿½n.
+2026-04-30 18:28:49.201 - ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow - Iniciado despacho de la transformaciï¿½n [ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow]
+2026-04-30 18:28:49.222 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2026-04-30 18:28:49.245 - LOG - FK huerfanas staging.0 - Connected to database [PracticaSM_Postgres] (commit=100)
+2026-04-30 18:28:49.677 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Este paso se ha detenido debido a un error: org.pentaho.di.core.exception.KettleDatabaseException: 
+2026-04-30 18:28:49.677 - 04 - Lookup FK estacion (A6).0 - Error occurred while trying to connect to the database
+2026-04-30 18:28:49.677 - 04 - Lookup FK estacion (A6).0 - 
+2026-04-30 18:28:49.677 - 04 - Lookup FK estacion (A6).0 - Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+2026-04-30 18:28:49.677 - 04 - Lookup FK estacion (A6).0 - Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2026-04-30 18:28:49.678 - 04 - Lookup FK estacion (A6).0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-30 18:28:49.679 - ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-30 18:28:49.679 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
+2026-04-30 18:28:49.680 - 09 - InsertUpdate staging.observaciones_clean.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido terminar transacciï¿½n(s):org.pentaho.di.core.exception.KettleDatabaseException: 
+2026-04-30 18:28:49.680 - 09 - InsertUpdate staging.observaciones_clean.0 - Error comitting connection
+2026-04-30 18:28:49.680 - 09 - InsertUpdate staging.observaciones_clean.0 - 
+2026-04-30 18:28:49.680 - 09 - InsertUpdate staging.observaciones_clean.0 - Unable to get database metadata from this database connection
+2026-04-30 18:28:49.680 - 09 - InsertUpdate staging.observaciones_clean.0 - 
+2026-04-30 18:28:49.680 - 09 - InsertUpdate staging.observaciones_clean.0 - Error connecting to database [PracticasSM]
+2026-04-30 18:28:49.681 - 10 - Leer staging.observaciones_clean.0 - Finished reading query, closing connection
+2026-04-30 18:28:49.681 - 11 - InsertUpdate olap_snow.dim_clima.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : No se ha podido terminar transacciï¿½n(s):org.pentaho.di.core.exception.KettleDatabaseException: 
+2026-04-30 18:28:49.681 - 11 - InsertUpdate olap_snow.dim_clima.0 - Error comitting connection
+2026-04-30 18:28:49.681 - 11 - InsertUpdate olap_snow.dim_clima.0 - 
+2026-04-30 18:28:49.681 - 11 - InsertUpdate olap_snow.dim_clima.0 - Unable to get database metadata from this database connection
+2026-04-30 18:28:49.681 - 11 - InsertUpdate olap_snow.dim_clima.0 - 
+2026-04-30 18:28:49.681 - 11 - InsertUpdate olap_snow.dim_clima.0 - Error connecting to database [PracticasSM]
+2026-04-30 18:28:49.681 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow: preparing transformation execution failed
+2026-04-30 18:28:49.681 - Spoon - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2026-04-30 18:28:49.681 - Spoon - No se ha podido inicializar al menos un paso.  No se puede empezar la ejecuciï¿½n!
+2026-04-30 18:28:49.681 - Spoon - 
+2026-04-30 18:28:49.681 - Spoon - 
+2026-04-30 18:28:49.681 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1338)
+2026-04-30 18:28:49.681 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:803)
+2026-04-30 18:28:49.681 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$30.run(TransGraph.java:4257)
+2026-04-30 18:28:49.681 - Spoon - 	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-04-30 18:28:49.681 - ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-04-30 18:28:49.685 - ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-04-30 18:30:28.927 - Spoon - Transformaciï¿½n abierta.
+2026-04-30 18:30:28.927 - Spoon - Ejecutando transformaciï¿½n [ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow]...
+2026-04-30 18:30:28.927 - Spoon - Se ha iniciado la ejecuciï¿½n de la transformaciï¿½n.
+2026-04-30 18:30:28.959 - ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow - Iniciado despacho de la transformaciï¿½n [ETL MeteorolÃ³gico â€“ meteo â†’ staging â†’ olap_snow]
+2026-04-30 18:30:28.963 - LOG - FK huerfanas staging.0 - Connected to database [PracticaSM_Postgres] (commit=100)
+2026-04-30 18:30:29.222 - 02 - Limpieza JS (A1-A5, A9).0 - Optimization level set to 9.
+2026-04-30 18:30:29.322 - 10 - Leer staging.observaciones_clean.0 - Finished reading query, closing connection
+2026-04-30 18:30:29.326 - 10 - Leer staging.observaciones_clean.0 - Procesamiento finalizado (I=10001, O=0, R=0, W=10001, U=0, E=0)
+2026-04-30 18:30:29.434 - 01 - Leer meteo.observaciones_diarias.0 - Finished reading query, closing connection
+2026-04-30 18:30:29.436 - 01 - Leer meteo.observaciones_diarias.0 - Procesamiento finalizado (I=18282, O=0, R=0, W=18282, U=0, E=0)
+2026-04-30 18:30:29.512 - 02 - Limpieza JS (A1-A5, A9).0 - Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-30 18:30:29.516 - 03 - Filtrar filas nulas (A7).0 - Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-30 18:30:29.518 - DESCARTE - filas nulas.0 - Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-30 18:30:29.519 - 04 - Lookup FK estacion (A6).0 - Procesamiento finalizado (I=50, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-30 18:30:29.523 - 05 - Separar FK validas vs huerfanas.0 - Procesamiento finalizado (I=0, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-30 18:30:29.536 - LOG - FK huerfanas staging.0 - Procesamiento finalizado (I=0, O=20, R=20, W=20, U=0, E=0)
+2026-04-30 18:30:29.568 - 06 - Ordenar (fecha, ciudad, obs_id).0 - Procesamiento finalizado (I=0, O=0, R=18259, W=18259, U=0, E=0)
+2026-04-30 18:30:29.583 - 07 - Unique Rows dedup (fecha, ciudad).0 - Procesamiento finalizado (I=0, O=0, R=18259, W=18247, U=0, E=0)
+2026-04-30 18:30:40.270 - 08 - Select Values (columnas finales).0 - Procesamiento finalizado (I=0, O=0, R=18247, W=18247, U=0, E=0)
+2026-04-30 18:30:42.278 - 11 - InsertUpdate olap_snow.dim_clima.0 - Procesamiento finalizado (I=10001, O=0, R=10001, W=10001, U=0, E=0)

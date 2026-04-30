@@ -23,16 +23,24 @@ CREATE TABLE IF NOT EXISTS staging.observaciones_clean (
     CONSTRAINT uq_stg_obs_clean UNIQUE (fecha, ciudad)
 );
 
-CREATE TABLE IF NOT EXISTS staging.etl_log_fk_huerfanas (
-    id               SERIAL PRIMARY KEY,
-    observacion_id   INT,
-    fecha            DATE,
-    ciudad           VARCHAR(80),
-    estacion_id      INT,
-    lkp_estacion     VARCHAR(100),
-    ts_carga         TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+DROP TABLE IF EXISTS staging.etl_log_fk_huerfanas;
 
+CREATE TABLE staging.etl_log_fk_huerfanas (
+    id                   SERIAL PRIMARY KEY,
+    observacion_id        INT,
+    fecha                 DATE,
+    ciudad                VARCHAR(80),
+    estacion_id           INT,
+    temp_max              DECIMAL(5,1),
+    temp_min              DECIMAL(5,1),
+    temp_media            DECIMAL(5,1),
+    precipitacion_mm      DECIMAL(6,1),
+    humedad_pct           INT,
+    velocidad_viento_kmh  DECIMAL(5,1),
+    condicion_climatica   VARCHAR(50),
+    lkp_estacion          INT,
+    ts_carga              TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 -- ─── dim_clima en olap_snow (si no existe) ────────────────────────────
 CREATE SCHEMA IF NOT EXISTS olap_snow;
 
