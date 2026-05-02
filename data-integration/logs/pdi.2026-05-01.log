@@ -1,0 +1,547 @@
+2026-05-01 18:59:33.526 INFO  <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-05-01 18:59:33.563 INFO  <init of LOG - FK huerfanas staging.0 (Thread-76)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-05-01 18:59:33.563 WARN  <init of 11 - Salida Tabla olap.fact_ventas.0 (Thread-79)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  WARNING! Error handling in combination with batch processing is not fully supported on the used database because of driver limitations. Proceed with caution at your own risk.
+2026-05-01 18:59:33.564 INFO  <init of 11 - Salida Tabla olap.fact_ventas.0 (Thread-79)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=1000)
+2026-05-01 18:59:33.679 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 18:59:33.680 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 18:59:33.680 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 18:59:33.681 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-05-01 18:59:33.682 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-05-01 18:59:33.707 INFO  <ETL Torquelab - 11 - Salida Tabla olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=3, R=3, W=3, U=0, E=0)
+2026-05-01 18:59:33.716 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-05-01 18:59:33.836 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-05-01 18:59:33.840 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-05-01 18:59:33.842 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-05-01 18:59:33.850 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-05-01 18:59:33.866 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-05-01 18:59:33.883 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-05-01 18:59:33.886 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-05-01 18:59:33.888 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-05-01 18:59:33.891 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=3, U=0, E=0)
+2026-05-01 18:59:33.893 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-05-01 18:59:33.908 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=3, W=3, U=2, E=0)
+2026-05-01 19:07:43.836 INFO  <Thread-108> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-05-01 19:07:43.840 INFO  <init of LOG - FK huerfanas staging.0 (Thread-120)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-05-01 19:07:43.936 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:07:43.936 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:07:43.939 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:07:43.940 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-05-01 19:07:43.942 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-05-01 19:07:43.970 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-01 19:07:43.974 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-01 19:07:43.977 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-05-01 19:07:43.981 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:07:44.000 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:07:44.014 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:07:44.017 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:07:44.019 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-05-01 19:07:44.022 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=8, U=0, E=0)
+2026-05-01 19:07:44.025 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=8, W=8, U=0, E=0)
+2026-05-01 19:07:44.043 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=8, R=8, W=8, U=0, E=0)
+2026-05-01 19:11:16.429 INFO  <Thread-146> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-05-01 19:11:16.433 INFO  <init of LOG - FK huerfanas staging.0 (Thread-158)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-05-01 19:11:16.511 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:11:16.511 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:11:16.512 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-05-01 19:11:16.512 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-05-01 19:11:16.512 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:11:16.514 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=0, R=0, W=8, U=0, E=0)
+2026-05-01 19:11:16.534 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-01 19:11:16.537 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-01 19:11:16.540 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-05-01 19:11:16.542 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas 2> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=8, R=8, W=8, U=0, E=0)
+2026-05-01 19:11:16.543 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:11:16.557 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:11:16.573 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:11:16.577 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:11:16.582 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-05-01 19:11:16.584 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=8, U=0, E=0)
+2026-05-01 19:11:16.587 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=8, W=8, U=0, E=0)
+2026-05-01 19:11:16.600 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=0, R=8, W=8, U=2, E=0)
+2026-05-01 19:12:08.187 INFO  <Thread-181> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-05-01 19:12:08.192 INFO  <init of LOG - FK huerfanas staging.0 (Thread-193)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-05-01 19:12:08.272 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:12:08.272 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:12:08.272 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-05-01 19:12:08.273 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-05-01 19:12:08.274 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 19:12:08.276 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=0, R=0, W=8, U=0, E=0)
+2026-05-01 19:12:08.292 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas 2> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=0, R=8, W=8, U=0, E=0)
+2026-05-01 19:12:08.293 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-01 19:12:08.296 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-01 19:12:08.299 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-05-01 19:12:08.302 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:12:08.317 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:12:08.332 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:12:08.334 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 19:12:08.336 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-05-01 19:12:08.340 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=8, U=0, E=0)
+2026-05-01 19:12:08.344 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=8, W=8, U=0, E=0)
+2026-05-01 19:12:08.358 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=0, R=8, W=8, U=2, E=0)
+2026-05-01 20:33:20.804 INFO  <Thread-274> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-05-01 20:33:20.809 INFO  <init of LOG - FK huerfanas staging.0 (Thread-286)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-05-01 20:33:20.896 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 20:33:20.896 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 20:33:20.896 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-05-01 20:33:20.896 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-05-01 20:33:20.897 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-05-01 20:33:20.897 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=0, R=0, W=8, U=0, E=0)
+2026-05-01 20:33:20.915 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=0, R=8, W=8, U=0, E=0)
+2026-05-01 20:33:20.916 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-01 20:33:20.920 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-01 20:33:20.922 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-05-01 20:33:20.927 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 20:33:20.942 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 20:33:20.956 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 20:33:20.958 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=24, W=24, U=0, E=0)
+2026-05-01 20:33:20.961 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-05-01 20:33:20.964 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=8, U=0, E=0)
+2026-05-01 20:33:20.969 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=8, W=8, U=0, E=0)
+2026-05-01 20:33:20.982 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=8, O=0, R=8, W=8, U=2, E=0)
+2026-05-01 21:34:32.040 INFO  <ModalContext> [/Transformaci�n 1.ktr]  Iniciado despacho de la transformaci�n [/Transformaci�n 1]
+2026-05-01 21:34:32.056 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Error desconocido
+2026-05-01 21:34:32.057 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+    dcat.nombre_categoria AS categoria,
+    SUM(fv.precio) AS ingresos,
+    SUM(fv.coste) AS costes,
+    SUM(fv.beneficio) AS beneficios
+FROM olap.fact_ventas fv
+JOIN olap.dim_componente dc 
+    ON fv.id_componente = dc.id_componente_dw
+JOIN olap.dim_categoria dcat
+    ON dc.id_categoria = dcat.id_categoria_dw
+GROUP BY dcat.nombre_categoria
+ORDER BY dcat.nombre_categoria;
+ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:34:32.058 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Finished reading query, closing connection
+2026-05-01 21:34:32.059 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:34:32.059 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n detectada 
+2026-05-01 21:34:32.060 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:34:54.551 INFO  <ModalContext> [/Transformaci�n 1.ktr]  Iniciado despacho de la transformaci�n [/Transformaci�n 1]
+2026-05-01 21:34:54.573 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Error desconocido
+2026-05-01 21:34:54.574 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT dc.nombre_categoria AS categoria, SUM(fv.precio) AS ingresos, SUM(fv.coste) AS costes, SUM(fv.beneficio) AS beneficios FROM olap.fact_ventas fv JOIN olap.dim_componente dc ON fv.id_componente = dc.id_componente_dw GROUP BY dc.nombre_categoria
+ERROR: column dc.nombre_categoria does not exist
+  Position: 8
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: column dc.nombre_categoria does not exist
+  Position: 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:34:54.574 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Finished reading query, closing connection
+2026-05-01 21:34:54.575 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:34:54.575 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n detectada 
+2026-05-01 21:34:54.576 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:35:13.792 INFO  <ModalContext> [/Transformaci�n 1.ktr]  Iniciado despacho de la transformaci�n [/Transformaci�n 1]
+2026-05-01 21:35:13.806 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Error desconocido
+2026-05-01 21:35:13.807 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+    dcat.nombre_categoria AS categoria,
+    SUM(fv.precio) AS ingresos,
+    SUM(fv.coste) AS costes,
+    SUM(fv.beneficio) AS beneficios
+FROM olap.fact_ventas fv
+JOIN olap.dim_componente dc 
+    ON fv.id_componente = dc.id_componente_dw
+JOIN olap.dim_categoria dcat
+    ON dc.id_categoria = dcat.id_categoria_dw
+GROUP BY dcat.nombre_categoria
+ORDER BY dcat.nombre_categoria;
+ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:35:13.807 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Finished reading query, closing connection
+2026-05-01 21:35:13.808 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:35:13.808 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n detectada 
+2026-05-01 21:35:13.809 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:35:53.504 INFO  <ModalContext> [/Transformaci�n 1.ktr]  Iniciado despacho de la transformaci�n [/Transformaci�n 1]
+2026-05-01 21:35:53.518 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Error desconocido
+2026-05-01 21:35:53.519 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+    dcat.nombre_categoria AS categoria,
+    SUM(fv.precio) AS ingresos,
+    SUM(fv.coste) AS costes,
+    SUM(fv.beneficio) AS beneficios
+FROM olap.fact_ventas fv
+JOIN olap.dim_componente dc 
+    ON fv.id_componente = dc.id_componente_dw
+JOIN olap.dim_categoria dcat
+    ON dc.id_categoria = dcat.id_categoria_dw
+GROUP BY dcat.nombre_categoria
+ORDER BY dcat.nombre_categoria;
+ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:35:53.519 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Finished reading query, closing connection
+2026-05-01 21:35:53.520 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:35:53.520 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n detectada 
+2026-05-01 21:35:53.521 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:36:51.408 INFO  <ModalContext> [/Transformaci�n 1.ktr]  Iniciado despacho de la transformaci�n [/Transformaci�n 1]
+2026-05-01 21:36:51.422 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Error desconocido
+2026-05-01 21:36:51.422 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+    dcat.nombre_categoria AS categoria,
+    SUM(fv.precio) AS ingresos,
+    SUM(fv.coste) AS costes,
+    SUM(fv.beneficio) AS beneficios
+FROM olap.fact_ventas fv
+JOIN olap.dim_componente dc 
+    ON fv.id_componente = dc.id_componente_dw
+JOIN olap.dim_categoria dcat
+    ON dc.id_categoria = dcat.id_categoria_dw
+GROUP BY dcat.nombre_categoria
+ORDER BY dcat.nombre_categoria;
+ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:36:51.423 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Finished reading query, closing connection
+2026-05-01 21:36:51.423 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:36:51.424 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n detectada 
+2026-05-01 21:36:51.424 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:37:20.721 INFO  <ModalContext> [/Transformaci�n 1.ktr]  Iniciado despacho de la transformaci�n [/Transformaci�n 1]
+2026-05-01 21:37:20.734 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Error desconocido
+2026-05-01 21:37:20.735 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+    dcat.nombre_categoria AS categoria,
+    SUM(fv.precio) AS ingresos,
+    SUM(fv.coste) AS costes,
+    SUM(fv.beneficio) AS beneficios
+FROM olap.fact_ventas fv
+JOIN olap.dim_componente dc 
+    ON fv.id_componente = dc.id_componente_dw
+JOIN olap.dim_categoria dcat
+    ON dc.id_categoria = dcat.id_categoria_dw
+GROUP BY dcat.nombre_categoria
+ORDER BY dcat.nombre_categoria;
+ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:37:20.735 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Finished reading query, closing connection
+2026-05-01 21:37:20.736 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:37:20.736 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n detectada 
+2026-05-01 21:37:20.736 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:37:41.191 INFO  <ModalContext> [/Transformaci�n 1.ktr]  Iniciado despacho de la transformaci�n [/Transformaci�n 1]
+2026-05-01 21:37:41.203 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Error desconocido
+2026-05-01 21:37:41.203 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+    dcat.nombre_categoria AS categoria,
+    SUM(fv.precio) AS ingresos,
+    SUM(fv.coste) AS costes,
+    SUM(fv.beneficio) AS beneficios
+FROM olap.fact_ventas fv
+JOIN olap.dim_componente dc 
+    ON fv.id_componente = dc.id_componente_dw
+JOIN olap.dim_categoria dcat
+    ON dc.id_categoria_dw = dcat.id_categoria_dw
+GROUP BY dcat.nombre_categoria
+ORDER BY dcat.nombre_categoria;
+ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:37:41.203 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Finished reading query, closing connection
+2026-05-01 21:37:41.205 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:37:41.205 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n detectada 
+2026-05-01 21:37:41.205 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:48:34.971 INFO  <ModalContext> [/Transformaci�n 1.ktr]  Iniciado despacho de la transformaci�n [/Transformaci�n 1]
+2026-05-01 21:48:34.990 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Error desconocido
+2026-05-01 21:48:34.990 ERROR </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+    dcat.nombre_categoria AS categoria,
+    SUM(fv.precio) AS ingresos,
+    SUM(fv.coste) AS costes,
+    SUM(fv.beneficio) AS beneficios
+FROM olap.fact_ventas fv
+JOIN olap.dim_componente dc 
+    ON fv.id_componente = dc.id_componente_dw
+JOIN olap.dim_categoria dcat
+    ON dc.id_categoria_dw = dcat.id_categoria_dw
+GROUP BY dcat.nombre_categoria
+ORDER BY dcat.nombre_categoria;
+ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:48:34.990 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Finished reading query, closing connection
+2026-05-01 21:48:34.991 INFO  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:48:34.991 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n detectada 
+2026-05-01 21:48:34.992 WARN  </Transformaci�n 1 - Entrada Tabla> [/Transformaci�n 1.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:50:05.252 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos]
+2026-05-01 21:50:05.264 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Error desconocido
+2026-05-01 21:50:05.264 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+    dcat.nombre_categoria AS categoria,
+    SUM(fv.precio) AS ingresos,
+    SUM(fv.coste) AS costes,
+    SUM(fv.beneficio) AS beneficios
+FROM olap.fact_ventas fv
+JOIN olap.dim_componente dc 
+    ON fv.id_componente = dc.id_componente_dw
+JOIN olap.dim_categoria dcat
+    ON dc.id_categoria_dw = dcat.id_categoria_dw
+GROUP BY dcat.nombre_categoria
+ORDER BY dcat.nombre_categoria;
+ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "olap.dim_categoria" does not exist
+  Position: 259
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-05-01 21:50:05.264 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Finished reading query, closing connection
+2026-05-01 21:50:05.265 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-05-01 21:50:05.266 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Transformaci�n detectada 
+2026-05-01 21:50:05.266 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 21:50:21.979 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos]
+2026-05-01 21:50:21.997 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Finished reading query, closing connection
+2026-05-01 21:50:21.998 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 21:50:22.000 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 21:53:27.452 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos]
+2026-05-01 21:53:27.468 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-01 21:53:27.468 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 21:53:27.475 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 21:56:28.364 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos]
+2026-05-01 21:56:28.367 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-01 21:56:28.367 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 21:56:28.370 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr : objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:11:11.570 INFO  <Thread-531> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Iniciado despacho de la transformaci�n [objetivos_analiticos]
+2026-05-01 22:11:11.592 INFO  <objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-01 22:11:11.592 INFO  <objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 22:11:11.596 INFO  <objetivos_analiticos - Ordenar filas CSV> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:11:11.606 INFO  <objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Finished reading query, closing connection
+2026-05-01 22:11:11.607 INFO  <objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 22:11:11.608 INFO  <objetivos_analiticos - Ordenar filas OLAP> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:11:11.914 INFO  <objetivos_analiticos - Unión por clave> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=10, W=5, U=0, E=0)
+2026-05-01 22:11:11.918 INFO  <objetivos_analiticos - Constante 100> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:11:11.922 INFO  <objetivos_analiticos - Calculadora> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:11:11.925 INFO  <objetivos_analiticos - Ordenar ingresos DESC> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:11:11.925 ERROR <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Error desconocido
+2026-05-01 22:11:11.925 ERROR <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+No fields in row, can't insert!
+
+	at org.pentaho.di.core.database.Database.prepareInsert(Database.java:943)
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:276)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-05-01 22:11:11.926 INFO  <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-05-01 22:11:11.926 ERROR <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Errores detectados!
+2026-05-01 22:11:11.927 ERROR <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Errores detectados!
+2026-05-01 22:11:11.935 ERROR <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Errores detectados!
+2026-05-01 22:11:11.949 WARN  <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Transformaci�n detectada 
+2026-05-01 22:11:11.949 WARN  <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Transformaci�n est� matando los otros pasos!
+2026-05-01 22:30:35.603 INFO  <Thread-601> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Iniciado despacho de la transformaci�n [objetivos_analiticos]
+2026-05-01 22:30:35.622 INFO  <objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-01 22:30:35.622 INFO  <objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 22:30:35.626 INFO  <objetivos_analiticos - Ordenar filas CSV> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:30:35.638 INFO  <objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Finished reading query, closing connection
+2026-05-01 22:30:35.640 INFO  <objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 22:30:35.641 INFO  <objetivos_analiticos - Ordenar filas OLAP> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:30:35.946 INFO  <objetivos_analiticos - Unión por clave> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=10, W=5, U=0, E=0)
+2026-05-01 22:30:35.950 INFO  <objetivos_analiticos - Constante 100> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:30:35.953 INFO  <objetivos_analiticos - Calculadora> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:30:35.955 INFO  <objetivos_analiticos - Ordenar ingresos DESC> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:30:35.958 INFO  <objetivos_analiticos - Selecciona/Renombra valores> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:30:35.975 INFO  <objetivos_analiticos - Salida Fichero de Texto> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=6, R=5, W=5, U=0, E=0)
+2026-05-01 22:30:35.977 INFO  <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=5, O=5, R=5, W=5, U=0, E=0)
+2026-05-01 22:31:57.386 INFO  <Thread-629> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Iniciado despacho de la transformaci�n [objetivos_analiticos]
+2026-05-01 22:31:57.393 INFO  <objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-01 22:31:57.393 INFO  <objetivos_analiticos - CSV file input> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 22:31:57.397 INFO  <objetivos_analiticos - Ordenar filas CSV> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:31:57.407 INFO  <objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Finished reading query, closing connection
+2026-05-01 22:31:57.408 INFO  <objetivos_analiticos - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 22:31:57.410 INFO  <objetivos_analiticos - Ordenar filas OLAP> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:31:57.713 INFO  <objetivos_analiticos - Unión por clave> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=10, W=5, U=0, E=0)
+2026-05-01 22:31:57.717 INFO  <objetivos_analiticos - Constante 100> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:31:57.720 INFO  <objetivos_analiticos - Calculadora> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:31:57.723 INFO  <objetivos_analiticos - Ordenar ingresos DESC> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:31:57.726 INFO  <objetivos_analiticos - Selecciona/Renombra valores> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:31:57.740 INFO  <objetivos_analiticos - Salida Fichero de Texto> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=6, R=5, W=5, U=0, E=0)
+2026-05-01 22:31:57.754 INFO  <objetivos_analiticos - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=5, O=5, R=5, W=5, U=0, E=0)
+2026-05-01 22:38:30.958 INFO  <Thread-697> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Iniciado despacho de la transformaci�n [objetivos_analiticos]
+2026-05-01 22:38:30.966 INFO  <objetivos_analiticos - 01 - Entrada CSV> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-01 22:38:30.966 INFO  <objetivos_analiticos - 01 - Entrada CSV> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 22:38:30.970 INFO  <objetivos_analiticos - 02 - Ordenar filas CSV> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:38:30.982 INFO  <objetivos_analiticos - 01 - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Finished reading query, closing connection
+2026-05-01 22:38:30.983 INFO  <objetivos_analiticos - 01 - Entrada Tabla> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-01 22:38:30.984 INFO  <objetivos_analiticos - 02 - Ordenar filas OLAP> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:38:31.287 INFO  <objetivos_analiticos - 03 - Unión por clave> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=10, W=5, U=0, E=0)
+2026-05-01 22:38:31.291 INFO  <objetivos_analiticos - 04 - Constante 100> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:38:31.296 INFO  <objetivos_analiticos - 05 - Calcular porcentajes> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:38:31.300 INFO  <objetivos_analiticos - 06 - Ordenar ingresos DESC> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:38:31.302 INFO  <objetivos_analiticos - 07 - Selecciona/Renombra valores> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-01 22:38:31.318 INFO  <objetivos_analiticos - 09 - Salida Fichero CSV> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=0, O=6, R=5, W=5, U=0, E=0)
+2026-05-01 22:38:31.319 INFO  <objetivos_analiticos - 08 - Insertar / Actualizar> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_analiticos.ktr]  Procesamiento finalizado (I=5, O=5, R=5, W=5, U=0, E=0)

@@ -467,15 +467,22 @@ A9: vocabulario inválido → “Desconocido”</note>
     </notepad>
     <notepad>
       <note>FASE 2 – STAGING: staging.*
-staging.observaciones_clean
-  UPSERT por (fecha, ciudad)
-  → idempotente (re-ejecutable)
-staging.etl_log_fk_huerfanas
-  → log de errores A6</note>
-      <xloc>800</xloc>
-      <yloc>128</yloc>
-      <width>300</width>
-      <heigth>100</heigth>
+
+staging.ventas_clean:
+Carga desde raw.ventas_sucias tras limpieza (JS + filtros + deduplicación)
+UPSERT por (id_venta)
+→ idempotente (puede ejecutarse varias veces sin duplicar datos)
+
+staging.etl_log_fk_huerfanas:
+Registra filas con claves foráneas no válidas:
+id_cliente no existe
+id_componente no existe
+fecha no existe en dim_tiempo
+→ control de calidad de datos antes de cargar en OLAP</note>
+      <xloc>720</xloc>
+      <yloc>96</yloc>
+      <width>440</width>
+      <heigth>207</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
       <fontbold>N</fontbold>
@@ -492,17 +499,24 @@ staging.etl_log_fk_huerfanas
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>FASE 3 – DW: olap_snow.*
-olap_snow.dim_clima
-  UPSERT por (fecha, ciudad)
-  Columnas derivadas calculadas:
-  · es_dia_lluvia (BOOLEAN)
-  · categoria_temperatura
-  · anio, mes, dia_del_anio</note>
-      <xloc>1632</xloc>
-      <yloc>112</yloc>
+      <note>FASE 3 – DW: olap.*
+
+olap.fact_ventas:
+Carga desde staging.ventas_clean
+Inserción/actualización mediante InsertUpdate
+Claves:
+id_fecha
+id_cliente
+id_componente
+
+Columnas derivadas calculadas:
+precio → importe total (precio_unitario * unidades)
+coste → coste total (coste_unitario * unidades)
+beneficio → precio - coste</note>
+      <xloc>2336</xloc>
+      <yloc>128</yloc>
       <width>300</width>
-      <heigth>115</heigth>
+      <heigth>222</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
       <fontbold>N</fontbold>
@@ -566,11 +580,6 @@ olap_snow.dim_clima
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>10 - Leer staging.ventas_clean</from>
-      <to>11 - InsertUpdate olap.fact_ventas</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>04 - Lookup FK componente</from>
       <to>04 - Lookup FK cliente</to>
       <enabled>Y</enabled>
@@ -593,6 +602,11 @@ olap_snow.dim_clima
     <hop>
       <from>Select LOG huerfanas</from>
       <to>LOG - FK huerfanas staging</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>10 - Leer staging.ventas_clean</from>
+      <to>11 - InsertUpdate olap.fact_ventas</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1321,6 +1335,54 @@ if (precio != null &amp;&amp; coste != null) {
     </GUI>
   </step>
   <step>
+    <name>04 - Lookup FK fecha</name>
+    <type>DBLookup</type>
+    <description>Verifica que estacion_id existe en meteo.estaciones_meteorologicas</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PostgresSQL_Torquelab</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>olap</schema>
+      <table>dim_tiempo</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>fecha_solo_dia</name>
+        <field>fecha</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id_fecha</name>
+        <rename>lkp_fecha</rename>
+        <default>-1</default>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>05 - Separar FK validas vs huerfanas</name>
     <type>FilterRows</type>
     <description>FK válida → flujo principal | FK huérfana → log staging</description>
@@ -1516,7 +1578,6 @@ if (precio != null &amp;&amp; coste != null) {
     <fields>
       <field>
         <name>id_venta</name>
-        <rename/>
       </field>
       <field>
         <name>fecha_solo_dia</name>
@@ -1540,15 +1601,12 @@ if (precio != null &amp;&amp; coste != null) {
       </field>
       <field>
         <name>precio</name>
-        <rename/>
       </field>
       <field>
         <name>coste</name>
-        <rename/>
       </field>
       <field>
         <name>beneficio</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1644,8 +1702,8 @@ if (precio != null &amp;&amp; coste != null) {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2304</xloc>
-      <yloc>368</yloc>
+      <xloc>2256</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2062,91 +2120,6 @@ ORDER BY id_fecha, id_cliente, id_componente;</sql>
     </GUI>
   </step>
   <step>
-    <name>11 - InsertUpdate olap.fact_ventas</name>
-    <type>InsertUpdate</type>
-    <description>Carga final en olap_snow.dim_clima – UPSERT por (fecha, ciudad)</description>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>PostgresSQL_Torquelab</connection>
-    <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>olap</schema>
-      <table>fact_ventas</table>
-      <key>
-        <name>id_fecha</name>
-        <field>id_fecha</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>id_cliente</name>
-        <field>id_cliente</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>id_componente</name>
-        <field>id_componente</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id_fecha</name>
-        <rename>id_fecha</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>id_cliente</name>
-        <rename>id_cliente</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>id_componente</name>
-        <rename>id_componente</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>unidades</name>
-        <rename>unidades</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>precio</name>
-        <rename>precio</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>coste</name>
-        <rename>coste</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>beneficio</name>
-        <rename>beneficio</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2512</xloc>
-      <yloc>480</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>DESCARTE - filas nulas</name>
     <type>Dummy</type>
     <description>Absorbe filas completamente nulas (A7) – descartadas</description>
@@ -2212,54 +2185,6 @@ ORDER BY id_fecha, id_cliente, id_componente;</sql>
     <GUI>
       <xloc>1328</xloc>
       <yloc>592</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>04 - Lookup FK fecha</name>
-    <type>DBLookup</type>
-    <description>Verifica que estacion_id existe en meteo.estaciones_meteorologicas</description>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>PostgresSQL_Torquelab</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>olap</schema>
-      <table>dim_tiempo</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>fecha_solo_dia</name>
-        <field>fecha</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id_fecha</name>
-        <rename>lkp_fecha</rename>
-        <default>-1</default>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1104</xloc>
-      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2879,6 +2804,91 @@ ORDER BY id_venta;</sql>
     <GUI>
       <xloc>1328</xloc>
       <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>11 - InsertUpdate olap.fact_ventas</name>
+    <type>InsertUpdate</type>
+    <description>Carga final en olap_snow.dim_clima – UPSERT por (fecha, ciudad)</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>PostgresSQL_Torquelab</connection>
+    <commit>1000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>olap</schema>
+      <table>fact_ventas</table>
+      <key>
+        <name>id_fecha</name>
+        <field>id_fecha</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>id_cliente</name>
+        <field>id_cliente</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>id_componente</name>
+        <field>id_componente</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id_fecha</name>
+        <rename>id_fecha</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>id_cliente</name>
+        <rename>id_cliente</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>id_componente</name>
+        <rename>id_componente</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>unidades</name>
+        <rename>unidades</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>precio</name>
+        <rename>precio</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>coste</name>
+        <rename>coste</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>beneficio</name>
+        <rename>beneficio</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2528</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

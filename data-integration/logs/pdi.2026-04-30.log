@@ -1,0 +1,711 @@
+<<<<<<< Updated upstream
+2026-04-29 18:21:41.641 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci?n [ETL Meteorol�gico � meteo ? staging ? olap_snow]
+2026-04-29 18:21:41.708 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-21)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-29 18:21:41.708 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-32)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-29 18:21:41.708 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-21)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-29 18:21:41.708 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-32)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-29 18:21:41.710 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-24)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-29 18:21:41.711 ERROR <init of LOG - FK huerfanas staging.0 (Thread-29)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-29 18:21:41.711 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-24)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-29 18:21:41.711 ERROR <init of LOG - FK huerfanas staging.0 (Thread-29)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-29 18:21:41.712 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-31)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-29 18:21:41.712 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-33)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-29 18:21:41.712 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-31)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-29 18:21:41.712 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-33)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-29 18:21:41.713 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-29 18:21:41.713 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-29 18:21:41.713 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-29 18:21:41.713 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-29 18:21:41.714 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-29 18:21:41.715 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-29 18:21:41.715 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-29 18:21:41.715 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-29 18:21:41.717 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-29 18:21:41.871 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-29 19:10:39.450 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
+2026-04-29 19:10:39.457 ERROR <init of 01 - Leer .0 (Thread-44)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-29 19:10:39.457 ERROR <init of 01 - Leer .0 (Thread-44)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Error inicializando paso [01 - Leer ]
+2026-04-29 19:10:39.460 ERROR <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  No se ha podido inicializar el paso [01 - Leer .0]!
+2026-04-29 19:10:39.460 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Finished reading query, closing connection
+2026-04-29 19:11:05.338 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
+2026-04-29 19:11:05.560 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - 01 - Leer > [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Finished reading query, closing connection
+2026-04-29 19:11:05.573 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - 01 - Leer > [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Procesamiento finalizado (I=9, O=0, R=0, W=9, U=0, E=0)
+2026-04-29 19:11:05.577 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+=======
+2026-04-22 19:18:20.569 INFO  <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci?n [ETL Meteorol�gico � meteo ? staging ? olap_snow]
+2026-04-22 19:18:20.640 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-34)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.640 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-34)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-22 19:18:20.640 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-23)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.641 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-23)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-22 19:18:20.641 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-26)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-22 19:18:20.641 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-26)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-22 19:18:20.642 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-33)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.642 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-35)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.643 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-33)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-22 19:18:20.643 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-35)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-22 19:18:20.644 ERROR <init of LOG - FK huerfanas staging.0 (Thread-31)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:18:20.644 ERROR <init of LOG - FK huerfanas staging.0 (Thread-31)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-22 19:18:20.644 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-22 19:18:20.646 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-22 19:18:20.647 INFO  <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-22 19:18:20.647 INFO  <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-22 19:18:20.649 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-22 19:18:20.811 ERROR <Thread-20> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-22 19:19:45.874 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow]
+2026-04-22 19:19:47.106 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Error desconocido
+2026-04-22 19:19:47.107 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT
+    observacion_id,
+    fecha,
+    ciudad,
+    estacion_id,
+    temp_max,
+    temp_min,
+    temp_media,
+    precipitacion_mm,
+    humedad_pct,
+    velocidad_viento_kmh,
+    condicion_climatica
+FROM meteo.observaciones_diarias
+ORDER BY observacion_id
+ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-04-22 19:19:47.108 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Finished reading query, closing connection
+2026-04-22 19:19:47.116 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-04-22 19:19:47.120 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Transformaci?n detectada 
+2026-04-22 19:19:47.121 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Transformaci?n est? matando los otros pasos!
+2026-04-22 19:20:47.161 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow]
+2026-04-22 19:20:47.184 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Error desconocido
+2026-04-22 19:20:47.184 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT
+    observacion_id,
+    fecha,
+    ciudad,
+    estacion_id,
+    temp_max,
+    temp_min,
+    temp_media,
+    precipitacion_mm,
+    humedad_pct,
+    velocidad_viento_kmh,
+    condicion_climatica
+FROM meteo.observaciones_diarias
+ORDER BY observacion_id
+ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1772)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:240)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:141)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "meteo.observaciones_diarias" does not exist
+  Position: 206
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:244)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1763)
+	... 4 more
+
+2026-04-22 19:20:47.185 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Finished reading query, closing connection
+2026-04-22 19:20:47.187 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-04-22 19:20:47.188 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Transformaci?n detectada 
+2026-04-22 19:20:47.188 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Transformaci?n est? matando los otros pasos!
+2026-04-22 19:23:29.666 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Iniciado despacho de la transformaci?n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow]
+2026-04-22 19:23:30.174 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=780, W=779, U=0, E=0)
+2026-04-22 19:23:30.207 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Finished reading query, closing connection
+2026-04-22 19:23:30.214 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorol�gico � meteo ? staging ? olap_snow.ktr]  Procesamiento finalizado (I=1003, O=0, R=0, W=1001, U=0, E=0)
+2026-04-22 19:23:40.647 INFO  <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci?n [ETL Meteorol�gico � meteo ? staging ? olap_snow]
+2026-04-22 19:23:40.661 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-54)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.661 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-57)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-22 19:23:40.661 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-54)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-22 19:23:40.663 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-57)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-22 19:23:40.663 ERROR <init of LOG - FK huerfanas staging.0 (Thread-62)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.664 ERROR <init of LOG - FK huerfanas staging.0 (Thread-62)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-22 19:23:40.664 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-64)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.664 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-66)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.665 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-65)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-22 19:23:40.665 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-64)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-22 19:23:40.665 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-66)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-22 19:23:40.665 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-65)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-22 19:23:40.665 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-22 19:23:40.665 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-22 19:23:40.667 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-22 19:23:40.667 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-22 19:23:40.667 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-22 19:23:40.667 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-22 19:23:40.667 INFO  <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-22 19:23:40.667 INFO  <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-22 19:23:40.669 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-22 19:23:40.669 ERROR <Thread-53> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 19:42:14.741 INFO  <ModalContext> [/02 - Limpieza JS (A1-A5, A9) - PREVIEW.ktr]  Iniciado despacho de la transformaci�n [/02 - Limpieza JS (A1-A5, A9) - PREVIEW]
+2026-04-26 19:42:14.777 INFO  </02 - Limpieza JS (A1-A5, A9) - PREVIEW - ## TEST DATA ##> [/02 - Limpieza JS (A1-A5, A9) - PREVIEW.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=10, U=0, E=0)
+2026-04-26 19:42:14.782 INFO  </02 - Limpieza JS (A1-A5, A9) - PREVIEW - dummy> [/02 - Limpieza JS (A1-A5, A9) - PREVIEW.ktr]  Procesamiento finalizado (I=0, O=0, R=10, W=10, U=0, E=0)
+2026-04-26 19:43:53.224 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 19:43:53.248 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Error desconocido
+2026-04-26 19:43:53.249 ERROR <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  org.pentaho.di.core.exception.KettleDatabaseException: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+	at org.pentaho.di.core.database.Database.normalConnect(Database.java:469)
+	at org.pentaho.di.core.database.Database.connect(Database.java:395)
+	at org.pentaho.di.core.database.Database.connect(Database.java:367)
+	at org.pentaho.di.trans.step.BaseDatabaseStep.connectToDatabase(BaseDatabaseStep.java:133)
+	at org.pentaho.di.trans.step.BaseDatabaseStep.beforeStartProcessing(BaseDatabaseStep.java:108)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.pentaho.di.core.exception.KettleDatabaseException: 
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+	at org.pentaho.di.core.database.Database.connectUsingClass(Database.java:618)
+	at org.pentaho.di.core.database.Database.normalConnect(Database.java:454)
+	... 6 more
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:253)
+	at org.postgresql.Driver.makeConnection(Driver.java:434)
+	at org.postgresql.Driver.connect(Driver.java:291)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:160)
+	at org.pentaho.di.core.database.Database.connectUsingClass(Database.java:615)
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:639)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:543)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:659)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 14 more
+
+2026-04-26 19:43:53.249 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Finished reading query, closing connection
+2026-04-26 19:43:53.249 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=0, U=0, E=1)
+2026-04-26 19:43:53.249 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Transformaci�n detectada 
+2026-04-26 19:43:53.250 WARN  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-26 19:47:48.878 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 19:47:49.381 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Finished reading query, closing connection
+2026-04-26 19:47:49.382 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=751, W=750, U=0, E=0)
+2026-04-26 19:47:49.385 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Procesamiento finalizado (I=1003, O=0, R=0, W=1001, U=0, E=0)
+2026-04-26 19:49:44.094 INFO  <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 19:49:44.109 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-50)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:49:44.109 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-50)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-26 19:49:44.110 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-61)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:49:44.110 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-61)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-26 19:49:44.111 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-53)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-26 19:49:44.111 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-53)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-26 19:49:44.112 ERROR <init of LOG - FK huerfanas staging.0 (Thread-58)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:49:44.112 ERROR <init of LOG - FK huerfanas staging.0 (Thread-58)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-26 19:49:44.112 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-60)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:49:44.112 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-60)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-26 19:49:44.112 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-62)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:49:44.112 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-62)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-26 19:49:44.112 ERROR <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-26 19:49:44.112 ERROR <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-26 19:49:44.113 ERROR <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-26 19:49:44.113 ERROR <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-26 19:49:44.113 ERROR <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-26 19:49:44.113 ERROR <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-26 19:49:44.113 INFO  <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 19:49:44.113 INFO  <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 19:49:44.114 ERROR <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 19:49:44.441 ERROR <Thread-49> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 19:51:25.392 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 19:51:25.895 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=573, W=572, U=0, E=0)
+2026-04-26 19:51:25.895 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Finished reading query, closing connection
+2026-04-26 19:51:25.897 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Procesamiento finalizado (I=1003, O=0, R=0, W=1001, U=0, E=0)
+2026-04-26 19:54:48.249 INFO  <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 19:54:48.252 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-85)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-26 19:54:48.252 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-85)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-26 19:54:48.253 ERROR <init of LOG - FK huerfanas staging.0 (Thread-90)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:54:48.253 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-92)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:54:48.253 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-94)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:54:48.253 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-92)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-26 19:54:48.253 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-94)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-26 19:54:48.253 ERROR <init of LOG - FK huerfanas staging.0 (Thread-90)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-26 19:54:48.253 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-93)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:54:48.254 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-93)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-26 19:54:48.254 ERROR <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-26 19:54:48.254 ERROR <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-26 19:54:48.255 ERROR <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-26 19:54:48.255 ERROR <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-26 19:54:48.255 ERROR <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-26 19:54:48.255 INFO  <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 19:54:48.255 INFO  <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 19:54:48.255 ERROR <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 19:54:48.256 ERROR <Thread-81> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 19:57:33.680 INFO  <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 19:57:33.711 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-26)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:57:33.711 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-37)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:57:33.711 ERROR <init of 01 - Leer meteo.observaciones_diarias.0 (Thread-26)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [01 - Leer meteo.observaciones_diarias]
+2026-04-26 19:57:33.711 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-37)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-26 19:57:33.711 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-29)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Database connection is missing for step [04 - Lookup FK estacion (A6)]!
+2026-04-26 19:57:33.711 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-29)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-26 19:57:33.713 ERROR <init of LOG - FK huerfanas staging.0 (Thread-34)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:57:33.713 ERROR <init of LOG - FK huerfanas staging.0 (Thread-34)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-26 19:57:33.713 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-36)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:57:33.713 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-38)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 19:57:33.713 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-36)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-26 19:57:33.713 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-38)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-26 19:57:33.714 ERROR <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [01 - Leer meteo.observaciones_diarias.0]!
+2026-04-26 19:57:33.714 ERROR <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-26 19:57:33.714 ERROR <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-26 19:57:33.714 ERROR <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-26 19:57:33.714 ERROR <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-26 19:57:33.714 ERROR <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-26 19:57:33.714 INFO  <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 19:57:33.714 INFO  <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 19:57:33.715 ERROR <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 19:57:33.947 ERROR <Thread-23> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 19:57:49.832 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 19:57:50.353 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Procesamiento finalizado (I=0, O=0, R=900, W=899, U=0, E=0)
+2026-04-26 19:57:50.355 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Finished reading query, closing connection
+2026-04-26 19:57:50.359 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr : ETL Meteorológico – meteo → staging → olap_snow.ktr]  Procesamiento finalizado (I=1003, O=0, R=0, W=1001, U=0, E=0)
+2026-04-26 20:00:24.901 INFO  <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 20:00:24.904 ERROR <init of LOG - FK huerfanas staging.0 (Thread-69)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 20:00:24.904 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-72)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 20:00:24.905 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-71)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 20:00:24.905 ERROR <init of LOG - FK huerfanas staging.0 (Thread-69)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-26 20:00:24.905 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-73)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-26 20:00:24.906 ERROR <init of 10 - Leer staging.observaciones_clean.0 (Thread-72)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [10 - Leer staging.observaciones_clean]
+2026-04-26 20:00:24.906 ERROR <init of 09 - InsertUpdate staging.observaciones_clean.0 (Thread-71)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [09 - InsertUpdate staging.observaciones_clean]
+2026-04-26 20:00:24.906 ERROR <init of 11 - InsertUpdate olap_snow.dim_clima.0 (Thread-73)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [11 - InsertUpdate olap_snow.dim_clima]
+2026-04-26 20:00:24.914 ERROR <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-26 20:00:24.914 ERROR <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [09 - InsertUpdate staging.observaciones_clean.0]!
+2026-04-26 20:00:24.914 ERROR <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [10 - Leer staging.observaciones_clean.0]!
+2026-04-26 20:00:24.914 ERROR <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [11 - InsertUpdate olap_snow.dim_clima.0]!
+2026-04-26 20:00:24.914 INFO  <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:00:24.914 INFO  <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:00:24.915 ERROR <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 20:00:24.915 ERROR <Thread-60> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 20:01:15.425 INFO  <Thread-84> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 20:01:15.428 INFO  <init of LOG - FK huerfanas staging.0 (Thread-93)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Connected to database [PracticaSM_Postgres] (commit=100)
+2026-04-26 20:01:15.475 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 10 - Leer staging.observaciones_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:01:15.509 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Optimization level set to 9.
+2026-04-26 20:01:15.689 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:01:15.693 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=18282, O=0, R=0, W=18282, U=0, E=0)
+2026-04-26 20:01:15.768 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-26 20:01:15.773 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 03 - Filtrar filas nulas (A7)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-26 20:01:15.776 INFO  <ETL Meteorológico – meteo → staging → olap_snow - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-26 20:01:15.779 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 04 - Lookup FK estacion (A6)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=50, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-26 20:01:15.783 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-26 20:01:15.794 ERROR <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Unexpected batch update error committing the database connection.
+2026-04-26 20:01:15.794 ERROR <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+Error updating batch
+Batch entry 0 INSERT INTO staging.etl_log_fk_huerfanas (observacion_id, fecha, ciudad, estacion_id, temp_max, temp_min, temp_media, precipitacion_mm, humedad_pct, velocidad_viento_kmh, condicion_climatica, lkp_estacion) VALUES ( ('924'::int8),  ('2022-07-12 00:00:00+02'),  ('Granada'),  ('60'::int8),  ('33.3'::double precision),  ('22.8'::double precision),  ('28.0'::double precision),  ('0.0'::double precision),  ('70'::int8),  ('3.5'::double precision),  ('Desconocido'),  ('-1'::int8)) was aborted: ERROR: column "temp_max" of relation "etl_log_fk_huerfanas" does not exist
+  Position: 87  Call getNextException to see other errors in the batch.
+
+	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1440)
+	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1429)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:567)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO staging.etl_log_fk_huerfanas (observacion_id, fecha, ciudad, estacion_id, temp_max, temp_min, temp_media, precipitacion_mm, humedad_pct, velocidad_viento_kmh, condicion_climatica, lkp_estacion) VALUES ( ('924'::int8),  ('2022-07-12 00:00:00+02'),  ('Granada'),  ('60'::int8),  ('33.3'::double precision),  ('22.8'::double precision),  ('28.0'::double precision),  ('0.0'::double precision),  ('70'::int8),  ('3.5'::double precision),  ('Desconocido'),  ('-1'::int8)) was aborted: ERROR: column "temp_max" of relation "etl_log_fk_huerfanas" does not exist
+  Position: 87  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:877)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:916)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1684)
+	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+	... 3 more
+Caused by: org.postgresql.util.PSQLException: ERROR: column "temp_max" of relation "etl_log_fk_huerfanas" does not exist
+  Position: 87
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:316)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:874)
+	... 6 more
+
+2026-04-26 20:01:15.796 INFO  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=20, W=0, U=0, E=1)
+2026-04-26 20:01:15.796 WARN  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Transformaci�n detectada 
+2026-04-26 20:01:15.797 WARN  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-26 20:01:15.805 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=0, U=0, E=0)
+2026-04-26 20:01:16.064 ERROR <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 20:01:16.064 ERROR <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 20:01:16.081 ERROR <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 20:01:36.498 INFO  <Thread-117> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 20:01:36.502 INFO  <init of LOG - FK huerfanas staging.0 (Thread-126)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Connected to database [PracticaSM_Postgres] (commit=100)
+2026-04-26 20:01:36.550 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 10 - Leer staging.observaciones_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:01:36.566 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Optimization level set to 9.
+2026-04-26 20:01:36.627 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:01:36.629 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=18282, O=0, R=0, W=18282, U=0, E=0)
+2026-04-26 20:01:36.660 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-26 20:01:36.666 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 03 - Filtrar filas nulas (A7)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-26 20:01:36.669 INFO  <ETL Meteorológico – meteo → staging → olap_snow - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-26 20:01:36.671 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 04 - Lookup FK estacion (A6)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=50, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-26 20:01:36.675 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-26 20:01:36.678 ERROR <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Unexpected batch update error committing the database connection.
+2026-04-26 20:01:36.679 ERROR <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+Error updating batch
+Batch entry 0 INSERT INTO staging.etl_log_fk_huerfanas (observacion_id, fecha, ciudad, estacion_id, temp_max, temp_min, temp_media, precipitacion_mm, humedad_pct, velocidad_viento_kmh, condicion_climatica, lkp_estacion) VALUES ( ('924'::int8),  ('2022-07-12 00:00:00+02'),  ('Granada'),  ('60'::int8),  ('33.3'::double precision),  ('22.8'::double precision),  ('28.0'::double precision),  ('0.0'::double precision),  ('70'::int8),  ('3.5'::double precision),  ('Desconocido'),  ('-1'::int8)) was aborted: ERROR: column "temp_max" of relation "etl_log_fk_huerfanas" does not exist
+  Position: 87  Call getNextException to see other errors in the batch.
+
+	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1440)
+	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1429)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:567)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO staging.etl_log_fk_huerfanas (observacion_id, fecha, ciudad, estacion_id, temp_max, temp_min, temp_media, precipitacion_mm, humedad_pct, velocidad_viento_kmh, condicion_climatica, lkp_estacion) VALUES ( ('924'::int8),  ('2022-07-12 00:00:00+02'),  ('Granada'),  ('60'::int8),  ('33.3'::double precision),  ('22.8'::double precision),  ('28.0'::double precision),  ('0.0'::double precision),  ('70'::int8),  ('3.5'::double precision),  ('Desconocido'),  ('-1'::int8)) was aborted: ERROR: column "temp_max" of relation "etl_log_fk_huerfanas" does not exist
+  Position: 87  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:877)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:916)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1684)
+	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+	... 3 more
+Caused by: org.postgresql.util.PSQLException: ERROR: column "temp_max" of relation "etl_log_fk_huerfanas" does not exist
+  Position: 87
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:316)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:874)
+	... 6 more
+
+2026-04-26 20:01:36.680 INFO  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=20, W=0, U=0, E=1)
+2026-04-26 20:01:36.680 WARN  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Transformaci�n detectada 
+2026-04-26 20:01:36.680 WARN  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-26 20:01:36.688 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=0, U=0, E=0)
+2026-04-26 20:01:36.947 ERROR <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 20:01:36.948 ERROR <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 20:01:36.957 ERROR <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-26 20:08:03.981 INFO  <Thread-147> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 20:08:03.984 INFO  <init of LOG - FK huerfanas staging.0 (Thread-156)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Connected to database [PracticaSM_Postgres] (commit=100)
+2026-04-26 20:08:04.034 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 10 - Leer staging.observaciones_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:08:04.049 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Optimization level set to 9.
+2026-04-26 20:08:04.113 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:08:04.114 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=18282, O=0, R=0, W=18282, U=0, E=0)
+2026-04-26 20:08:04.163 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-26 20:08:04.166 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 03 - Filtrar filas nulas (A7)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-26 20:08:04.170 INFO  <ETL Meteorológico – meteo → staging → olap_snow - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-26 20:08:04.172 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 04 - Lookup FK estacion (A6)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=50, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-26 20:08:04.174 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-26 20:08:04.186 INFO  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=20, R=20, W=20, U=0, E=0)
+2026-04-26 20:08:04.196 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=18259, U=0, E=0)
+2026-04-26 20:08:04.207 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 07 - Unique Rows dedup (fecha, ciudad)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=18247, U=0, E=0)
+2026-04-26 20:08:19.018 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18247, W=18247, U=0, E=0)
+2026-04-26 20:26:11.290 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 09 - InsertUpdate staging.observaciones_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=10001, O=10001, R=10001, W=10001, U=0, E=0)
+2026-04-26 20:26:13.898 INFO  <Thread-183> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-26 20:26:13.901 INFO  <init of LOG - FK huerfanas staging.0 (Thread-192)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Connected to database [PracticaSM_Postgres] (commit=100)
+2026-04-26 20:26:13.962 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Optimization level set to 9.
+2026-04-26 20:26:14.063 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:26:14.065 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=18282, O=0, R=0, W=18282, U=0, E=0)
+2026-04-26 20:26:14.098 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-26 20:26:14.101 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 03 - Filtrar filas nulas (A7)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-26 20:26:14.103 INFO  <ETL Meteorológico – meteo → staging → olap_snow - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-26 20:26:14.104 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 04 - Lookup FK estacion (A6)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=50, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-26 20:26:14.106 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-26 20:26:14.113 INFO  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=20, R=20, W=20, U=0, E=0)
+2026-04-26 20:26:14.121 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 10 - Leer staging.observaciones_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-26 20:26:14.122 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 10 - Leer staging.observaciones_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=10001, O=0, R=0, W=10001, U=0, E=0)
+2026-04-26 20:26:14.137 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=18259, U=0, E=0)
+2026-04-26 20:26:14.149 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 07 - Unique Rows dedup (fecha, ciudad)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=18247, U=0, E=0)
+2026-04-26 20:26:24.442 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18247, W=18247, U=0, E=0)
+2026-04-26 20:26:32.293 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 11 - InsertUpdate olap_snow.dim_clima> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=10001, O=10001, R=10001, W=10001, U=0, E=0)
+>>>>>>> Stashed changes
+2026-04-30 18:28:49.205 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-30 18:28:49.246 INFO  <init of LOG - FK huerfanas staging.0 (Thread-29)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Connected to database [PracticaSM_Postgres] (commit=100)
+2026-04-30 18:28:49.678 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-24)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Este paso se ha detenido debido a un error: org.pentaho.di.core.exception.KettleDatabaseException: 
+Error occurred while trying to connect to the database
+
+Connection failed. Verify all connection parameters and confirm that the appropriate driver is installed.
+Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+
+
+2026-04-30 18:28:49.678 ERROR <init of 04 - Lookup FK estacion (A6).0 (Thread-24)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Error inicializando paso [04 - Lookup FK estacion (A6)]
+2026-04-30 18:28:49.679 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido inicializar el paso [04 - Lookup FK estacion (A6).0]!
+2026-04-30 18:28:49.679 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-30 18:28:49.681 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido terminar transacci�n(s):org.pentaho.di.core.exception.KettleDatabaseException: 
+Error comitting connection
+
+Unable to get database metadata from this database connection
+
+Error connecting to database [PracticasSM]
+
+
+
+2026-04-30 18:28:49.681 INFO  <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-30 18:28:49.681 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  No se ha podido terminar transacci�n(s):org.pentaho.di.core.exception.KettleDatabaseException: 
+Error comitting connection
+
+Unable to get database metadata from this database connection
+
+Error connecting to database [PracticasSM]
+
+
+
+2026-04-30 18:28:49.681 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-30 18:28:49.685 ERROR <Thread-18> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Errores detectados!
+2026-04-30 18:30:28.959 INFO  <Thread-39> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Iniciado despacho de la transformaci�n [ETL Meteorológico – meteo → staging → olap_snow]
+2026-04-30 18:30:28.964 INFO  <init of LOG - FK huerfanas staging.0 (Thread-48)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Connected to database [PracticaSM_Postgres] (commit=100)
+2026-04-30 18:30:29.222 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Optimization level set to 9.
+2026-04-30 18:30:29.322 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 10 - Leer staging.observaciones_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-30 18:30:29.326 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 10 - Leer staging.observaciones_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=10001, O=0, R=0, W=10001, U=0, E=0)
+2026-04-30 18:30:29.435 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Finished reading query, closing connection
+2026-04-30 18:30:29.436 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 01 - Leer meteo.observaciones_diarias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=18282, O=0, R=0, W=18282, U=0, E=0)
+2026-04-30 18:30:29.512 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 02 - Limpieza JS (A1-A5, A9)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-30 18:30:29.516 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 03 - Filtrar filas nulas (A7)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18282, W=18282, U=0, E=0)
+2026-04-30 18:30:29.518 INFO  <ETL Meteorológico – meteo → staging → olap_snow - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-30 18:30:29.520 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 04 - Lookup FK estacion (A6)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=50, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-30 18:30:29.524 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18279, W=18279, U=0, E=0)
+2026-04-30 18:30:29.536 INFO  <ETL Meteorológico – meteo → staging → olap_snow - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=20, R=20, W=20, U=0, E=0)
+2026-04-30 18:30:29.568 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 06 - Ordenar (fecha, ciudad, obs_id)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=18259, U=0, E=0)
+2026-04-30 18:30:29.584 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 07 - Unique Rows dedup (fecha, ciudad)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18259, W=18247, U=0, E=0)
+2026-04-30 18:30:40.271 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=0, O=0, R=18247, W=18247, U=0, E=0)
+2026-04-30 18:30:42.278 INFO  <ETL Meteorológico – meteo → staging → olap_snow - 11 - InsertUpdate olap_snow.dim_clima> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\dataset-meteo\limpieza_meteo_completo.ktr]  Procesamiento finalizado (I=10001, O=0, R=10001, W=10001, U=0, E=0)
+2026-04-30 18:46:49.748 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
+2026-04-30 18:46:49.766 ERROR <init of 01 - Leer raw.ventas_sucias.0 (Thread-21)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-30 18:46:49.766 ERROR <init of 01 - Leer raw.ventas_sucias.0 (Thread-21)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Error inicializando paso [01 - Leer raw.ventas_sucias]
+2026-04-30 18:46:49.766 ERROR <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  No se ha podido inicializar el paso [01 - Leer raw.ventas_sucias.0]!
+2026-04-30 18:46:49.767 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 18:47:12.036 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
+2026-04-30 18:47:12.081 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 18:47:12.084 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - dummy> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 18:47:12.085 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Procesamiento finalizado (I=9, O=0, R=0, W=9, U=0, E=0)
+2026-04-30 18:52:04.643 INFO  <ModalContext> [/02 - Limpieza JS - PREVIEW.ktr]  Iniciado despacho de la transformaci�n [/02 - Limpieza JS - PREVIEW]
+2026-04-30 18:52:04.647 INFO  </02 - Limpieza JS - PREVIEW - ## TEST DATA ##> [/02 - Limpieza JS - PREVIEW.ktr]  Procesamiento finalizado (I=0, O=0, R=0, W=10, U=0, E=0)
+2026-04-30 18:52:04.651 INFO  </02 - Limpieza JS - PREVIEW - dummy> [/02 - Limpieza JS - PREVIEW.ktr]  Procesamiento finalizado (I=0, O=0, R=10, W=10, U=0, E=0)
+2026-04-30 20:26:21.083 INFO  <ModalContext> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Iniciado despacho de la transformaci�n [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab]
+2026-04-30 20:26:21.136 INFO  <C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr : ETL Torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:22:32.205 INFO  <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 22:22:32.220 ERROR <init of LOG - FK huerfanas staging.0 (Thread-255)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  !BaseDatabaseStep.Init.ConnectionMissing!
+2026-04-30 22:22:32.220 ERROR <init of LOG - FK huerfanas staging.0 (Thread-255)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error inicializando paso [LOG - FK huerfanas staging]
+2026-04-30 22:22:32.230 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  No se ha podido inicializar el paso [LOG - FK huerfanas staging.0]!
+2026-04-30 22:22:32.230 INFO  <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:22:32.231 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  No se ha podido terminar transacci�n(s):org.pentaho.di.core.exception.KettleDatabaseException: 
+Error comitting connection
+
+Unable to get database metadata from this database connection
+
+Error connecting to database [torquelab]
+
+
+
+2026-04-30 22:22:32.231 INFO  <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:22:32.231 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  No se ha podido terminar transacci�n(s):org.pentaho.di.core.exception.KettleDatabaseException: 
+Error comitting connection
+
+Unable to get database metadata from this database connection
+
+Error connecting to database [torquelab]
+
+
+
+2026-04-30 22:22:32.231 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:22:32.539 ERROR <Thread-241> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:50:22.203 INFO  <Thread-266> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 22:50:22.208 INFO  <init of LOG - FK huerfanas staging.0 (Thread-280)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 22:50:22.404 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:50:22.405 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:50:22.406 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 22:50:22.434 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 22:50:22.569 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 22:50:22.573 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 22:50:22.574 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 22:50:22.584 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:50:22.602 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:50:22.622 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:50:22.624 ERROR <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error desconocido
+2026-04-30 22:50:22.625 ERROR <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  java.lang.ClassCastException: class java.util.Date cannot be cast to class java.sql.Timestamp (java.util.Date is in module java.base of loader 'bootstrap'; java.sql.Timestamp is in module java.sql of loader 'platform')
+	at org.pentaho.di.core.row.value.ValueMetaTimestamp.getTimestamp(ValueMetaTimestamp.java:132)
+	at org.pentaho.di.core.row.value.ValueMetaTimestamp.getString(ValueMetaTimestamp.java:121)
+	at org.pentaho.di.core.row.RowMeta.getString(RowMeta.java:320)
+	at org.pentaho.di.core.row.RowMeta.getString(RowMeta.java:855)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:381)
+	at org.pentaho.di.trans.steps.tableoutput.TableOutput.processRow(TableOutput.java:122)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-04-30 22:50:22.625 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:50:22.625 INFO  <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-04-30 22:50:22.625 WARN  <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n detectada 
+2026-04-30 22:50:22.626 WARN  <ETL Torquelab - LOG - FK huerfanas staging> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-30 22:50:22.627 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=0, U=0, E=0)
+2026-04-30 22:50:22.935 ERROR <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:50:22.936 ERROR <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:50:22.946 ERROR <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:55:56.379 INFO  <Thread-312> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 22:55:56.385 INFO  <init of LOG - FK huerfanas staging.0 (Thread-328)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 22:55:56.463 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:55:56.464 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:55:56.465 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 22:55:56.465 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 22:55:56.466 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 22:55:56.489 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 22:55:56.492 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 22:55:56.496 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 22:55:56.500 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:55:56.515 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:55:56.529 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:55:56.531 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 22:55:56.533 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-04-30 22:55:56.533 ERROR <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error desconocido
+2026-04-30 22:55:56.534 ERROR <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'fecha', so I can't delete it.
+
+
+Unable to find value metadata with name 'fecha', so I can't delete it.
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:373)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:357)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'fecha', so I can't delete it.
+
+	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:791)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:371)
+	... 3 more
+
+2026-04-30 22:55:56.534 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-04-30 22:55:56.534 WARN  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n detectada 
+2026-04-30 22:55:56.534 WARN  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-30 22:55:56.536 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=2, U=0, E=0)
+2026-04-30 22:55:56.863 ERROR <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:55:56.865 ERROR <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 22:55:56.876 ERROR <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:01:51.352 INFO  <Thread-353> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:01:51.360 INFO  <init of LOG - FK huerfanas staging.0 (Thread-369)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:01:51.437 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:01:51.437 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:01:51.437 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:01:51.438 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:01:51.438 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:01:51.459 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:01:51.462 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:01:51.464 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 23:01:51.471 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:01:51.486 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:01:51.501 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:01:51.504 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:01:51.506 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-04-30 23:01:51.509 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=3, U=0, E=0)
+2026-04-30 23:01:51.512 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-30 23:01:51.527 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=3, R=3, W=3, U=0, E=0)
+2026-04-30 23:05:10.177 INFO  <Thread-394> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:05:10.181 INFO  <init of LOG - FK huerfanas staging.0 (Thread-410)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:05:10.258 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:05:10.258 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:05:10.258 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:05:10.259 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:05:10.259 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:05:10.259 ERROR <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error desconocido
+2026-04-30 23:05:10.259 ERROR <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+No se ha podido encontrar el campo []!
+
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:245)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-04-30 23:05:10.260 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-04-30 23:05:10.260 WARN  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n detectada 
+2026-04-30 23:05:10.260 WARN  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-30 23:05:10.260 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-04-30 23:05:10.268 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=0)
+2026-04-30 23:05:10.590 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:05:10.590 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:05:10.599 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:07:41.250 INFO  <Thread-434> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:07:41.254 INFO  <init of LOG - FK huerfanas staging.0 (Thread-450)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:07:41.332 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:07:41.332 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:07:41.332 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:07:41.333 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:07:41.333 ERROR <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Error desconocido
+2026-04-30 23:07:41.334 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:07:41.334 ERROR <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+No se ha podido encontrar el campo []!
+
+	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:245)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-04-30 23:07:41.334 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-04-30 23:07:41.334 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-04-30 23:07:41.334 WARN  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n detectada 
+2026-04-30 23:07:41.335 WARN  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Transformaci�n est� matando los otros pasos!
+2026-04-30 23:07:41.342 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=0)
+2026-04-30 23:07:41.661 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:07:41.663 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:07:41.675 ERROR <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Errores detectados!
+2026-04-30 23:10:15.572 INFO  <Thread-477> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:10:15.576 INFO  <init of LOG - FK huerfanas staging.0 (Thread-493)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:10:15.649 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:10:15.649 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:10:15.650 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:10:15.651 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:10:15.652 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:10:15.654 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=0, W=3, U=0, E=0)
+2026-04-30 23:10:15.667 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:10:15.669 INFO  <ETL Torquelab - 11 - InsertUpdate olap.fact_ventas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=0, R=3, W=3, U=1, E=0)
+2026-04-30 23:10:15.671 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:10:15.673 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 23:10:15.679 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:10:15.696 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:10:15.711 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:10:15.713 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:10:15.716 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-04-30 23:10:15.720 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=3, U=0, E=0)
+2026-04-30 23:10:15.722 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-30 23:10:15.734 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=3, R=3, W=3, U=0, E=0)
+2026-04-30 23:17:39.517 INFO  <Thread-512> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-04-30 23:17:39.522 INFO  <init of LOG - FK huerfanas staging.0 (Thread-528)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-04-30 23:17:39.619 INFO  <ETL Torquelab - Select LOG huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:17:39.622 INFO  <ETL Torquelab - 10 - Leer staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:17:39.623 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Finished reading query, closing connection
+2026-04-30 23:17:39.623 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Optimization level set to 9.
+2026-04-30 23:17:39.624 INFO  <ETL Torquelab - 01 - Leer raw.ventas_sucias> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=16, O=0, R=0, W=16, U=0, E=0)
+2026-04-30 23:17:39.637 INFO  <ETL Torquelab - 02 - Limpieza JS> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:17:39.640 INFO  <ETL Torquelab - 03 - Filtrar filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=16, W=16, U=0, E=0)
+2026-04-30 23:17:39.642 INFO  <ETL Torquelab - DESCARTE - filas nulas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=7, W=7, U=0, E=0)
+2026-04-30 23:17:39.652 INFO  <ETL Torquelab - 04 - Lookup FK componente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=15, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:17:39.667 INFO  <ETL Torquelab - 04 - Lookup FK cliente> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=5, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:17:39.682 INFO  <ETL Torquelab - 04 - Lookup FK fecha> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=23, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:17:39.684 INFO  <ETL Torquelab - 05 - Separar FK validas vs huerfanas> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-04-30 23:17:39.686 INFO  <ETL Torquelab - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=4, U=0, E=0)
+2026-04-30 23:17:39.689 INFO  <ETL Torquelab - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=4, W=3, U=0, E=0)
+2026-04-30 23:17:39.691 INFO  <ETL Torquelab - 08 - Select Values (columnas finales)> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-04-30 23:17:39.700 INFO  <ETL Torquelab - 09 - InsertUpdate staging.ventas_clean> [C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\limpieza_torquelab.ktr]  Procesamiento finalizado (I=3, O=3, R=3, W=3, U=0, E=0)

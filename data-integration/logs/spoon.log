@@ -1,2 +1,147 @@
-2026-04-30 23:19:46.345 - Spoon - Spoon  ha terminado.
-stopping
+2026-05-02 18:30:47.704 - Spoon - Transformaci�n abierta.
+2026-05-02 18:30:47.706 - Spoon - Ejecutando transformaci�n [ETL Torquelab]...
+2026-05-02 18:30:47.706 - Spoon - Se ha iniciado la ejecuci�n de la transformaci�n.
+2026-05-02 18:30:48.435 - ETL Torquelab - Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-05-02 18:30:48.459 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2026-05-02 18:30:48.479 - LOG - FK huerfanas staging.0 - Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-05-02 18:30:48.657 - Select LOG huerfanas.0 - Finished reading query, closing connection
+2026-05-02 18:30:48.659 - 01 - Leer raw.ventas_sucias.0 - Finished reading query, closing connection
+2026-05-02 18:30:48.661 - 01 - Leer raw.ventas_sucias.0 - Procesamiento finalizado (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-05-02 18:30:48.662 - 10 - Leer staging.ventas_clean.0 - Finished reading query, closing connection
+2026-05-02 18:30:48.683 - 02 - Limpieza JS.0 - Optimization level set to 9.
+2026-05-02 18:30:48.817 - 02 - Limpieza JS.0 - Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-02 18:30:48.821 - 03 - Filtrar filas nulas.0 - Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-02 18:30:48.824 - DESCARTE - filas nulas.0 - Procesamiento finalizado (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-05-02 18:30:48.824 - 04 - Lookup FK componente.0 - Procesamiento finalizado (I=15, O=0, R=24, W=24, U=0, E=0)
+2026-05-02 18:30:48.840 - 04 - Lookup FK cliente.0 - Procesamiento finalizado (I=5, O=0, R=24, W=24, U=0, E=0)
+2026-05-02 18:30:48.855 - 04 - Lookup FK fecha.0 - Procesamiento finalizado (I=23, O=0, R=24, W=24, U=0, E=0)
+2026-05-02 18:30:48.859 - 05 - Separar FK validas vs huerfanas.0 - Procesamiento finalizado (I=0, O=0, R=24, W=24, U=0, E=0)
+2026-05-02 18:30:48.861 - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente).0 - Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-05-02 18:30:48.864 - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto).0 - Procesamiento finalizado (I=0, O=0, R=9, W=8, U=0, E=0)
+2026-05-02 18:30:48.867 - 08 - Select Values (columnas finales).0 - Procesamiento finalizado (I=0, O=0, R=8, W=8, U=0, E=0)
+2026-05-02 18:30:48.889 - 09 - InsertUpdate staging.ventas_clean.0 - Procesamiento finalizado (I=8, O=8, R=8, W=8, U=0, E=0)
+2026-05-02 18:30:48.892 - Spoon - La transformaci�n ha finalizado!!
+2026-05-02 18:30:56.773 - Spoon - Transformaci�n abierta.
+2026-05-02 18:30:56.773 - Spoon - Ejecutando transformaci�n [ETL Torquelab]...
+2026-05-02 18:30:56.773 - Spoon - Se ha iniciado la ejecuci�n de la transformaci�n.
+2026-05-02 18:30:56.797 - ETL Torquelab - Iniciado despacho de la transformaci�n [ETL Torquelab]
+2026-05-02 18:30:56.801 - LOG - FK huerfanas staging.0 - Connected to database [PostgresSQL_Torquelab] (commit=100)
+2026-05-02 18:30:56.879 - Select LOG huerfanas.0 - Finished reading query, closing connection
+2026-05-02 18:30:56.880 - 01 - Leer raw.ventas_sucias.0 - Finished reading query, closing connection
+2026-05-02 18:30:56.881 - 01 - Leer raw.ventas_sucias.0 - Procesamiento finalizado (I=30, O=0, R=0, W=30, U=0, E=0)
+2026-05-02 18:30:56.882 - 02 - Limpieza JS.0 - Optimization level set to 9.
+2026-05-02 18:30:56.883 - 10 - Leer staging.ventas_clean.0 - Finished reading query, closing connection
+2026-05-02 18:30:56.884 - 10 - Leer staging.ventas_clean.0 - Procesamiento finalizado (I=8, O=0, R=0, W=8, U=0, E=0)
+2026-05-02 18:30:56.908 - 02 - Limpieza JS.0 - Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-02 18:30:56.913 - 03 - Filtrar filas nulas.0 - Procesamiento finalizado (I=0, O=0, R=30, W=30, U=0, E=0)
+2026-05-02 18:30:56.913 - 11 - InsertUpdate olap.fact_ventas.0 - Procesamiento finalizado (I=8, O=8, R=8, W=8, U=0, E=0)
+2026-05-02 18:30:56.916 - DESCARTE - filas nulas.0 - Procesamiento finalizado (I=0, O=0, R=6, W=6, U=0, E=0)
+2026-05-02 18:30:56.916 - 04 - Lookup FK componente.0 - Procesamiento finalizado (I=15, O=0, R=24, W=24, U=0, E=0)
+2026-05-02 18:30:56.929 - 04 - Lookup FK cliente.0 - Procesamiento finalizado (I=5, O=0, R=24, W=24, U=0, E=0)
+2026-05-02 18:30:56.944 - 04 - Lookup FK fecha.0 - Procesamiento finalizado (I=23, O=0, R=24, W=24, U=0, E=0)
+2026-05-02 18:30:56.948 - 05 - Separar FK validas vs huerfanas.0 - Procesamiento finalizado (I=0, O=0, R=24, W=24, U=0, E=0)
+2026-05-02 18:30:56.950 - 06 - Ordenar (lkp_fecha, lkp_cliente, lkp_componente).0 - Procesamiento finalizado (I=0, O=0, R=9, W=9, U=0, E=0)
+2026-05-02 18:30:56.953 - 07 - Unique Rows dedup (lkp_fecha, lkp_cliente, lkp_producto).0 - Procesamiento finalizado (I=0, O=0, R=9, W=8, U=0, E=0)
+2026-05-02 18:30:56.956 - 08 - Select Values (columnas finales).0 - Procesamiento finalizado (I=0, O=0, R=8, W=8, U=0, E=0)
+2026-05-02 18:30:56.971 - 09 - InsertUpdate staging.ventas_clean.0 - Procesamiento finalizado (I=8, O=0, R=8, W=8, U=2, E=0)
+2026-05-02 18:30:56.972 - Spoon - La transformaci�n ha finalizado!!
+2026-05-02 19:10:28.418 - Spoon - Transformaci�n abierta.
+2026-05-02 19:10:28.418 - Spoon - Ejecutando transformaci�n [objetivos_analiticos]...
+2026-05-02 19:10:28.418 - Spoon - Se ha iniciado la ejecuci�n de la transformaci�n.
+2026-05-02 19:10:29.072 - objetivos_analiticos - Iniciado despacho de la transformaci�n [objetivos_analiticos]
+2026-05-02 19:10:29.158 - 01 - Entrada CSV.0 - Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-02 19:10:29.159 - 01 - Entrada CSV.0 - Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-02 19:10:29.162 - 02 - Ordenar filas CSV.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:10:29.163 - 01 - Entrada Tabla.0 - Finished reading query, closing connection
+2026-05-02 19:10:29.165 - 01 - Entrada Tabla.0 - Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-02 19:10:29.168 - 02 - Ordenar filas OLAP.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:10:29.476 - 03 - Unión por clave.0 - Procesamiento finalizado (I=0, O=0, R=10, W=5, U=0, E=0)
+2026-05-02 19:10:29.480 - 04 - Constante 100.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:10:29.483 - 05 - Calcular porcentajes.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:10:29.487 - 06 - Ordenar ingresos DESC.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:10:29.491 - 07 - Selecciona/Renombra valores.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:10:29.512 - 09 - Salida Fichero CSV.0 - Procesamiento finalizado (I=0, O=6, R=5, W=5, U=0, E=0)
+2026-05-02 19:10:29.513 - 08 - Insertar / Actualizar.0 - Procesamiento finalizado (I=5, O=0, R=5, W=5, U=5, E=0)
+2026-05-02 19:10:29.514 - Spoon - La transformaci�n ha finalizado!!
+2026-05-02 19:24:38.388 - Spoon - Transformaci�n abierta.
+2026-05-02 19:24:38.388 - Spoon - Ejecutando transformaci�n [objetivos_analiticos]...
+2026-05-02 19:24:38.388 - Spoon - Se ha iniciado la ejecuci�n de la transformaci�n.
+2026-05-02 19:24:38.421 - objetivos_analiticos - Iniciado despacho de la transformaci�n [objetivos_analiticos]
+2026-05-02 19:24:38.429 - 01 - Entrada CSV.0 - Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-02 19:24:38.431 - 01 - Entrada CSV.0 - Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-02 19:24:38.433 - 02 - Ordenar filas CSV.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:24:38.445 - 01 - Entrada Tabla.0 - Finished reading query, closing connection
+2026-05-02 19:24:38.447 - 01 - Entrada Tabla.0 - Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-02 19:24:38.448 - 02 - Ordenar filas OLAP.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:24:38.757 - 03 - Unión por clave.0 - Procesamiento finalizado (I=0, O=0, R=10, W=5, U=0, E=0)
+2026-05-02 19:24:38.759 - 04 - Constante 100.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:24:38.764 - 05 - Calcular porcentajes.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:24:38.767 - 06 - Ordenar ingresos DESC.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:24:38.770 - 07 - Selecciona/Renombra valores.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:24:38.774 - 08 - Insertar / Actualizar.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Error en paso, pidiendo a todos que se paren:
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseException: 
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - Error looking up row in database
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - ERROR: relation "staging.resultados_analisis" does not exist
+  Position: 107
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.pentaho.di.core.database.Database.getLookup(Database.java:3100)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.pentaho.di.core.database.Database.getLookup(Database.java:3079)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.pentaho.di.core.database.Database.getLookup(Database.java:3075)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.lookupValues(InsertUpdate.java:78)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.pentaho.di.trans.steps.insertupdate.InsertUpdate.processRow(InsertUpdate.java:292)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:54)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - Caused by: org.postgresql.util.PSQLException: ERROR: relation "staging.resultados_analisis" does not exist
+  Position: 107
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	at org.pentaho.di.core.database.Database.getLookup(Database.java:3085)
+2026-05-02 19:24:38.775 - 08 - Insertar / Actualizar.0 - 	... 6 more
+2026-05-02 19:24:38.776 - 08 - Insertar / Actualizar.0 - Procesamiento finalizado (I=0, O=0, R=1, W=0, U=0, E=1)
+2026-05-02 19:24:38.776 - objetivos_analiticos - Transformaci�n detectada 
+2026-05-02 19:24:38.776 - objetivos_analiticos - Transformaci�n est� matando los otros pasos!
+2026-05-02 19:24:39.002 - objetivos_analiticos - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-05-02 19:24:39.004 - Spoon - La transformaci�n ha finalizado!!
+2026-05-02 19:24:39.004 - objetivos_analiticos - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-05-02 19:24:39.014 - objetivos_analiticos - ERROR (version 11.0.0.0-237, build 0.0 from 2025-12-30 10.16.49 by buildguy) : Errores detectados!
+2026-05-02 19:25:37.016 - Spoon - Transformaci�n abierta.
+2026-05-02 19:25:37.016 - Spoon - Ejecutando transformaci�n [objetivos_analiticos]...
+2026-05-02 19:25:37.016 - Spoon - Se ha iniciado la ejecuci�n de la transformaci�n.
+2026-05-02 19:25:37.052 - objetivos_analiticos - Iniciado despacho de la transformaci�n [objetivos_analiticos]
+2026-05-02 19:25:37.076 - 01 - Entrada CSV.0 - Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-02 19:25:37.077 - 01 - Entrada CSV.0 - Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-02 19:25:37.079 - 02 - Ordenar filas CSV.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:25:37.089 - 01 - Entrada Tabla.0 - Finished reading query, closing connection
+2026-05-02 19:25:37.090 - 01 - Entrada Tabla.0 - Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-02 19:25:37.095 - 02 - Ordenar filas OLAP.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:25:37.399 - 03 - Unión por clave.0 - Procesamiento finalizado (I=0, O=0, R=10, W=5, U=0, E=0)
+2026-05-02 19:25:37.404 - 04 - Constante 100.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:25:37.409 - 05 - Calcular porcentajes.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:25:37.412 - 06 - Ordenar ingresos DESC.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:25:37.416 - 07 - Selecciona/Renombra valores.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:25:37.432 - 09 - Salida Fichero CSV.0 - Procesamiento finalizado (I=0, O=6, R=5, W=5, U=0, E=0)
+2026-05-02 19:25:37.433 - 08 - Insertar / Actualizar.0 - Procesamiento finalizado (I=5, O=5, R=5, W=5, U=0, E=0)
+2026-05-02 19:25:37.434 - Spoon - La transformaci�n ha finalizado!!
+2026-05-02 19:39:04.339 - Spoon - Transformaci�n abierta.
+2026-05-02 19:39:04.339 - Spoon - Ejecutando transformaci�n [objetivos_analiticos]...
+2026-05-02 19:39:04.339 - Spoon - Se ha iniciado la ejecuci�n de la transformaci�n.
+2026-05-02 19:39:04.372 - objetivos_analiticos - Iniciado despacho de la transformaci�n [objetivos_analiticos]
+2026-05-02 19:39:04.397 - 01 - Entrada CSV.0 - Header row skipped in file 'C:\Users\forza\Desktop\SM_Sistema_OLAP\PostgreSQL_ficheros\ETL-torquelab\objetivos_categorias.csv'
+2026-05-02 19:39:04.398 - 01 - Entrada CSV.0 - Procesamiento finalizado (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-05-02 19:39:04.401 - 02 - Ordenar filas CSV.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:39:04.413 - 01 - Entrada Tabla.0 - Finished reading query, closing connection
+2026-05-02 19:39:04.415 - 01 - Entrada Tabla.0 - Procesamiento finalizado (I=5, O=0, R=0, W=5, U=0, E=0)
+2026-05-02 19:39:04.416 - 02 - Ordenar filas OLAP.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:39:04.722 - 03 - Unión por clave.0 - Procesamiento finalizado (I=0, O=0, R=10, W=5, U=0, E=0)
+2026-05-02 19:39:04.725 - 04 - Constante 100.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:39:04.729 - 05 - Calcular porcentajes.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:39:04.732 - 06 - Ordenar ingresos DESC.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:39:04.736 - 07 - Selecciona/Renombra valores.0 - Procesamiento finalizado (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:39:04.746 - 08 - Insertar / Actualizar.0 - Procesamiento finalizado (I=5, O=0, R=5, W=5, U=0, E=0)
+2026-05-02 19:39:04.748 - 09 - Salida Fichero CSV.0 - Procesamiento finalizado (I=0, O=6, R=5, W=5, U=0, E=0)
+2026-05-02 19:39:04.749 - Spoon - La transformaci�n ha finalizado!!

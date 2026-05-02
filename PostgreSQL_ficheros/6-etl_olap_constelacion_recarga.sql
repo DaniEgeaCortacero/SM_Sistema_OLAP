@@ -154,20 +154,69 @@ FROM oltp_administracion.servicio s;
 
 -- =========================================================
 -- DIMENSION COMPONENTE
--- En el diagrama solo se guardan marca y tipo_producto.
+-- Carga componente con nombre y categoría asociada
 -- =========================================================
-INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_producto)
-SELECT c.id_componente, 'oltp_ventas', c.marca, c.tipo_producto
-FROM oltp_ventas.componente c;
 
-INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_producto)
-SELECT c.id_componente, 'oltp_marketing', c.marca, c.tipo_producto
-FROM oltp_marketing.componente c;
+INSERT INTO olap.dim_componente (
+    id_componente_oltp,
+    origen_sistema,
+    nombre,
+    marca,
+    tipo_producto,
+    id_categoria_dw
+)
+SELECT
+    c.id_componente,
+    'oltp_ventas',
+    c.nombre,
+    c.marca,
+    c.tipo_producto,
+    dcat.id_categoria_dw
+FROM oltp_ventas.componente c
+LEFT JOIN olap.dim_categoria_componente dcat
+    ON dcat.origen_sistema = 'oltp_ventas'
+   AND dcat.id_categoria_oltp = c.id_categoria;
 
-INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_producto)
-SELECT c.id_componente, 'oltp_administracion', c.marca, c.tipo_producto
-FROM oltp_administracion.componente c;
+INSERT INTO olap.dim_componente (
+    id_componente_oltp,
+    origen_sistema,
+    nombre,
+    marca,
+    tipo_producto,
+    id_categoria_dw
+)
+SELECT
+    c.id_componente,
+    'oltp_marketing',
+    c.nombre,
+    c.marca,
+    c.tipo_producto,
+    dcat.id_categoria_dw
+FROM oltp_marketing.componente c
+LEFT JOIN olap.dim_categoria_componente dcat
+    ON dcat.origen_sistema = 'oltp_marketing'
+   AND dcat.id_categoria_oltp = c.id_categoria;
 
+INSERT INTO olap.dim_componente (
+    id_componente_oltp,
+    origen_sistema,
+    nombre,
+    marca,
+    tipo_producto,
+    id_categoria_dw
+)
+SELECT
+    c.id_componente,
+    'oltp_administracion',
+    c.nombre,
+    c.marca,
+    c.tipo_producto,
+    dcat.id_categoria_dw
+FROM oltp_administracion.componente c
+LEFT JOIN olap.dim_categoria_componente dcat
+    ON dcat.origen_sistema = 'oltp_administracion'
+   AND dcat.id_categoria_oltp = c.id_categoria;
+   
 -- =========================================================
 -- HECHO: FACT_VENTAS
 -- precio     = subtotal de la línea
