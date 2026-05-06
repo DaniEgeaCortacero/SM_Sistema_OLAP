@@ -118,27 +118,26 @@ JOIN oltp_rrhh.departamento d
 
 -- =========================================================
 -- DIMENSION VEHICULO
--- tipo_vehiculo y version se dejan a NULL porque no aparecen de forma
--- explícita en las tablas OLTP proporcionadas.
+-- tipo_vehiculo se toma del OLTP y version se guarda como el año del vehículo.
 -- =========================================================
 INSERT INTO olap.dim_vehiculo (id_vehiculo_oltp, origen_sistema, tipo_vehiculo, marca, modelo, version)
 SELECT
     v.id_vehiculo,
     'oltp_tecnico',
-    NULL,
+    v.tipo_vehiculo,
     v.marca,
     v.modelo,
-    NULL
+    v.anio::TEXT
 FROM oltp_tecnico.vehiculo v;
 
 INSERT INTO olap.dim_vehiculo (id_vehiculo_oltp, origen_sistema, tipo_vehiculo, marca, modelo, version)
 SELECT
     v.id_vehiculo,
     'oltp_administracion',
-    NULL,
+    v.tipo_vehiculo,
     v.marca,
     v.modelo,
-    NULL
+    v.anio::TEXT
 FROM oltp_administracion.vehiculo v;
 
 -- =========================================================
@@ -154,18 +153,18 @@ FROM oltp_administracion.servicio s;
 
 -- =========================================================
 -- DIMENSION COMPONENTE
--- En el diagrama solo se guardan marca y tipo_producto.
+-- En el diagrama solo se guardan marca y tipo_componente.
 -- =========================================================
-INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_producto)
-SELECT c.id_componente, 'oltp_ventas', c.marca, c.tipo_producto
+INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_componente)
+SELECT c.id_componente, 'oltp_ventas', c.marca, c.tipo_componente
 FROM oltp_ventas.componente c;
 
-INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_producto)
-SELECT c.id_componente, 'oltp_marketing', c.marca, c.tipo_producto
+INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_componente)
+SELECT c.id_componente, 'oltp_marketing', c.marca, c.tipo_componente
 FROM oltp_marketing.componente c;
 
-INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_producto)
-SELECT c.id_componente, 'oltp_administracion', c.marca, c.tipo_producto
+INSERT INTO olap.dim_componente (id_componente_oltp, origen_sistema, marca, tipo_componente)
+SELECT c.id_componente, 'oltp_administracion', c.marca, c.tipo_componente
 FROM oltp_administracion.componente c;
 
 -- =========================================================
@@ -359,3 +358,4 @@ LEFT JOIN (
     ON comp.id_servicio = s.id_servicio;
 
 COMMIT;
+

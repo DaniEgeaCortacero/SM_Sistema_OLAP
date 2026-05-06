@@ -17,7 +17,7 @@ INSERT INTO oltp_ventas.categoria_componente (nombre_categoria, descripcion) VAL
 ('Electrónica', 'Sensores, baterías y componentes electrónicos'),
 ('Escape', 'Sistemas de escape y accesorios deportivos');
 
-INSERT INTO oltp_ventas.componente (nombre, descripcion, precio_venta, precio_compra, stock, stock_minimo, tipo_producto, marca, modelos_compatibles, id_categoria) VALUES
+INSERT INTO oltp_ventas.componente (nombre, descripcion, precio_venta, precio_compra, stock, stock_minimo, tipo_componente, marca, modelos_compatibles, id_categoria) VALUES
 ('Filtro de aceite Bosch P3254', 'Filtro de aceite para mantenimiento periódico', 18.90, 9.50, 45, 8, 'Recambio', 'Bosch', 'Seat León, VW Golf, Audi A3',
     (SELECT id_categoria FROM oltp_ventas.categoria_componente WHERE nombre_categoria = 'Motor')),
 ('Pastillas de freno delanteras Valeo 598764', 'Juego de pastillas delanteras de alto rendimiento', 64.90, 34.00, 30, 6, 'Recambio', 'Valeo', 'Renault Clio, Megane, Captur',
@@ -75,7 +75,7 @@ INSERT INTO oltp_marketing.categoria_componente (nombre_categoria, descripcion) 
 ('Electrónica', 'Productos tecnológicos y eléctricos'),
 ('Escape', 'Accesorios de alto rendimiento');
 
-INSERT INTO oltp_marketing.componente (nombre, descripcion, precio_venta, precio_compra, stock, stock_minimo, tipo_producto, marca, modelos_compatibles, id_categoria) VALUES
+INSERT INTO oltp_marketing.componente (nombre, descripcion, precio_venta, precio_compra, stock, stock_minimo, tipo_componente, marca, modelos_compatibles, id_categoria) VALUES
 ('Kit de admisión K&N 57S', 'Kit de admisión directa para mejora de respuesta', 289.00, 190.00, 10, 2, 'Tuning', 'K&N', 'VW Golf GTI, Seat León Cupra',
     (SELECT id_categoria FROM oltp_marketing.categoria_componente WHERE nombre_categoria = 'Motor')),
 ('Discos de freno Brembo Max', 'Discos ventilados para conducción deportiva', 199.00, 132.00, 16, 4, 'Recambio', 'Brembo', 'Audi A4, A5, VW Passat',
@@ -119,12 +119,12 @@ INSERT INTO oltp_marketing.detalle_pedido (cantidad, precio_unitario, subtotal, 
 -- =========================================================
 -- INSERTS OLTP_TECNICO
 -- =========================================================
-INSERT INTO oltp_tecnico.vehiculo (matricula, marca, modelo, anio, num_bastidor) VALUES
-('1234KLM', 'Seat', 'León FR', 2020, 'VSSZZZKLZLR012345'),
-('2345MNP', 'Volkswagen', 'Golf GTI', 2019, 'WVWZZZAUZKW123456'),
-('3456PQR', 'BMW', '320d', 2021, 'WBA8C11050FK23456'),
-('4567STU', 'Audi', 'A3 Sportback', 2018, 'WAUZZZ8V0JA345678'),
-('5678VWX', 'Ford', 'Focus ST-Line', 2022, 'WF0NXXGCHNCD45678');
+INSERT INTO oltp_tecnico.vehiculo (matricula, tipo_vehiculo, marca, modelo, anio, num_bastidor) VALUES
+('1234KLM', 'Compacto', 'Seat', 'León FR', 2020, 'VSSZZZKLZLR012345'),
+('2345MNP', 'Compacto', 'Volkswagen', 'Golf GTI', 2019, 'WVWZZZAUZKW123456'),
+('3456PQR', 'Sedan', 'BMW', '320d', 2021, 'WBA8C11050FK23456'),
+('4567STU', 'Compacto', 'Audi', 'A3 Sportback', 2018, 'WAUZZZ8V0JA345678'),
+('5678VWX', 'Compacto', 'Ford', 'Focus ST-Line', 2022, 'WF0NXXGCHNCD45678');
 
 INSERT INTO oltp_tecnico.cita (fecha, hora, motivo, estado, id_vehiculo) VALUES
 ('2026-03-25', '09:00:00', 'Cambio de aceite y filtros', 'Completada',
@@ -169,7 +169,7 @@ INSERT INTO oltp_tecnico.categoria_componente (nombre_categoria, descripcion) VA
 ('Electrónica', 'Baterías, sensores y diagnosis'),
 ('Escape', 'Sistemas de escape para taller');
 
-INSERT INTO oltp_tecnico.componente (nombre, descripcion, precio_venta, precio_compra, stock, stock_minimo, tipo_producto, marca, modelos_compatibles, id_categoria) VALUES
+INSERT INTO oltp_tecnico.componente (nombre, descripcion, precio_venta, precio_compra, stock, stock_minimo, tipo_componente, marca, modelos_compatibles, id_categoria) VALUES
 ('Aceite 5W30 Castrol 5L', 'Aceite sintético para mantenimientos', 42.00, 24.00, 25, 5, 'Consumible', 'Castrol', 'Universal',
     (SELECT id_categoria FROM oltp_tecnico.categoria_componente WHERE nombre_categoria = 'Motor')),
 ('Juego de pastillas Brembo P85020', 'Pastillas delanteras para turismo', 69.90, 38.00, 20, 4, 'Recambio', 'Brembo', 'VW Golf, Audi A3',
@@ -268,16 +268,16 @@ INSERT INTO oltp_administracion.empleado (nombre, apellidos, dni, telefono, emai
 ('Noelia', 'Rubio Campos', '15151515X', '666700444', 'noelia.rubio@torquelab.com', 'Responsable compras', 1900.00, '2019-11-21'),
 ('David', 'Herrero Ruiz', '16161616Y', '666700555', 'david.herrero@torquelab.com', 'Mecánico', 1750.00, '2023-04-03');
 
-INSERT INTO oltp_administracion.vehiculo (matricula, marca, modelo, anio, num_bastidor, id_cliente) VALUES
-('6789BCD', 'Seat', 'Ibiza', 2019, 'VSSZZZKJZKR567890',
+INSERT INTO oltp_administracion.vehiculo (matricula, tipo_vehiculo, marca, modelo, anio, num_bastidor, id_cliente) VALUES
+('6789BCD', 'Compacto', 'Seat', 'Ibiza', 2019, 'VSSZZZKJZKR567890',
     (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '66666666N')),
-('7890CDF', 'Volkswagen', 'Polo', 2020, 'WVWZZZAWZLU678901',
+('7890CDF', 'Compacto', 'Volkswagen', 'Polo', 2020, 'WVWZZZAWZLU678901',
     (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '77777777P')),
-('8901DFG', 'Peugeot', '308', 2021, 'VF3LPHNSMMS789012',
+('8901DFG', 'Compacto', 'Peugeot', '308', 2021, 'VF3LPHNSMMS789012',
     (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '88888888Q')),
-('9012FGH', 'Audi', 'A1', 2018, 'WAUZZZGB0JN890123',
+('9012FGH', 'Compacto', 'Audi', 'A1', 2018, 'WAUZZZGB0JN890123',
     (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '99999999R')),
-('0123GHI', 'BMW', '118i', 2022, 'WBA7K11090V901234',
+('0123GHI', 'Compacto', 'BMW', '118i', 2022, 'WBA7K11090V901234',
     (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '10101010S'));
 
 INSERT INTO oltp_administracion.servicio (fecha_apertura, fecha_cierre, tipo, descripcion, estado, kilometraje, coste, id_vehiculo, id_cliente, id_empleado) VALUES
@@ -321,7 +321,7 @@ INSERT INTO oltp_administracion.orden_compra (fecha, estado, total, id_proveedor
 ('2026-03-12 11:10:00', 'Pendiente', 820.00,
     (SELECT id_proveedor FROM oltp_administracion.proveedor WHERE cif = 'E56789012'));
 
-INSERT INTO oltp_administracion.componente (nombre, descripcion, precio_venta, precio_compra, stock, stock_minimo, tipo_producto, marca, modelos_compatibles, id_proveedor, id_categoria) VALUES
+INSERT INTO oltp_administracion.componente (nombre, descripcion, precio_venta, precio_compra, stock, stock_minimo, tipo_componente, marca, modelos_compatibles, id_proveedor, id_categoria) VALUES
 ('Filtro de aire Bosch S3491', 'Filtro de aire para mantenimiento de motor', 24.00, 12.00, 40, 8, 'Recambio', 'Bosch', 'Seat Ibiza, VW Polo, Skoda Fabia',
     (SELECT id_proveedor FROM oltp_administracion.proveedor WHERE cif = 'A12345678'),
     (SELECT id_categoria FROM oltp_administracion.categoria_componente WHERE nombre_categoria = 'Motor')),

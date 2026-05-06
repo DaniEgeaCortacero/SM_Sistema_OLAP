@@ -32,7 +32,7 @@ CREATE INDEX IF NOT EXISTS idx_dim_categoria_componente_nombre
 -- =========================================================
 -- 2) MODIFICAR DIM_COMPONENTE
 -- dim_componente ya existía con:
---   id_componente_dw, id_componente_oltp, origen_sistema, marca, tipo_producto
+--   id_componente_dw, id_componente_oltp, origen_sistema, marca, tipo_componente
 -- Se añaden nombre e id_categoria_dw
 -- =========================================================
 ALTER TABLE olap.dim_componente
@@ -120,7 +120,7 @@ INSERT INTO olap.dim_componente (
     origen_sistema,
     nombre,
     marca,
-    tipo_producto,
+    tipo_componente,
     id_categoria_dw
 )
 SELECT
@@ -128,7 +128,7 @@ SELECT
     'oltp_ventas',
     c.nombre,
     c.marca,
-    c.tipo_producto,
+    c.tipo_componente,
     dc.id_categoria_dw
 FROM oltp_ventas.componente c
 LEFT JOIN olap.dim_categoria_componente dc
@@ -142,7 +142,7 @@ SELECT
     'oltp_marketing',
     c.nombre,
     c.marca,
-    c.tipo_producto,
+    c.tipo_componente,
     dc.id_categoria_dw
 FROM oltp_marketing.componente c
 LEFT JOIN olap.dim_categoria_componente dc
@@ -156,7 +156,7 @@ SELECT
     'oltp_tecnico',
     c.nombre,
     c.marca,
-    c.tipo_producto,
+    c.tipo_componente,
     dc.id_categoria_dw
 FROM oltp_tecnico.componente c
 LEFT JOIN olap.dim_categoria_componente dc
@@ -170,7 +170,7 @@ SELECT
     'oltp_administracion',
     c.nombre,
     c.marca,
-    c.tipo_producto,
+    c.tipo_componente,
     dc.id_categoria_dw
 FROM oltp_administracion.componente c
 LEFT JOIN olap.dim_categoria_componente dc

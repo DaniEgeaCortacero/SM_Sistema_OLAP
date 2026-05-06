@@ -118,27 +118,26 @@ JOIN oltp_rrhh.departamento d
 
 -- =========================================================
 -- DIMENSION VEHICULO
--- tipo_vehiculo y version se dejan a NULL porque no aparecen de forma
--- explícita en las tablas OLTP proporcionadas.
+-- tipo_vehiculo se toma del OLTP y version se guarda como el año del vehículo.
 -- =========================================================
 INSERT INTO olap.dim_vehiculo (id_vehiculo_oltp, origen_sistema, tipo_vehiculo, marca, modelo, version)
 SELECT
     v.id_vehiculo,
     'oltp_tecnico',
-    NULL,
+    v.tipo_vehiculo,
     v.marca,
     v.modelo,
-    NULL
+    v.anio::TEXT
 FROM oltp_tecnico.vehiculo v;
 
 INSERT INTO olap.dim_vehiculo (id_vehiculo_oltp, origen_sistema, tipo_vehiculo, marca, modelo, version)
 SELECT
     v.id_vehiculo,
     'oltp_administracion',
-    NULL,
+    v.tipo_vehiculo,
     v.marca,
     v.modelo,
-    NULL
+    v.anio::TEXT
 FROM oltp_administracion.vehiculo v;
 
 -- =========================================================
@@ -162,7 +161,7 @@ INSERT INTO olap.dim_componente (
     origen_sistema,
     nombre,
     marca,
-    tipo_producto,
+    tipo_componente,
     id_categoria_dw
 )
 SELECT
@@ -170,7 +169,7 @@ SELECT
     'oltp_ventas',
     c.nombre,
     c.marca,
-    c.tipo_producto,
+    c.tipo_componente,
     dcat.id_categoria_dw
 FROM oltp_ventas.componente c
 LEFT JOIN olap.dim_categoria_componente dcat
@@ -182,7 +181,7 @@ INSERT INTO olap.dim_componente (
     origen_sistema,
     nombre,
     marca,
-    tipo_producto,
+    tipo_componente,
     id_categoria_dw
 )
 SELECT
@@ -190,7 +189,7 @@ SELECT
     'oltp_marketing',
     c.nombre,
     c.marca,
-    c.tipo_producto,
+    c.tipo_componente,
     dcat.id_categoria_dw
 FROM oltp_marketing.componente c
 LEFT JOIN olap.dim_categoria_componente dcat
@@ -202,7 +201,7 @@ INSERT INTO olap.dim_componente (
     origen_sistema,
     nombre,
     marca,
-    tipo_producto,
+    tipo_componente,
     id_categoria_dw
 )
 SELECT
@@ -210,7 +209,7 @@ SELECT
     'oltp_administracion',
     c.nombre,
     c.marca,
-    c.tipo_producto,
+    c.tipo_componente,
     dcat.id_categoria_dw
 FROM oltp_administracion.componente c
 LEFT JOIN olap.dim_categoria_componente dcat
@@ -408,3 +407,4 @@ LEFT JOIN (
     ON comp.id_servicio = s.id_servicio;
 
 COMMIT;
+

@@ -69,7 +69,7 @@ CREATE TABLE olap.dim_componente (
     id_componente_oltp  BIGINT,
     origen_sistema      VARCHAR(50),
     marca               VARCHAR(80),
-    tipo_producto       VARCHAR(80)
+    tipo_componente       VARCHAR(80)
 );
 
 -- =========================================================
