@@ -13,6 +13,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./init:/docker-entrypoint-initdb.d
       - ./PostgreSQL_ficheros:/imports
+
   pgadmin:
     image: dpage/pgadmin4:latest
     container_name: pgadmin_sm
@@ -28,5 +29,19 @@ services:
     volumes:
       - ./pgadmin/servers.json:/pgadmin4/servers.json
 
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase_sm
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - metabase_data:/metabase-data
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+    depends_on:
+      - postgres
+
 volumes:
   postgres_data:
+  metabase_data:
