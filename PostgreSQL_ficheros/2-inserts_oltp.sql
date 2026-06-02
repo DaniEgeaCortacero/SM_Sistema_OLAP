@@ -8,7 +8,29 @@ INSERT INTO oltp_ventas.cliente (dni, nombre, apellidos, email, telefono, pais, 
 ('23456789B', 'Lucía', 'Martín Pérez', 'lucia.martin@gmail.com', '600123222', 'España', 'Madrid', 'Madrid', 'Madrid', 'Avenida de América 52'),
 ('34567890C', 'Javier', 'López Sánchez', 'javier.lopez@gmail.com', '600123333', 'España', 'Comunidad Valenciana', 'Valencia', 'Valencia', 'Calle Colón 8'),
 ('45678901D', 'Marta', 'Fernández Díaz', 'marta.fernandez@gmail.com', '600123444', 'España', 'Cataluña', 'Barcelona', 'Barcelona', 'Passeig de Gràcia 101'),
-('56789012E', 'Álvaro', 'Navarro Torres', 'alvaro.navarro@gmail.com', '600123555', 'España', 'País Vasco', 'Vizcaya', 'Bilbao', 'Gran Vía 23');
+('56789012E', 'Álvaro', 'Navarro Torres', 'alvaro.navarro@gmail.com', '600123555', 'España', 'País Vasco', 'Vizcaya', 'Bilbao', 'Gran Vía 23'),
+('V00000001', 'Mario', 'Vega Salas', 'mario.1.ventas@demo.com', '670000001', 'España', 'Andalucía', 'Granada', 'Granada', 'Calle Extra Ventas 1'),
+('V00000002', 'Clara', 'Reyes Molina', 'clara.2.ventas@demo.com', '670000002', 'España', 'Andalucía', 'Córdoba', 'Córdoba', 'Calle Extra Ventas 2'),
+('V00000003', 'Hugo', 'Serrano Vidal', 'hugo.3.ventas@demo.com', '670000003', 'España', 'Madrid', 'Madrid', 'Alcalá de Henares', 'Calle Extra Ventas 3'),
+('V00000004', 'Paula', 'Cano Ríos', 'paula.4.ventas@demo.com', '670000004', 'España', 'Cataluña', 'Girona', 'Girona', 'Calle Extra Ventas 4'),
+('V00000005', 'Daniel', 'Giménez Ortega', 'daniel.5.ventas@demo.com', '670000005', 'España', 'Cataluña', 'Tarragona', 'Tarragona', 'Calle Extra Ventas 5'),
+('V00000006', 'Irene', 'Campos Martín', 'irene.6.ventas@demo.com', '670000006', 'España', 'Comunidad Valenciana', 'Castellón', 'Castellón', 'Calle Extra Ventas 6'),
+('V00000007', 'Andrés', 'Mora Pastor', 'andres.7.ventas@demo.com', '670000007', 'España', 'Galicia', 'Pontevedra', 'Pontevedra', 'Calle Extra Ventas 7'),
+('V00000008', 'Sara', 'Benítez León', 'sara.8.ventas@demo.com', '670000008', 'España', 'Galicia', 'Ourense', 'Ourense', 'Calle Extra Ventas 8'),
+('V00000009', 'Tomás', 'Ramos Gil', 'tomas.9.ventas@demo.com', '670000009', 'España', 'Aragón', 'Huesca', 'Huesca', 'Calle Extra Ventas 9'),
+('V00000010', 'Celia', 'Navas Rubio', 'celia.10.ventas@demo.com', '670000010', 'España', 'Castilla y León', 'León', 'León', 'Calle Extra Ventas 10'),
+('V00000011', 'Rubén', 'Delgado Peña', 'ruben.11.ventas@demo.com', '670000011', 'España', 'País Vasco', 'Guipúzcoa', 'San Sebastián', 'Calle Extra Ventas 11'),
+('V00000012', 'Alicia', 'Fuentes Vega', 'alicia.12.ventas@demo.com', '670000012', 'España', 'Navarra', 'Navarra', 'Pamplona', 'Calle Extra Ventas 12'),
+('V00000013', 'Marcos', 'Cortés Soto', 'marcos.13.ventas@demo.com', '670000013', 'España', 'Cantabria', 'Cantabria', 'Santander', 'Calle Extra Ventas 13'),
+('V00000014', 'Julia', 'Méndez Navarro', 'julia.14.ventas@demo.com', '670000014', 'España', 'Asturias', 'Asturias', 'Oviedo', 'Calle Extra Ventas 14'),
+('V00000015', 'Víctor', 'Pardo Luna', 'victor.15.ventas@demo.com', '670000015', 'España', 'La Rioja', 'La Rioja', 'Logroño', 'Calle Extra Ventas 15'),
+('V00000016', 'Noa', 'Herranz Iglesias', 'noa.16.ventas@demo.com', '670000016', 'España', 'Extremadura', 'Badajoz', 'Badajoz', 'Calle Extra Ventas 16'),
+('V00000017', 'Óscar', 'Sáez Romero', 'oscar.17.ventas@demo.com', '670000017', 'España', 'Extremadura', 'Cáceres', 'Cáceres', 'Calle Extra Ventas 17'),
+('V00000018', 'Natalia', 'Blanco Torres', 'natalia.18.ventas@demo.com', '670000018', 'España', 'Castilla-La Mancha', 'Toledo', 'Toledo', 'Calle Extra Ventas 18'),
+('V00000019', 'Adrián', 'Soler Núñez', 'adrian.19.ventas@demo.com', '670000019', 'España', 'Castilla-La Mancha', 'Albacete', 'Albacete', 'Calle Extra Ventas 19'),
+('V00000020', 'Eva', 'Calvo Medina', 'eva.20.ventas@demo.com', '670000020', 'España', 'Baleares', 'Illes Balears', 'Palma', 'Calle Extra Ventas 20');
+
+
 
 INSERT INTO oltp_ventas.categoria_componente (nombre_categoria, descripcion) VALUES
 ('Motor', 'Piezas relacionadas con el sistema de motor y admisión'),
@@ -29,6 +51,8 @@ INSERT INTO oltp_ventas.componente (nombre, descripcion, precio_venta, precio_co
 ('Escape deportivo Akrapovic Slip-On', 'Escape deportivo homologado de acero inoxidable', 599.00, 410.00, 6, 1, 'Tuning', 'Akrapovic', 'BMW M2, Toyota GR86, VW Golf GTI',
     (SELECT id_categoria FROM oltp_ventas.categoria_componente WHERE nombre_categoria = 'Escape'));
 
+
+
 INSERT INTO oltp_ventas.pedido (fecha_pedido, estado, total, metodo_pago, direccion_envio, id_cliente) VALUES
 ('2026-03-10 10:15:00', 'Entregado', 37.80, 'Tarjeta', 'Calle San Jacinto 14, Sevilla',
     (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = '12345678A')),
@@ -39,7 +63,29 @@ INSERT INTO oltp_ventas.pedido (fecha_pedido, estado, total, metodo_pago, direcc
 ('2026-03-18 09:10:00', 'Entregado', 129.90, 'Tarjeta', 'Passeig de Gràcia 101, Barcelona',
     (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = '45678901D')),
 ('2026-03-20 18:05:00', 'Enviado', 599.00, 'Financiación', 'Gran Vía 23, Bilbao',
-    (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = '56789012E'));
+    (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = '56789012E')),
+('2024-01-12 10:05:00', 'Enviado', 18.90, 'PayPal', 'Dirección extra ventas 1', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000001')),
+('2024-02-18 12:30:00', 'Preparación', 129.80, 'Transferencia', 'Dirección extra ventas 2', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000002')),
+('2024-03-22 16:45:00', 'Entregado', 357.00, 'Bizum', 'Dirección extra ventas 3', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000003')),
+('2024-04-09 09:20:00', 'Entregado', 129.90, 'Financiación', 'Dirección extra ventas 4', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000004')),
+('2024-05-15 17:10:00', 'Entregado', 1198.00, 'Tarjeta', 'Dirección extra ventas 5', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000005')),
+('2024-06-27 11:35:00', 'Enviado', 18.90, 'PayPal', 'Dirección extra ventas 6', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000006')),
+('2024-07-03 13:25:00', 'Preparación', 129.80, 'Transferencia', 'Dirección extra ventas 7', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000007')),
+('2024-08-19 18:40:00', 'Entregado', 357.00, 'Bizum', 'Dirección extra ventas 8', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000008')),
+('2024-09-24 08:50:00', 'Entregado', 129.90, 'Financiación', 'Dirección extra ventas 9', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000009')),
+('2024-10-11 15:15:00', 'Entregado', 1198.00, 'Tarjeta', 'Dirección extra ventas 10', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000010')),
+('2024-11-30 10:45:00', 'Enviado', 18.90, 'PayPal', 'Dirección extra ventas 11', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000011')),
+('2024-12-06 19:05:00', 'Preparación', 129.80, 'Transferencia', 'Dirección extra ventas 12', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000012')),
+('2025-01-17 09:55:00', 'Entregado', 357.00, 'Bizum', 'Dirección extra ventas 13', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000013')),
+('2025-02-25 14:10:00', 'Entregado', 129.90, 'Financiación', 'Dirección extra ventas 14', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000014')),
+('2025-03-13 12:20:00', 'Entregado', 1198.00, 'Tarjeta', 'Dirección extra ventas 15', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000015')),
+('2025-04-28 16:00:00', 'Enviado', 18.90, 'PayPal', 'Dirección extra ventas 16', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000016')),
+('2025-05-09 11:05:00', 'Preparación', 129.80, 'Transferencia', 'Dirección extra ventas 17', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000017')),
+('2025-06-21 13:45:00', 'Entregado', 357.00, 'Bizum', 'Dirección extra ventas 18', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000018')),
+('2025-07-14 17:25:00', 'Entregado', 129.90, 'Financiación', 'Dirección extra ventas 19', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000019')),
+('2026-01-23 10:30:00', 'Entregado', 1198.00, 'Tarjeta', 'Dirección extra ventas 20', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V00000020'));
+
+
 
 INSERT INTO oltp_ventas.detalle_pedido (cantidad, precio_unitario, subtotal, id_pedido, id_componente) VALUES
 (2, 18.90, 37.80,
@@ -56,7 +102,30 @@ INSERT INTO oltp_ventas.detalle_pedido (cantidad, precio_unitario, subtotal, id_
     (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
 (1, 599.00, 599.00,
     (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-03-20 18:05:00'),
-    (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On'));
+    (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On')),
+(1, 18.90, 18.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-01-12 10:05:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Filtro de aceite Bosch P3254')),
+(2, 64.90, 129.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-02-18 12:30:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Pastillas de freno delanteras Valeo 598764')),
+(3, 119.00, 357.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-03-22 16:45:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Amortiguador trasero Monroe OESpectrum')),
+(1, 129.90, 129.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-04-09 09:20:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
+(2, 599.00, 1198.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-05-15 17:10:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On')),
+(1, 18.90, 18.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-06-27 11:35:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Filtro de aceite Bosch P3254')),
+(2, 64.90, 129.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-07-03 13:25:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Pastillas de freno delanteras Valeo 598764')),
+(3, 119.00, 357.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-08-19 18:40:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Amortiguador trasero Monroe OESpectrum')),
+(1, 129.90, 129.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-09-24 08:50:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
+(2, 599.00, 1198.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-10-11 15:15:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On')),
+(1, 18.90, 18.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-11-30 10:45:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Filtro de aceite Bosch P3254')),
+(2, 64.90, 129.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2024-12-06 19:05:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Pastillas de freno delanteras Valeo 598764')),
+(3, 119.00, 357.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2025-01-17 09:55:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Amortiguador trasero Monroe OESpectrum')),
+(1, 129.90, 129.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2025-02-25 14:10:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
+(2, 599.00, 1198.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2025-03-13 12:20:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On')),
+(1, 18.90, 18.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2025-04-28 16:00:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Filtro de aceite Bosch P3254')),
+(2, 64.90, 129.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2025-05-09 11:05:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Pastillas de freno delanteras Valeo 598764')),
+(3, 119.00, 357.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2025-06-21 13:45:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Amortiguador trasero Monroe OESpectrum')),
+(1, 129.90, 129.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2025-07-14 17:25:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
+(2, 599.00, 1198.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-01-23 10:30:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On'));
+
+
+
 
 -- =========================================================
 -- INSERTS OLTP_MARKETING
@@ -66,7 +135,28 @@ INSERT INTO oltp_marketing.cliente (dni, nombre, apellidos, email, telefono, pai
 ('78901234G', 'Elena', 'Prieto Ramos', 'elena.prieto@gmail.com', '611200222', 'España', 'Galicia', 'A Coruña', 'A Coruña', 'Rúa Real 15'),
 ('89012345H', 'Pablo', 'Castro Gil', 'pablo.castro@gmail.com', '611200333', 'España', 'Aragón', 'Zaragoza', 'Zaragoza', 'Paseo Independencia 44'),
 ('90123456I', 'Nuria', 'Ortega León', 'nuria.ortega@gmail.com', '611200444', 'España', 'Murcia', 'Murcia', 'Murcia', 'Gran Vía Escultor Salzillo 7'),
-('01234567J', 'Diego', 'Santos Vega', 'diego.santos@gmail.com', '611200555', 'España', 'Castilla y León', 'Valladolid', 'Valladolid', 'Calle Santiago 31');
+('01234567J', 'Diego', 'Santos Vega', 'diego.santos@gmail.com', '611200555', 'España', 'Castilla y León', 'Valladolid', 'Valladolid', 'Calle Santiago 31'),
+('M00000001', 'Mario', 'Vega Salas', 'mario.1.marketing@demo.com', '671000001', 'España', 'Baleares', 'Illes Balears', 'Palma', 'Avenida Extra Marketing 1'),
+('M00000002', 'Clara', 'Reyes Molina', 'clara.2.marketing@demo.com', '671000002', 'España', 'Castilla-La Mancha', 'Albacete', 'Albacete', 'Avenida Extra Marketing 2'),
+('M00000003', 'Hugo', 'Serrano Vidal', 'hugo.3.marketing@demo.com', '671000003', 'España', 'Castilla-La Mancha', 'Toledo', 'Toledo', 'Avenida Extra Marketing 3'),
+('M00000004', 'Paula', 'Cano Ríos', 'paula.4.marketing@demo.com', '671000004', 'España', 'Extremadura', 'Cáceres', 'Cáceres', 'Avenida Extra Marketing 4'),
+('M00000005', 'Daniel', 'Giménez Ortega', 'daniel.5.marketing@demo.com', '671000005', 'España', 'Extremadura', 'Badajoz', 'Badajoz', 'Avenida Extra Marketing 5'),
+('M00000006', 'Irene', 'Campos Martín', 'irene.6.marketing@demo.com', '671000006', 'España', 'La Rioja', 'La Rioja', 'Logroño', 'Avenida Extra Marketing 6'),
+('M00000007', 'Andrés', 'Mora Pastor', 'andres.7.marketing@demo.com', '671000007', 'España', 'Asturias', 'Asturias', 'Oviedo', 'Avenida Extra Marketing 7'),
+('M00000008', 'Sara', 'Benítez León', 'sara.8.marketing@demo.com', '671000008', 'España', 'Cantabria', 'Cantabria', 'Santander', 'Avenida Extra Marketing 8'),
+('M00000009', 'Tomás', 'Ramos Gil', 'tomas.9.marketing@demo.com', '671000009', 'España', 'Navarra', 'Navarra', 'Pamplona', 'Avenida Extra Marketing 9'),
+('M00000010', 'Celia', 'Navas Rubio', 'celia.10.marketing@demo.com', '671000010', 'España', 'País Vasco', 'Guipúzcoa', 'San Sebastián', 'Avenida Extra Marketing 10'),
+('M00000011', 'Rubén', 'Delgado Peña', 'ruben.11.marketing@demo.com', '671000011', 'España', 'Castilla y León', 'León', 'León', 'Avenida Extra Marketing 11'),
+('M00000012', 'Alicia', 'Fuentes Vega', 'alicia.12.marketing@demo.com', '671000012', 'España', 'Aragón', 'Huesca', 'Huesca', 'Avenida Extra Marketing 12'),
+('M00000013', 'Marcos', 'Cortés Soto', 'marcos.13.marketing@demo.com', '671000013', 'España', 'Galicia', 'Ourense', 'Ourense', 'Avenida Extra Marketing 13'),
+('M00000014', 'Julia', 'Méndez Navarro', 'julia.14.marketing@demo.com', '671000014', 'España', 'Galicia', 'Pontevedra', 'Pontevedra', 'Avenida Extra Marketing 14'),
+('M00000015', 'Víctor', 'Pardo Luna', 'victor.15.marketing@demo.com', '671000015', 'España', 'Comunidad Valenciana', 'Castellón', 'Castellón', 'Avenida Extra Marketing 15'),
+('M00000016', 'Noa', 'Herranz Iglesias', 'noa.16.marketing@demo.com', '671000016', 'España', 'Cataluña', 'Tarragona', 'Tarragona', 'Avenida Extra Marketing 16'),
+('M00000017', 'Óscar', 'Sáez Romero', 'oscar.17.marketing@demo.com', '671000017', 'España', 'Cataluña', 'Girona', 'Girona', 'Avenida Extra Marketing 17'),
+('M00000018', 'Natalia', 'Blanco Torres', 'natalia.18.marketing@demo.com', '671000018', 'España', 'Madrid', 'Madrid', 'Alcalá de Henares', 'Avenida Extra Marketing 18'),
+('M00000019', 'Adrián', 'Soler Núñez', 'adrian.19.marketing@demo.com', '671000019', 'España', 'Andalucía', 'Córdoba', 'Córdoba', 'Avenida Extra Marketing 19'),
+('M00000020', 'Eva', 'Calvo Medina', 'eva.20.marketing@demo.com', '671000020', 'España', 'Andalucía', 'Granada', 'Granada', 'Avenida Extra Marketing 20');
+
 
 INSERT INTO oltp_marketing.categoria_componente (nombre_categoria, descripcion) VALUES
 ('Motor', 'Productos destacados del área de motor'),
@@ -97,7 +187,28 @@ INSERT INTO oltp_marketing.pedido (fecha_pedido, estado, total, metodo_pago, dir
 ('2026-03-17 10:00:00', 'Preparación', 49.90, 'Transferencia', 'Gran Vía Escultor Salzillo 7, Murcia',
     (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = '90123456I')),
 ('2026-03-21 19:25:00', 'Enviado', 89.90, 'Tarjeta', 'Calle Santiago 31, Valladolid',
-    (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = '01234567J'));
+    (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = '01234567J')),
+('2024-01-15 10:05:00', 'Preparación', 289.00, 'Bizum', 'Dirección extra marketing 1', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000001')),
+('2024-02-21 12:30:00', 'Entregado', 199.00, 'Financiación', 'Dirección extra marketing 2', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000002')),
+('2024-03-25 16:45:00', 'Entregado', 490.00, 'Tarjeta', 'Dirección extra marketing 3', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000003')),
+('2024-04-12 09:20:00', 'Entregado', 149.70, 'PayPal', 'Dirección extra marketing 4', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000004')),
+('2024-05-18 17:10:00', 'Enviado', 179.80, 'Transferencia', 'Dirección extra marketing 5', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000005')),
+('2024-06-30 11:35:00', 'Preparación', 289.00, 'Bizum', 'Dirección extra marketing 6', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000006')),
+('2024-07-06 13:25:00', 'Entregado', 199.00, 'Financiación', 'Dirección extra marketing 7', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000007')),
+('2024-08-22 18:40:00', 'Entregado', 490.00, 'Tarjeta', 'Dirección extra marketing 8', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000008')),
+('2024-09-27 08:50:00', 'Entregado', 149.70, 'PayPal', 'Dirección extra marketing 9', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000009')),
+('2024-10-14 15:15:00', 'Enviado', 179.80, 'Transferencia', 'Dirección extra marketing 10', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000010')),
+('2024-12-03 10:45:00', 'Preparación', 289.00, 'Bizum', 'Dirección extra marketing 11', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000011')),
+('2024-12-09 19:05:00', 'Entregado', 199.00, 'Financiación', 'Dirección extra marketing 12', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000012')),
+('2025-01-20 09:55:00', 'Entregado', 490.00, 'Tarjeta', 'Dirección extra marketing 13', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000013')),
+('2025-02-28 14:10:00', 'Entregado', 149.70, 'PayPal', 'Dirección extra marketing 14', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000014')),
+('2025-03-16 12:20:00', 'Enviado', 179.80, 'Transferencia', 'Dirección extra marketing 15', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000015')),
+('2025-05-01 16:00:00', 'Preparación', 289.00, 'Bizum', 'Dirección extra marketing 16', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000016')),
+('2025-05-12 11:05:00', 'Entregado', 199.00, 'Financiación', 'Dirección extra marketing 17', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000017')),
+('2025-06-24 13:45:00', 'Entregado', 490.00, 'Tarjeta', 'Dirección extra marketing 18', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000018')),
+('2025-07-17 17:25:00', 'Entregado', 149.70, 'PayPal', 'Dirección extra marketing 19', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000019')),
+('2026-01-26 10:30:00', 'Enviado', 179.80, 'Transferencia', 'Dirección extra marketing 20', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M00000020'));
+
 
 INSERT INTO oltp_marketing.detalle_pedido (cantidad, precio_unitario, subtotal, id_pedido, id_componente) VALUES
 (1, 289.00, 289.00,
@@ -114,7 +225,28 @@ INSERT INTO oltp_marketing.detalle_pedido (cantidad, precio_unitario, subtotal, 
     (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
 (1, 89.90, 89.90,
     (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-03-21 19:25:00'),
-    (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus'));
+    (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus')),
+(1, 289.00, 289.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-01-15 10:05:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Kit de admisión K&N 57S')),
+(1, 199.00, 199.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-02-21 12:30:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Discos de freno Brembo Max')),
+(2, 245.00, 490.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-03-25 16:45:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Muelles deportivos Eibach Pro-Kit')),
+(3, 49.90, 149.70, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-04-12 09:20:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
+(2, 89.90, 179.80, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-05-18 17:10:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus')),
+(1, 289.00, 289.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-06-30 11:35:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Kit de admisión K&N 57S')),
+(1, 199.00, 199.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-07-06 13:25:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Discos de freno Brembo Max')),
+(2, 245.00, 490.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-08-22 18:40:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Muelles deportivos Eibach Pro-Kit')),
+(3, 49.90, 149.70, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-09-27 08:50:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
+(2, 89.90, 179.80, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-10-14 15:15:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus')),
+(1, 289.00, 289.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-12-03 10:45:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Kit de admisión K&N 57S')),
+(1, 199.00, 199.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2024-12-09 19:05:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Discos de freno Brembo Max')),
+(2, 245.00, 490.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2025-01-20 09:55:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Muelles deportivos Eibach Pro-Kit')),
+(3, 49.90, 149.70, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2025-02-28 14:10:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
+(2, 89.90, 179.80, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2025-03-16 12:20:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus')),
+(1, 289.00, 289.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2025-05-01 16:00:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Kit de admisión K&N 57S')),
+(1, 199.00, 199.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2025-05-12 11:05:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Discos de freno Brembo Max')),
+(2, 245.00, 490.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2025-06-24 13:45:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Muelles deportivos Eibach Pro-Kit')),
+(3, 49.90, 149.70, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2025-07-17 17:25:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
+(2, 89.90, 179.80, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-01-26 10:30:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus'));
+
 
 -- =========================================================
 -- INSERTS OLTP_TECNICO
@@ -124,7 +256,30 @@ INSERT INTO oltp_tecnico.vehiculo (matricula, tipo_vehiculo, marca, modelo, anio
 ('2345MNP', 'Compacto', 'Volkswagen', 'Golf GTI', 2019, 'WVWZZZAUZKW123456'),
 ('3456PQR', 'Sedan', 'BMW', '320d', 2021, 'WBA8C11050FK23456'),
 ('4567STU', 'Compacto', 'Audi', 'A3 Sportback', 2018, 'WAUZZZ8V0JA345678'),
-('5678VWX', 'Compacto', 'Ford', 'Focus ST-Line', 2022, 'WF0NXXGCHNCD45678');
+('5678VWX', 'Compacto', 'Ford', 'Focus ST-Line', 2022, 'WF0NXXGCHNCD45678'),
+('7001TEX', 'SUV', 'Toyota', 'RAV4', 2021, 'TLBTECHX0000000001'),
+('7002TEX', 'SUV', 'Nissan', 'Qashqai', 2020, 'TLBTECHX0000000002'),
+('7003TEX', 'Sedan', 'Mercedes', 'Clase C', 2019, 'TLBTECHX0000000003'),
+('7004TEX', 'Deportivo', 'Toyota', 'GR86', 2022, 'TLBTECHX0000000004'),
+('7005TEX', 'Compacto', 'Hyundai', 'i30 N', 2021, 'TLBTECHX0000000005'),
+('7006TEX', 'SUV', 'Kia', 'Sportage', 2023, 'TLBTECHX0000000006'),
+('7007TEX', 'Sedan', 'Audi', 'A4', 2020, 'TLBTECHX0000000007'),
+('7008TEX', 'Compacto', 'Renault', 'Megane RS', 2018, 'TLBTECHX0000000008'),
+('7009TEX', 'SUV', 'Cupra', 'Formentor', 2022, 'TLBTECHX0000000009'),
+('7010TEX', 'Compacto', 'Opel', 'Astra', 2021, 'TLBTECHX0000000010'),
+('7011TEX', 'Sedan', 'Tesla', 'Model 3', 2023, 'TLBTECHX0000000011'),
+('7012TEX', 'Deportivo', 'Mazda', 'MX-5', 2020, 'TLBTECHX0000000012'),
+('7013TEX', 'SUV', 'Volvo', 'XC40', 2022, 'TLBTECHX0000000013'),
+('7014TEX', 'Compacto', 'Skoda', 'Octavia RS', 2021, 'TLBTECHX0000000014'),
+('7015TEX', 'Sedan', 'Lexus', 'IS 300h', 2019, 'TLBTECHX0000000015'),
+('7016TEX', 'SUV', 'BMW', 'X3', 2022, 'TLBTECHX0000000016'),
+('7017TEX', 'Compacto', 'Honda', 'Civic Type R', 2020, 'TLBTECHX0000000017'),
+('7018TEX', 'Deportivo', 'Porsche', 'Cayman', 2018, 'TLBTECHX0000000018'),
+('7019TEX', 'SUV', 'Mercedes', 'GLA', 2021, 'TLBTECHX0000000019'),
+('7020TEX', 'Sedan', 'Alfa Romeo', 'Giulia', 2020, 'TLBTECHX0000000020');
+
+
+
 
 INSERT INTO oltp_tecnico.cita (fecha, hora, motivo, estado, id_vehiculo) VALUES
 ('2026-03-25', '09:00:00', 'Cambio de aceite y filtros', 'Completada',
@@ -136,7 +291,28 @@ INSERT INTO oltp_tecnico.cita (fecha, hora, motivo, estado, id_vehiculo) VALUES
 ('2026-03-28', '16:00:00', 'Diagnóstico electrónico', 'Confirmada',
     (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '4567STU')),
 ('2026-03-29', '08:30:00', 'Montaje de escape deportivo', 'Confirmada',
-    (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '5678VWX'));
+    (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '5678VWX')),
+('2024-01-22', '11:05:00', 'Revisión pre-ITV', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7001TEX')),
+('2024-02-28', '13:30:00', 'Cambio de neumáticos', 'Pendiente', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7002TEX')),
+('2024-04-01', '17:45:00', 'Diagnóstico electrónico', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7003TEX')),
+('2024-04-19', '10:20:00', 'Instalación de accesorio', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7004TEX')),
+('2024-05-25', '18:10:00', 'Mantenimiento completo', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7005TEX')),
+('2024-07-07', '12:35:00', 'Revisión pre-ITV', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7006TEX')),
+('2024-07-13', '14:25:00', 'Cambio de neumáticos', 'Pendiente', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7007TEX')),
+('2024-08-29', '19:40:00', 'Diagnóstico electrónico', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7008TEX')),
+('2024-10-04', '09:50:00', 'Instalación de accesorio', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7009TEX')),
+('2024-10-21', '16:15:00', 'Mantenimiento completo', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7010TEX')),
+('2024-12-10', '11:45:00', 'Revisión pre-ITV', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7011TEX')),
+('2024-12-16', '20:05:00', 'Cambio de neumáticos', 'Pendiente', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7012TEX')),
+('2025-01-27', '10:55:00', 'Diagnóstico electrónico', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7013TEX')),
+('2025-03-07', '15:10:00', 'Instalación de accesorio', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7014TEX')),
+('2025-03-23', '13:20:00', 'Mantenimiento completo', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7015TEX')),
+('2025-05-08', '17:00:00', 'Revisión pre-ITV', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7016TEX')),
+('2025-05-19', '12:05:00', 'Cambio de neumáticos', 'Pendiente', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7017TEX')),
+('2025-07-01', '14:45:00', 'Diagnóstico electrónico', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7018TEX')),
+('2025-07-24', '18:25:00', 'Instalación de accesorio', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7019TEX')),
+('2026-02-02', '11:30:00', 'Mantenimiento completo', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7020TEX'));
+
 
 INSERT INTO oltp_tecnico.empleado (nombre, apellidos, telefono, email, puesto) VALUES
 ('Iván', 'Romero Vidal', '622300111', 'ivan.romero@torquelab.com', 'Mecánico'),
@@ -160,7 +336,28 @@ INSERT INTO oltp_tecnico.servicio (fecha_apertura, fecha_cierre, tipo, descripci
     (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
 ('2026-03-29 08:45:00', NULL, 'Instalación', 'Instalación de escape deportivo homologado', 'Pendiente', 18450, 320.00,
     (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '5678VWX'),
-    (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com'));
+    (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2024-01-22 12:05:00', '2024-01-22 14:35:00', 'Mantenimiento', 'Mantenimiento extra de taller', 'Finalizado', 32750, 95.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7001TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2024-02-28 14:30:00', '2024-02-28 17:00:00', 'Reparación', 'Reparación extra de taller', 'Finalizado', 35500, 180.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7002TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'raul.herrera@torquelab.com')),
+('2024-04-01 18:45:00', '2024-04-01 21:15:00', 'Diagnóstico', 'Diagnóstico extra de taller', 'Finalizado', 38250, 70.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7003TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'sonia.campos@torquelab.com')),
+('2024-04-19 11:20:00', NULL, 'Instalación', 'Instalación extra de taller', 'En proceso', 41000, 260.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7004TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
+('2024-05-25 19:10:00', '2024-05-25 21:40:00', 'Revisión', 'Revisión extra de taller', 'Finalizado', 43750, 130.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7005TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'cristina.molina@torquelab.com')),
+('2024-07-07 13:35:00', '2024-07-07 16:05:00', 'Mantenimiento', 'Mantenimiento extra de taller', 'Finalizado', 46500, 95.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7006TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2024-07-13 15:25:00', '2024-07-13 17:55:00', 'Reparación', 'Reparación extra de taller', 'Finalizado', 49250, 180.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7007TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'raul.herrera@torquelab.com')),
+('2024-08-29 20:40:00', NULL, 'Diagnóstico', 'Diagnóstico extra de taller', 'En proceso', 52000, 70.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7008TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'sonia.campos@torquelab.com')),
+('2024-10-04 10:50:00', '2024-10-04 13:20:00', 'Instalación', 'Instalación extra de taller', 'Finalizado', 54750, 260.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7009TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
+('2024-10-21 17:15:00', '2024-10-21 19:45:00', 'Revisión', 'Revisión extra de taller', 'Finalizado', 57500, 130.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7010TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'cristina.molina@torquelab.com')),
+('2024-12-10 12:45:00', '2024-12-10 15:15:00', 'Mantenimiento', 'Mantenimiento extra de taller', 'Finalizado', 60250, 95.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7011TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2024-12-16 21:05:00', NULL, 'Reparación', 'Reparación extra de taller', 'En proceso', 63000, 180.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7012TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'raul.herrera@torquelab.com')),
+('2025-01-27 11:55:00', '2025-01-27 14:25:00', 'Diagnóstico', 'Diagnóstico extra de taller', 'Finalizado', 65750, 70.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7013TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'sonia.campos@torquelab.com')),
+('2025-03-07 16:10:00', '2025-03-07 18:40:00', 'Instalación', 'Instalación extra de taller', 'Finalizado', 68500, 260.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7014TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
+('2025-03-23 14:20:00', '2025-03-23 16:50:00', 'Revisión', 'Revisión extra de taller', 'Finalizado', 71250, 130.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7015TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'cristina.molina@torquelab.com')),
+('2025-05-08 18:00:00', NULL, 'Mantenimiento', 'Mantenimiento extra de taller', 'En proceso', 74000, 95.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7016TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2025-05-19 13:05:00', '2025-05-19 15:35:00', 'Reparación', 'Reparación extra de taller', 'Finalizado', 76750, 180.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7017TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'raul.herrera@torquelab.com')),
+('2025-07-01 15:45:00', '2025-07-01 18:15:00', 'Diagnóstico', 'Diagnóstico extra de taller', 'Finalizado', 79500, 70.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7018TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'sonia.campos@torquelab.com')),
+('2025-07-24 19:25:00', '2025-07-24 21:55:00', 'Instalación', 'Instalación extra de taller', 'Finalizado', 82250, 260.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7019TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
+('2026-02-02 12:30:00', NULL, 'Revisión', 'Revisión extra de taller', 'En proceso', 85000, 130.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7020TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'cristina.molina@torquelab.com'));
+
 
 INSERT INTO oltp_tecnico.categoria_componente (nombre_categoria, descripcion) VALUES
 ('Motor', 'Componentes usados en operaciones de motor'),
@@ -196,7 +393,28 @@ INSERT INTO oltp_tecnico.servicio_componente (cantidad, precio_unitario, id_serv
     (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
 (1, 355.00,
     (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-03-29 08:45:00'),
-    (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus'));
+    (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus')),
+(1, 42.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-01-22 12:05:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Aceite 5W30 Castrol 5L')),
+(2, 69.90, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-02-28 14:30:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Juego de pastillas Brembo P85020')),
+(1, 115.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-04-01 18:45:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Amortiguador Sachs Super Touring')),
+(1, 124.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-04-19 11:20:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
+(1, 355.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-05-25 19:10:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus')),
+(1, 42.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-07-07 13:35:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Aceite 5W30 Castrol 5L')),
+(2, 69.90, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-07-13 15:25:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Juego de pastillas Brembo P85020')),
+(1, 115.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-08-29 20:40:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Amortiguador Sachs Super Touring')),
+(1, 124.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-10-04 10:50:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
+(1, 355.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-10-21 17:15:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus')),
+(1, 42.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-12-10 12:45:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Aceite 5W30 Castrol 5L')),
+(2, 69.90, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2024-12-16 21:05:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Juego de pastillas Brembo P85020')),
+(1, 115.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2025-01-27 11:55:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Amortiguador Sachs Super Touring')),
+(1, 124.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2025-03-07 16:10:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
+(1, 355.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2025-03-23 14:20:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus')),
+(1, 42.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2025-05-08 18:00:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Aceite 5W30 Castrol 5L')),
+(2, 69.90, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2025-05-19 13:05:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Juego de pastillas Brembo P85020')),
+(1, 115.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2025-07-01 15:45:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Amortiguador Sachs Super Touring')),
+(1, 124.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2025-07-24 19:25:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
+(1, 355.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-02-02 12:30:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus'));
+
 
 -- =========================================================
 -- INSERTS OLTP_RRHH
@@ -259,7 +477,28 @@ INSERT INTO oltp_administracion.cliente (dni, nombre, apellidos, email, telefono
 ('77777777P', 'María', 'López Serrano', 'maria.lopez@gmail.com', '655600222', 'España', 'Madrid', 'Madrid', 'Madrid', 'Calle Goya 77'),
 ('88888888Q', 'Luis', 'García Torres', 'luis.garcia@gmail.com', '655600333', 'España', 'Comunidad Valenciana', 'Alicante', 'Alicante', 'Avenida Maisonnave 14'),
 ('99999999R', 'Ana', 'Martínez Vega', 'ana.martinez@gmail.com', '655600444', 'España', 'Cataluña', 'Barcelona', 'Sabadell', 'Carrer de Gràcia 56'),
-('10101010S', 'Carlos', 'Ruiz Navarro', 'carlos.ruiz2@gmail.com', '655600555', 'España', 'Galicia', 'Pontevedra', 'Vigo', 'Rúa Urzáiz 91');
+('10101010S', 'Carlos', 'Ruiz Navarro', 'carlos.ruiz2@gmail.com', '655600555', 'España', 'Galicia', 'Pontevedra', 'Vigo', 'Rúa Urzáiz 91'),
+('A00000001', 'Eva', 'Calvo Medina', 'eva.1.admin@demo.com', '672000001', 'España', 'Andalucía', 'Granada', 'Granada', 'Calle Extra Admin 1'),
+('A00000002', 'Adrián', 'Soler Núñez', 'adrian.2.admin@demo.com', '672000002', 'España', 'Andalucía', 'Córdoba', 'Córdoba', 'Calle Extra Admin 2'),
+('A00000003', 'Natalia', 'Blanco Torres', 'natalia.3.admin@demo.com', '672000003', 'España', 'Madrid', 'Madrid', 'Alcalá de Henares', 'Calle Extra Admin 3'),
+('A00000004', 'Óscar', 'Sáez Romero', 'oscar.4.admin@demo.com', '672000004', 'España', 'Cataluña', 'Girona', 'Girona', 'Calle Extra Admin 4'),
+('A00000005', 'Noa', 'Herranz Iglesias', 'noa.5.admin@demo.com', '672000005', 'España', 'Cataluña', 'Tarragona', 'Tarragona', 'Calle Extra Admin 5'),
+('A00000006', 'Víctor', 'Pardo Luna', 'victor.6.admin@demo.com', '672000006', 'España', 'Comunidad Valenciana', 'Castellón', 'Castellón', 'Calle Extra Admin 6'),
+('A00000007', 'Julia', 'Méndez Navarro', 'julia.7.admin@demo.com', '672000007', 'España', 'Galicia', 'Pontevedra', 'Pontevedra', 'Calle Extra Admin 7'),
+('A00000008', 'Marcos', 'Cortés Soto', 'marcos.8.admin@demo.com', '672000008', 'España', 'Galicia', 'Ourense', 'Ourense', 'Calle Extra Admin 8'),
+('A00000009', 'Alicia', 'Fuentes Vega', 'alicia.9.admin@demo.com', '672000009', 'España', 'Aragón', 'Huesca', 'Huesca', 'Calle Extra Admin 9'),
+('A00000010', 'Rubén', 'Delgado Peña', 'ruben.10.admin@demo.com', '672000010', 'España', 'Castilla y León', 'León', 'León', 'Calle Extra Admin 10'),
+('A00000011', 'Celia', 'Navas Rubio', 'celia.11.admin@demo.com', '672000011', 'España', 'País Vasco', 'Guipúzcoa', 'San Sebastián', 'Calle Extra Admin 11'),
+('A00000012', 'Tomás', 'Ramos Gil', 'tomas.12.admin@demo.com', '672000012', 'España', 'Navarra', 'Navarra', 'Pamplona', 'Calle Extra Admin 12'),
+('A00000013', 'Sara', 'Benítez León', 'sara.13.admin@demo.com', '672000013', 'España', 'Cantabria', 'Cantabria', 'Santander', 'Calle Extra Admin 13'),
+('A00000014', 'Andrés', 'Mora Pastor', 'andres.14.admin@demo.com', '672000014', 'España', 'Asturias', 'Asturias', 'Oviedo', 'Calle Extra Admin 14'),
+('A00000015', 'Irene', 'Campos Martín', 'irene.15.admin@demo.com', '672000015', 'España', 'La Rioja', 'La Rioja', 'Logroño', 'Calle Extra Admin 15'),
+('A00000016', 'Daniel', 'Giménez Ortega', 'daniel.16.admin@demo.com', '672000016', 'España', 'Extremadura', 'Badajoz', 'Badajoz', 'Calle Extra Admin 16'),
+('A00000017', 'Paula', 'Cano Ríos', 'paula.17.admin@demo.com', '672000017', 'España', 'Extremadura', 'Cáceres', 'Cáceres', 'Calle Extra Admin 17'),
+('A00000018', 'Hugo', 'Serrano Vidal', 'hugo.18.admin@demo.com', '672000018', 'España', 'Castilla-La Mancha', 'Toledo', 'Toledo', 'Calle Extra Admin 18'),
+('A00000019', 'Clara', 'Reyes Molina', 'clara.19.admin@demo.com', '672000019', 'España', 'Castilla-La Mancha', 'Albacete', 'Albacete', 'Calle Extra Admin 19'),
+('A00000020', 'Mario', 'Vega Salas', 'mario.20.admin@demo.com', '672000020', 'España', 'Baleares', 'Illes Balears', 'Palma', 'Calle Extra Admin 20');
+
 
 INSERT INTO oltp_administracion.empleado (nombre, apellidos, dni, telefono, email, puesto, salario, fecha_contratacion) VALUES
 ('Raúl', 'Jiménez Soto', '12121212T', '666700111', 'raul.jimenez@torquelab.com', 'Jefe de taller', 2400.00, '2020-05-11'),
@@ -278,7 +517,28 @@ INSERT INTO oltp_administracion.vehiculo (matricula, tipo_vehiculo, marca, model
 ('9012FGH', 'Compacto', 'Audi', 'A1', 2018, 'WAUZZZGB0JN890123',
     (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '99999999R')),
 ('0123GHI', 'Compacto', 'BMW', '118i', 2022, 'WBA7K11090V901234',
-    (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '10101010S'));
+    (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '10101010S')),
+('8001ADX', 'Sedan', 'Alfa Romeo', 'Giulia', 2020, 'TLBADMIN0000000001', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000001')),
+('8002ADX', 'SUV', 'Mercedes', 'GLA', 2021, 'TLBADMIN0000000002', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000002')),
+('8003ADX', 'Deportivo', 'Porsche', 'Cayman', 2018, 'TLBADMIN0000000003', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000003')),
+('8004ADX', 'Compacto', 'Honda', 'Civic Type R', 2020, 'TLBADMIN0000000004', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000004')),
+('8005ADX', 'SUV', 'BMW', 'X3', 2022, 'TLBADMIN0000000005', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000005')),
+('8006ADX', 'Sedan', 'Lexus', 'IS 300h', 2019, 'TLBADMIN0000000006', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000006')),
+('8007ADX', 'Compacto', 'Skoda', 'Octavia RS', 2021, 'TLBADMIN0000000007', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000007')),
+('8008ADX', 'SUV', 'Volvo', 'XC40', 2022, 'TLBADMIN0000000008', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000008')),
+('8009ADX', 'Deportivo', 'Mazda', 'MX-5', 2020, 'TLBADMIN0000000009', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000009')),
+('8010ADX', 'Sedan', 'Tesla', 'Model 3', 2023, 'TLBADMIN0000000010', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000010')),
+('8011ADX', 'Compacto', 'Opel', 'Astra', 2021, 'TLBADMIN0000000011', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000011')),
+('8012ADX', 'SUV', 'Cupra', 'Formentor', 2022, 'TLBADMIN0000000012', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000012')),
+('8013ADX', 'Compacto', 'Renault', 'Megane RS', 2018, 'TLBADMIN0000000013', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000013')),
+('8014ADX', 'Sedan', 'Audi', 'A4', 2020, 'TLBADMIN0000000014', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000014')),
+('8015ADX', 'SUV', 'Kia', 'Sportage', 2023, 'TLBADMIN0000000015', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000015')),
+('8016ADX', 'Compacto', 'Hyundai', 'i30 N', 2021, 'TLBADMIN0000000016', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000016')),
+('8017ADX', 'Deportivo', 'Toyota', 'GR86', 2022, 'TLBADMIN0000000017', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000017')),
+('8018ADX', 'Sedan', 'Mercedes', 'Clase C', 2019, 'TLBADMIN0000000018', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000018')),
+('8019ADX', 'SUV', 'Nissan', 'Qashqai', 2020, 'TLBADMIN0000000019', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000019')),
+('8020ADX', 'SUV', 'Toyota', 'RAV4', 2021, 'TLBADMIN0000000020', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000020'));
+
 
 INSERT INTO oltp_administracion.servicio (fecha_apertura, fecha_cierre, tipo, descripcion, estado, kilometraje, coste, id_vehiculo, id_cliente, id_empleado) VALUES
 ('2026-03-05 08:30:00', '2026-03-05 11:00:00', 'Mantenimiento', 'Revisión anual con cambio de aceite y filtros', 'Finalizado', 52300, 129.90,
@@ -300,7 +560,28 @@ INSERT INTO oltp_administracion.servicio (fecha_apertura, fecha_cierre, tipo, de
 ('2026-03-22 11:40:00', NULL, 'Instalación', 'Instalación de escape deportivo', 'Pendiente', 18500, 320.00,
     (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '0123GHI'),
     (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '10101010S'),
-    (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T'));
+    (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2024-01-18 11:05:00', '2024-01-18 13:20:00', 'Diagnóstico', 'Diagnóstico administrativo extra', 'Finalizado', 25100, 120.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8001ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000001'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2024-02-24 13:30:00', '2024-02-24 15:45:00', 'Instalación', 'Instalación administrativo extra', 'Finalizado', 28200, 210.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8002ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000002'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '16161616Y')),
+('2024-03-28 17:45:00', NULL, 'Revisión', 'Revisión administrativo extra', 'Pendiente', 31300, 85.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8003ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000003'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '14141414W')),
+('2024-04-15 10:20:00', '2024-04-15 12:35:00', 'Mantenimiento', 'Mantenimiento administrativo extra', 'Finalizado', 34400, 310.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8004ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000004'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '15151515X')),
+('2024-05-21 18:10:00', '2024-05-21 20:25:00', 'Reparación', 'Reparación administrativo extra', 'Finalizado', 37500, 150.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8005ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000005'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '13131313V')),
+('2024-07-03 12:35:00', NULL, 'Diagnóstico', 'Diagnóstico administrativo extra', 'Pendiente', 40600, 120.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8006ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000006'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2024-07-09 14:25:00', '2024-07-09 16:40:00', 'Instalación', 'Instalación administrativo extra', 'Finalizado', 43700, 210.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8007ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000007'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '16161616Y')),
+('2024-08-25 19:40:00', '2024-08-25 21:55:00', 'Revisión', 'Revisión administrativo extra', 'Finalizado', 46800, 85.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8008ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000008'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '14141414W')),
+('2024-09-30 09:50:00', NULL, 'Mantenimiento', 'Mantenimiento administrativo extra', 'Pendiente', 49900, 310.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8009ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000009'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '15151515X')),
+('2024-10-17 16:15:00', '2024-10-17 18:30:00', 'Reparación', 'Reparación administrativo extra', 'Finalizado', 53000, 150.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8010ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000010'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '13131313V')),
+('2024-12-06 11:45:00', '2024-12-06 14:00:00', 'Diagnóstico', 'Diagnóstico administrativo extra', 'Finalizado', 56100, 120.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8011ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000011'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2024-12-12 20:05:00', NULL, 'Instalación', 'Instalación administrativo extra', 'Pendiente', 59200, 210.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8012ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000012'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '16161616Y')),
+('2025-01-23 10:55:00', '2025-01-23 13:10:00', 'Revisión', 'Revisión administrativo extra', 'Finalizado', 62300, 85.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8013ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000013'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '14141414W')),
+('2025-03-03 15:10:00', '2025-03-03 17:25:00', 'Mantenimiento', 'Mantenimiento administrativo extra', 'Finalizado', 65400, 310.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8014ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000014'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '15151515X')),
+('2025-03-19 13:20:00', NULL, 'Reparación', 'Reparación administrativo extra', 'Pendiente', 68500, 150.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8015ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000015'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '13131313V')),
+('2025-05-04 17:00:00', '2025-05-04 19:15:00', 'Diagnóstico', 'Diagnóstico administrativo extra', 'Finalizado', 71600, 120.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8016ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000016'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2025-05-15 12:05:00', '2025-05-15 14:20:00', 'Instalación', 'Instalación administrativo extra', 'Finalizado', 74700, 210.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8017ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000017'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '16161616Y')),
+('2025-06-27 14:45:00', NULL, 'Revisión', 'Revisión administrativo extra', 'Pendiente', 77800, 85.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8018ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000018'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '14141414W')),
+('2025-07-20 18:25:00', '2025-07-20 20:40:00', 'Mantenimiento', 'Mantenimiento administrativo extra', 'Finalizado', 80900, 310.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8019ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000019'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '15151515X')),
+('2026-01-29 11:30:00', '2026-01-29 13:45:00', 'Reparación', 'Reparación administrativo extra', 'Finalizado', 84000, 150.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8020ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000020'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '13131313V'));
+
 
 INSERT INTO oltp_administracion.categoria_componente (nombre_categoria, descripcion) VALUES
 ('Motor', 'Categoría de componentes de motor'),
@@ -370,7 +651,28 @@ INSERT INTO oltp_administracion.servicio_componente (cantidad, precio_unitario, 
     (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
 (1, 820.00,
     (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-03-22 11:40:00'),
-    (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line'));
+    (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-01-18 11:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-02-24 13:30:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-03-28 17:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(1, 158.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-04-15 10:20:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-05-21 18:10:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-07-03 12:35:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-07-09 14:25:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-08-25 19:40:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(1, 158.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-09-30 09:50:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-10-17 16:15:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-12-06 11:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2024-12-12 20:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2025-01-23 10:55:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(1, 158.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2025-03-03 15:10:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2025-03-19 13:20:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2025-05-04 17:00:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2025-05-15 12:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2025-06-27 14:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(1, 158.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2025-07-20 18:25:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-01-29 11:30:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line'));
+
 
 INSERT INTO oltp_administracion.pedido (fecha_pedido, estado, total, metodo_pago, direccion_envio, id_cliente) VALUES
 ('2026-03-04 14:20:00', 'Entregado', 24.00, 'Tarjeta', 'Avenida Europa 12, Jerez de la Frontera',
@@ -382,7 +684,28 @@ INSERT INTO oltp_administracion.pedido (fecha_pedido, estado, total, metodo_pago
 ('2026-03-15 17:50:00', 'Entregado', 158.00, 'Tarjeta', 'Carrer de Gràcia 56, Sabadell',
     (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '99999999R')),
 ('2026-03-19 09:40:00', 'Preparación', 820.00, 'Financiación', 'Rúa Urzáiz 91, Vigo',
-    (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '10101010S'));
+    (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = '10101010S')),
+('2024-01-20 10:05:00', 'Entregado', 24.00, 'Transferencia', 'Dirección extra admin 1', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000001')),
+('2024-02-26 12:30:00', 'Entregado', 136.00, 'Bizum', 'Dirección extra admin 2', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000002')),
+('2024-03-30 16:45:00', 'Entregado', 140.00, 'Financiación', 'Dirección extra admin 3', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000003')),
+('2024-04-17 09:20:00', 'Enviado', 474.00, 'Tarjeta', 'Dirección extra admin 4', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000004')),
+('2024-05-23 17:10:00', 'Preparación', 820.00, 'PayPal', 'Dirección extra admin 5', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000005')),
+('2024-07-05 11:35:00', 'Entregado', 24.00, 'Transferencia', 'Dirección extra admin 6', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000006')),
+('2024-07-11 13:25:00', 'Entregado', 136.00, 'Bizum', 'Dirección extra admin 7', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000007')),
+('2024-08-27 18:40:00', 'Entregado', 140.00, 'Financiación', 'Dirección extra admin 8', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000008')),
+('2024-10-02 08:50:00', 'Enviado', 474.00, 'Tarjeta', 'Dirección extra admin 9', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000009')),
+('2024-10-19 15:15:00', 'Preparación', 820.00, 'PayPal', 'Dirección extra admin 10', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000010')),
+('2024-12-08 10:45:00', 'Entregado', 24.00, 'Transferencia', 'Dirección extra admin 11', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000011')),
+('2024-12-14 19:05:00', 'Entregado', 136.00, 'Bizum', 'Dirección extra admin 12', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000012')),
+('2025-01-25 09:55:00', 'Entregado', 140.00, 'Financiación', 'Dirección extra admin 13', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000013')),
+('2025-03-05 14:10:00', 'Enviado', 474.00, 'Tarjeta', 'Dirección extra admin 14', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000014')),
+('2025-03-21 12:20:00', 'Preparación', 820.00, 'PayPal', 'Dirección extra admin 15', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000015')),
+('2025-05-06 16:00:00', 'Entregado', 24.00, 'Transferencia', 'Dirección extra admin 16', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000016')),
+('2025-05-17 11:05:00', 'Entregado', 136.00, 'Bizum', 'Dirección extra admin 17', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000017')),
+('2025-06-29 13:45:00', 'Entregado', 140.00, 'Financiación', 'Dirección extra admin 18', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000018')),
+('2025-07-22 17:25:00', 'Enviado', 474.00, 'Tarjeta', 'Dirección extra admin 19', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000019')),
+('2026-01-31 10:30:00', 'Preparación', 820.00, 'PayPal', 'Dirección extra admin 20', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A00000020'));
+
 
 INSERT INTO oltp_administracion.detalle_pedido (cantidad, precio_unitario, subtotal, id_pedido, id_componente) VALUES
 (1, 24.00, 24.00,
@@ -399,6 +722,401 @@ INSERT INTO oltp_administracion.detalle_pedido (cantidad, precio_unitario, subto
     (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
 (1, 820.00, 820.00,
     (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-03-19 09:40:00'),
-    (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line'));
+    (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, 24.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-01-20 10:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, 136.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-02-26 12:30:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, 140.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-03-30 16:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(3, 158.00, 474.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-04-17 09:20:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, 820.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-05-23 17:10:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, 24.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-07-05 11:35:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, 136.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-07-11 13:25:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, 140.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-08-27 18:40:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(3, 158.00, 474.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-10-02 08:50:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, 820.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-10-19 15:15:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, 24.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-12-08 10:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, 136.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2024-12-14 19:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, 140.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2025-01-25 09:55:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(3, 158.00, 474.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2025-03-05 14:10:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, 820.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2025-03-21 12:20:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, 24.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2025-05-06 16:00:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, 136.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2025-05-17 11:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, 140.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2025-06-29 13:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(3, 158.00, 474.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2025-07-22 17:25:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, 820.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-01-31 10:30:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line'));
+
+
+
+
+-- =========================================================
+-- SEGUNDO BLOQUE EXTRA: 20 REGISTROS ADICIONALES EN 2026 (ENERO-MAYO)
+-- =========================================================
+
+-- =========================================================
+-- DATOS EXTRA 2026 (OLTP_VENTAS)
+-- =========================================================
+INSERT INTO oltp_ventas.cliente (dni, nombre, apellidos, email, telefono, pais, region, provincia, ciudad, direccion) VALUES
+('V20000001', 'Nerea', 'Luna Pérez', 'nerea.1.v2@demo.com', '673000001', 'España', 'Andalucía', 'Sevilla', 'Dos Hermanas', 'Dirección extra ventas 2026 1'),
+('V20000002', 'Mateo', 'Costa Ruiz', 'mateo.2.v2@demo.com', '673000002', 'España', 'Andalucía', 'Málaga', 'Marbella', 'Dirección extra ventas 2026 2'),
+('V20000003', 'Ainhoa', 'Molina Sanz', 'ainhoa.3.v2@demo.com', '673000003', 'España', 'Madrid', 'Madrid', 'Getafe', 'Dirección extra ventas 2026 3'),
+('V20000004', 'Lucas', 'Peña Ortiz', 'lucas.4.v2@demo.com', '673000004', 'España', 'Madrid', 'Madrid', 'Leganés', 'Dirección extra ventas 2026 4'),
+('V20000005', 'Valeria', 'Soto Marín', 'valeria.5.v2@demo.com', '673000005', 'España', 'Cataluña', 'Barcelona', 'Terrassa', 'Dirección extra ventas 2026 5'),
+('V20000006', 'Bruno', 'Ríos Vidal', 'bruno.6.v2@demo.com', '673000006', 'España', 'Cataluña', 'Barcelona', 'Badalona', 'Dirección extra ventas 2026 6'),
+('V20000007', 'Emma', 'Vera Cano', 'emma.7.v2@demo.com', '673000007', 'España', 'Comunidad Valenciana', 'Valencia', 'Torrent', 'Dirección extra ventas 2026 7'),
+('V20000008', 'Leo', 'Pastor Gil', 'leo.8.v2@demo.com', '673000008', 'España', 'Comunidad Valenciana', 'Alicante', 'Elche', 'Dirección extra ventas 2026 8'),
+('V20000009', 'Carla', 'Ibáñez Rey', 'carla.9.v2@demo.com', '673000009', 'España', 'Galicia', 'Pontevedra', 'Vigo', 'Dirección extra ventas 2026 9'),
+('V20000010', 'Álex', 'Román Lara', 'álex.10.v2@demo.com', '673000010', 'España', 'Galicia', 'A Coruña', 'Santiago de Compostela', 'Dirección extra ventas 2026 10'),
+('V20000011', 'Miriam', 'Cruz Bueno', 'miriam.11.v2@demo.com', '673000011', 'España', 'País Vasco', 'Vizcaya', 'Bilbao', 'Dirección extra ventas 2026 11'),
+('V20000012', 'Enzo', 'Blasco Mora', 'enzo.12.v2@demo.com', '673000012', 'España', 'País Vasco', 'Guipúzcoa', 'Irún', 'Dirección extra ventas 2026 12'),
+('V20000013', 'Lola', 'Rey Campos', 'lola.13.v2@demo.com', '673000013', 'España', 'Aragón', 'Zaragoza', 'Zaragoza', 'Dirección extra ventas 2026 13'),
+('V20000014', 'Gael', 'Núñez Prieto', 'gael.14.v2@demo.com', '673000014', 'España', 'Murcia', 'Murcia', 'Cartagena', 'Dirección extra ventas 2026 14'),
+('V20000015', 'Alba', 'Sierra López', 'alba.15.v2@demo.com', '673000015', 'España', 'Castilla y León', 'Burgos', 'Burgos', 'Dirección extra ventas 2026 15'),
+('V20000016', 'Teo', 'Pascual Torres', 'teo.16.v2@demo.com', '673000016', 'España', 'Castilla-La Mancha', 'Ciudad Real', 'Ciudad Real', 'Dirección extra ventas 2026 16'),
+('V20000017', 'Nadia', 'Iglesias Ramos', 'nadia.17.v2@demo.com', '673000017', 'España', 'Extremadura', 'Badajoz', 'Mérida', 'Dirección extra ventas 2026 17'),
+('V20000018', 'Dario', 'Calero Vega', 'dario.18.v2@demo.com', '673000018', 'España', 'Navarra', 'Navarra', 'Pamplona', 'Dirección extra ventas 2026 18'),
+('V20000019', 'Inés', 'Pardo Soler', 'inés.19.v2@demo.com', '673000019', 'España', 'Asturias', 'Asturias', 'Gijón', 'Dirección extra ventas 2026 19'),
+('V20000020', 'Joel', 'Suárez Blanco', 'joel.20.v2@demo.com', '673000020', 'España', 'Baleares', 'Illes Balears', 'Palma', 'Dirección extra ventas 2026 20');
+
+INSERT INTO oltp_ventas.pedido (fecha_pedido, estado, total, metodo_pago, direccion_envio, id_cliente) VALUES
+('2026-01-05 09:10:00', 'Entregado', 18.90, 'Tarjeta', 'Dirección extra ventas 2026 1', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000001')),
+('2026-01-12 11:25:00', 'Enviado', 129.80, 'PayPal', 'Dirección extra ventas 2026 2', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000002')),
+('2026-01-20 16:40:00', 'Preparación', 119.00, 'Bizum', 'Dirección extra ventas 2026 3', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000003')),
+('2026-01-28 18:05:00', 'Entregado', 259.80, 'Transferencia', 'Dirección extra ventas 2026 4', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000004')),
+('2026-02-03 10:15:00', 'Entregado', 599.00, 'Financiación', 'Dirección extra ventas 2026 5', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000005')),
+('2026-02-11 12:30:00', 'Entregado', 37.80, 'Tarjeta', 'Dirección extra ventas 2026 6', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000006')),
+('2026-02-19 17:45:00', 'Enviado', 64.90, 'PayPal', 'Dirección extra ventas 2026 7', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000007')),
+('2026-02-26 09:50:00', 'Preparación', 238.00, 'Bizum', 'Dirección extra ventas 2026 8', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000008')),
+('2026-03-02 13:20:00', 'Entregado', 129.90, 'Transferencia', 'Dirección extra ventas 2026 9', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000009')),
+('2026-03-09 15:35:00', 'Entregado', 1198.00, 'Financiación', 'Dirección extra ventas 2026 10', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000010')),
+('2026-03-18 10:45:00', 'Entregado', 56.70, 'Tarjeta', 'Dirección extra ventas 2026 11', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000011')),
+('2026-03-27 19:00:00', 'Enviado', 194.70, 'PayPal', 'Dirección extra ventas 2026 12', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000012')),
+('2026-04-04 08:55:00', 'Preparación', 119.00, 'Bizum', 'Dirección extra ventas 2026 13', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000013')),
+('2026-04-13 14:10:00', 'Entregado', 259.80, 'Transferencia', 'Dirección extra ventas 2026 14', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000014')),
+('2026-04-22 16:25:00', 'Entregado', 599.00, 'Financiación', 'Dirección extra ventas 2026 15', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000015')),
+('2026-04-30 11:40:00', 'Entregado', 75.60, 'Tarjeta', 'Dirección extra ventas 2026 16', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000016')),
+('2026-05-06 09:30:00', 'Enviado', 129.80, 'PayPal', 'Dirección extra ventas 2026 17', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000017')),
+('2026-05-14 12:45:00', 'Preparación', 238.00, 'Bizum', 'Dirección extra ventas 2026 18', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000018')),
+('2026-05-23 18:15:00', 'Entregado', 129.90, 'Transferencia', 'Dirección extra ventas 2026 19', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000019')),
+('2026-05-31 10:05:00', 'Entregado', 1198.00, 'Financiación', 'Dirección extra ventas 2026 20', (SELECT id_cliente FROM oltp_ventas.cliente WHERE dni = 'V20000020'));
+
+INSERT INTO oltp_ventas.detalle_pedido (cantidad, precio_unitario, subtotal, id_pedido, id_componente) VALUES
+(1, 18.90, 18.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-01-05 09:10:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Filtro de aceite Bosch P3254')),
+(2, 64.90, 129.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-01-12 11:25:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Pastillas de freno delanteras Valeo 598764')),
+(1, 119.00, 119.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-01-20 16:40:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Amortiguador trasero Monroe OESpectrum')),
+(2, 129.90, 259.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-01-28 18:05:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
+(1, 599.00, 599.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-02-03 10:15:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On')),
+(2, 18.90, 37.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-02-11 12:30:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Filtro de aceite Bosch P3254')),
+(1, 64.90, 64.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-02-19 17:45:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Pastillas de freno delanteras Valeo 598764')),
+(2, 119.00, 238.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-02-26 09:50:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Amortiguador trasero Monroe OESpectrum')),
+(1, 129.90, 129.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-03-02 13:20:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
+(2, 599.00, 1198.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-03-09 15:35:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On')),
+(3, 18.90, 56.70, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-03-18 10:45:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Filtro de aceite Bosch P3254')),
+(3, 64.90, 194.70, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-03-27 19:00:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Pastillas de freno delanteras Valeo 598764')),
+(1, 119.00, 119.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-04-04 08:55:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Amortiguador trasero Monroe OESpectrum')),
+(2, 129.90, 259.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-04-13 14:10:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
+(1, 599.00, 599.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-04-22 16:25:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On')),
+(4, 18.90, 75.60, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-04-30 11:40:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Filtro de aceite Bosch P3254')),
+(2, 64.90, 129.80, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-05-06 09:30:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Pastillas de freno delanteras Valeo 598764')),
+(2, 119.00, 238.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-05-14 12:45:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Amortiguador trasero Monroe OESpectrum')),
+(1, 129.90, 129.90, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-05-23 18:15:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Batería Varta Blue Dynamic 74Ah')),
+(2, 599.00, 1198.00, (SELECT id_pedido FROM oltp_ventas.pedido WHERE fecha_pedido = '2026-05-31 10:05:00'), (SELECT id_componente FROM oltp_ventas.componente WHERE nombre = 'Escape deportivo Akrapovic Slip-On'));
+
+
+-- =========================================================
+-- DATOS EXTRA 2026 (OLTP_MARKETING)
+-- =========================================================
+INSERT INTO oltp_marketing.cliente (dni, nombre, apellidos, email, telefono, pais, region, provincia, ciudad, direccion) VALUES
+('M20000001', 'Nerea', 'Luna Pérez', 'nerea.1.m2@demo.com', '674000001', 'España', 'Andalucía', 'Sevilla', 'Dos Hermanas', 'Dirección extra marketing 2026 1'),
+('M20000002', 'Mateo', 'Costa Ruiz', 'mateo.2.m2@demo.com', '674000002', 'España', 'Andalucía', 'Málaga', 'Marbella', 'Dirección extra marketing 2026 2'),
+('M20000003', 'Ainhoa', 'Molina Sanz', 'ainhoa.3.m2@demo.com', '674000003', 'España', 'Madrid', 'Madrid', 'Getafe', 'Dirección extra marketing 2026 3'),
+('M20000004', 'Lucas', 'Peña Ortiz', 'lucas.4.m2@demo.com', '674000004', 'España', 'Madrid', 'Madrid', 'Leganés', 'Dirección extra marketing 2026 4'),
+('M20000005', 'Valeria', 'Soto Marín', 'valeria.5.m2@demo.com', '674000005', 'España', 'Cataluña', 'Barcelona', 'Terrassa', 'Dirección extra marketing 2026 5'),
+('M20000006', 'Bruno', 'Ríos Vidal', 'bruno.6.m2@demo.com', '674000006', 'España', 'Cataluña', 'Barcelona', 'Badalona', 'Dirección extra marketing 2026 6'),
+('M20000007', 'Emma', 'Vera Cano', 'emma.7.m2@demo.com', '674000007', 'España', 'Comunidad Valenciana', 'Valencia', 'Torrent', 'Dirección extra marketing 2026 7'),
+('M20000008', 'Leo', 'Pastor Gil', 'leo.8.m2@demo.com', '674000008', 'España', 'Comunidad Valenciana', 'Alicante', 'Elche', 'Dirección extra marketing 2026 8'),
+('M20000009', 'Carla', 'Ibáñez Rey', 'carla.9.m2@demo.com', '674000009', 'España', 'Galicia', 'Pontevedra', 'Vigo', 'Dirección extra marketing 2026 9'),
+('M20000010', 'Álex', 'Román Lara', 'álex.10.m2@demo.com', '674000010', 'España', 'Galicia', 'A Coruña', 'Santiago de Compostela', 'Dirección extra marketing 2026 10'),
+('M20000011', 'Miriam', 'Cruz Bueno', 'miriam.11.m2@demo.com', '674000011', 'España', 'País Vasco', 'Vizcaya', 'Bilbao', 'Dirección extra marketing 2026 11'),
+('M20000012', 'Enzo', 'Blasco Mora', 'enzo.12.m2@demo.com', '674000012', 'España', 'País Vasco', 'Guipúzcoa', 'Irún', 'Dirección extra marketing 2026 12'),
+('M20000013', 'Lola', 'Rey Campos', 'lola.13.m2@demo.com', '674000013', 'España', 'Aragón', 'Zaragoza', 'Zaragoza', 'Dirección extra marketing 2026 13'),
+('M20000014', 'Gael', 'Núñez Prieto', 'gael.14.m2@demo.com', '674000014', 'España', 'Murcia', 'Murcia', 'Cartagena', 'Dirección extra marketing 2026 14'),
+('M20000015', 'Alba', 'Sierra López', 'alba.15.m2@demo.com', '674000015', 'España', 'Castilla y León', 'Burgos', 'Burgos', 'Dirección extra marketing 2026 15'),
+('M20000016', 'Teo', 'Pascual Torres', 'teo.16.m2@demo.com', '674000016', 'España', 'Castilla-La Mancha', 'Ciudad Real', 'Ciudad Real', 'Dirección extra marketing 2026 16'),
+('M20000017', 'Nadia', 'Iglesias Ramos', 'nadia.17.m2@demo.com', '674000017', 'España', 'Extremadura', 'Badajoz', 'Mérida', 'Dirección extra marketing 2026 17'),
+('M20000018', 'Dario', 'Calero Vega', 'dario.18.m2@demo.com', '674000018', 'España', 'Navarra', 'Navarra', 'Pamplona', 'Dirección extra marketing 2026 18'),
+('M20000019', 'Inés', 'Pardo Soler', 'inés.19.m2@demo.com', '674000019', 'España', 'Asturias', 'Asturias', 'Gijón', 'Dirección extra marketing 2026 19'),
+('M20000020', 'Joel', 'Suárez Blanco', 'joel.20.m2@demo.com', '674000020', 'España', 'Baleares', 'Illes Balears', 'Palma', 'Dirección extra marketing 2026 20');
+
+INSERT INTO oltp_marketing.pedido (fecha_pedido, estado, total, metodo_pago, direccion_envio, id_cliente) VALUES
+('2026-01-05 09:10:00', 'Entregado', 289.00, 'Tarjeta', 'Dirección extra marketing 2026 1', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000001')),
+('2026-01-12 11:25:00', 'Enviado', 398.00, 'PayPal', 'Dirección extra marketing 2026 2', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000002')),
+('2026-01-20 16:40:00', 'Preparación', 735.00, 'Bizum', 'Dirección extra marketing 2026 3', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000003')),
+('2026-01-28 18:05:00', 'Entregado', 199.60, 'Transferencia', 'Dirección extra marketing 2026 4', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000004')),
+('2026-02-03 10:15:00', 'Entregado', 179.80, 'Financiación', 'Dirección extra marketing 2026 5', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000005')),
+('2026-02-11 12:30:00', 'Entregado', 578.00, 'Tarjeta', 'Dirección extra marketing 2026 6', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000006')),
+('2026-02-19 17:45:00', 'Enviado', 199.00, 'PayPal', 'Dirección extra marketing 2026 7', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000007')),
+('2026-02-26 09:50:00', 'Preparación', 490.00, 'Bizum', 'Dirección extra marketing 2026 8', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000008')),
+('2026-03-02 13:20:00', 'Entregado', 49.90, 'Transferencia', 'Dirección extra marketing 2026 9', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000009')),
+('2026-03-09 15:35:00', 'Entregado', 89.90, 'Financiación', 'Dirección extra marketing 2026 10', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000010')),
+('2026-03-18 10:45:00', 'Entregado', 289.00, 'Tarjeta', 'Dirección extra marketing 2026 11', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000011')),
+('2026-03-27 19:00:00', 'Enviado', 398.00, 'PayPal', 'Dirección extra marketing 2026 12', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000012')),
+('2026-04-04 08:55:00', 'Preparación', 245.00, 'Bizum', 'Dirección extra marketing 2026 13', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000013')),
+('2026-04-13 14:10:00', 'Entregado', 99.80, 'Transferencia', 'Dirección extra marketing 2026 14', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000014')),
+('2026-04-22 16:25:00', 'Entregado', 269.70, 'Financiación', 'Dirección extra marketing 2026 15', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000015')),
+('2026-04-30 11:40:00', 'Entregado', 578.00, 'Tarjeta', 'Dirección extra marketing 2026 16', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000016')),
+('2026-05-06 09:30:00', 'Enviado', 199.00, 'PayPal', 'Dirección extra marketing 2026 17', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000017')),
+('2026-05-14 12:45:00', 'Preparación', 735.00, 'Bizum', 'Dirección extra marketing 2026 18', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000018')),
+('2026-05-23 18:15:00', 'Entregado', 149.70, 'Transferencia', 'Dirección extra marketing 2026 19', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000019')),
+('2026-05-31 10:05:00', 'Entregado', 179.80, 'Financiación', 'Dirección extra marketing 2026 20', (SELECT id_cliente FROM oltp_marketing.cliente WHERE dni = 'M20000020'));
+
+INSERT INTO oltp_marketing.detalle_pedido (cantidad, precio_unitario, subtotal, id_pedido, id_componente) VALUES
+(1, 289.00, 289.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-01-05 09:10:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Kit de admisión K&N 57S')),
+(2, 199.00, 398.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-01-12 11:25:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Discos de freno Brembo Max')),
+(3, 245.00, 735.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-01-20 16:40:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Muelles deportivos Eibach Pro-Kit')),
+(4, 49.90, 199.60, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-01-28 18:05:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
+(2, 89.90, 179.80, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-02-03 10:15:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus')),
+(2, 289.00, 578.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-02-11 12:30:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Kit de admisión K&N 57S')),
+(1, 199.00, 199.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-02-19 17:45:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Discos de freno Brembo Max')),
+(2, 245.00, 490.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-02-26 09:50:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Muelles deportivos Eibach Pro-Kit')),
+(1, 49.90, 49.90, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-03-02 13:20:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
+(1, 89.90, 89.90, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-03-09 15:35:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus')),
+(1, 289.00, 289.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-03-18 10:45:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Kit de admisión K&N 57S')),
+(2, 199.00, 398.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-03-27 19:00:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Discos de freno Brembo Max')),
+(1, 245.00, 245.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-04-04 08:55:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Muelles deportivos Eibach Pro-Kit')),
+(2, 49.90, 99.80, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-04-13 14:10:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
+(3, 89.90, 269.70, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-04-22 16:25:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus')),
+(2, 289.00, 578.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-04-30 11:40:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Kit de admisión K&N 57S')),
+(1, 199.00, 199.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-05-06 09:30:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Discos de freno Brembo Max')),
+(3, 245.00, 735.00, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-05-14 12:45:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Muelles deportivos Eibach Pro-Kit')),
+(3, 49.90, 149.70, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-05-23 18:15:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Sensor de aparcamiento Bosch')),
+(2, 89.90, 179.80, (SELECT id_pedido FROM oltp_marketing.pedido WHERE fecha_pedido = '2026-05-31 10:05:00'), (SELECT id_componente FROM oltp_marketing.componente WHERE nombre = 'Cola de escape decorativa Remus'));
+
+
+-- =========================================================
+-- DATOS EXTRA 2026 (OLTP_TECNICO)
+-- =========================================================
+INSERT INTO oltp_tecnico.vehiculo (matricula, tipo_vehiculo, marca, modelo, anio, num_bastidor) VALUES
+('7201TEX', 'SUV', 'Toyota', 'RAV4', 2021, 'TLBTECHY0000000001'),
+('7202TEX', 'SUV', 'Nissan', 'Qashqai', 2020, 'TLBTECHY0000000002'),
+('7203TEX', 'Sedan', 'Mercedes', 'Clase C', 2019, 'TLBTECHY0000000003'),
+('7204TEX', 'Deportivo', 'Toyota', 'GR86', 2022, 'TLBTECHY0000000004'),
+('7205TEX', 'Compacto', 'Hyundai', 'i30 N', 2021, 'TLBTECHY0000000005'),
+('7206TEX', 'SUV', 'Kia', 'Sportage', 2023, 'TLBTECHY0000000006'),
+('7207TEX', 'Sedan', 'Audi', 'A4', 2020, 'TLBTECHY0000000007'),
+('7208TEX', 'Compacto', 'Renault', 'Megane RS', 2018, 'TLBTECHY0000000008'),
+('7209TEX', 'SUV', 'Cupra', 'Formentor', 2022, 'TLBTECHY0000000009'),
+('7210TEX', 'Compacto', 'Opel', 'Astra', 2021, 'TLBTECHY0000000010'),
+('7211TEX', 'Sedan', 'Tesla', 'Model 3', 2023, 'TLBTECHY0000000011'),
+('7212TEX', 'Deportivo', 'Mazda', 'MX-5', 2020, 'TLBTECHY0000000012'),
+('7213TEX', 'SUV', 'Volvo', 'XC40', 2022, 'TLBTECHY0000000013'),
+('7214TEX', 'Compacto', 'Skoda', 'Octavia RS', 2021, 'TLBTECHY0000000014'),
+('7215TEX', 'Sedan', 'Lexus', 'IS 300h', 2019, 'TLBTECHY0000000015'),
+('7216TEX', 'SUV', 'BMW', 'X3', 2022, 'TLBTECHY0000000016'),
+('7217TEX', 'Compacto', 'Honda', 'Civic Type R', 2020, 'TLBTECHY0000000017'),
+('7218TEX', 'Deportivo', 'Porsche', 'Cayman', 2018, 'TLBTECHY0000000018'),
+('7219TEX', 'SUV', 'Mercedes', 'GLA', 2021, 'TLBTECHY0000000019'),
+('7220TEX', 'Sedan', 'Alfa Romeo', 'Giulia', 2020, 'TLBTECHY0000000020');
+
+INSERT INTO oltp_tecnico.cita (fecha, hora, motivo, estado, id_vehiculo) VALUES
+('2026-01-05', '09:00:00', 'Revisión pre-ITV', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7201TEX')),
+('2026-01-12', '10:30:00', 'Cambio de neumáticos', 'Pendiente', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7202TEX')),
+('2026-01-20', '12:00:00', 'Diagnóstico electrónico', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7203TEX')),
+('2026-01-28', '16:00:00', 'Instalación de accesorio', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7204TEX')),
+('2026-02-03', '08:30:00', 'Mantenimiento completo', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7205TEX')),
+('2026-02-11', '09:00:00', 'Revisión pre-ITV', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7206TEX')),
+('2026-02-19', '10:30:00', 'Cambio de neumáticos', 'Pendiente', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7207TEX')),
+('2026-02-26', '12:00:00', 'Diagnóstico electrónico', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7208TEX')),
+('2026-03-02', '16:00:00', 'Instalación de accesorio', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7209TEX')),
+('2026-03-09', '08:30:00', 'Mantenimiento completo', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7210TEX')),
+('2026-03-18', '09:00:00', 'Revisión pre-ITV', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7211TEX')),
+('2026-03-27', '10:30:00', 'Cambio de neumáticos', 'Pendiente', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7212TEX')),
+('2026-04-04', '12:00:00', 'Diagnóstico electrónico', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7213TEX')),
+('2026-04-13', '16:00:00', 'Instalación de accesorio', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7214TEX')),
+('2026-04-22', '08:30:00', 'Mantenimiento completo', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7215TEX')),
+('2026-04-30', '09:00:00', 'Revisión pre-ITV', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7216TEX')),
+('2026-05-06', '10:30:00', 'Cambio de neumáticos', 'Pendiente', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7217TEX')),
+('2026-05-14', '12:00:00', 'Diagnóstico electrónico', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7218TEX')),
+('2026-05-23', '16:00:00', 'Instalación de accesorio', 'Completada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7219TEX')),
+('2026-05-31', '08:30:00', 'Mantenimiento completo', 'Confirmada', (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7220TEX'));
+
+INSERT INTO oltp_tecnico.servicio (fecha_apertura, fecha_cierre, tipo, descripcion, estado, kilometraje, coste, id_vehiculo, id_empleado) VALUES
+('2026-01-05 09:10:00', NULL, 'Mantenimiento', 'Mantenimiento extra 2026 de taller', 'En proceso', 30000, 95.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7201TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2026-01-12 11:25:00', '2026-01-12 13:25:00', 'Reparación', 'Reparación extra 2026 de taller', 'Finalizado', 32850, 180.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7202TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'raul.herrera@torquelab.com')),
+('2026-01-20 16:40:00', '2026-01-20 18:40:00', 'Diagnóstico', 'Diagnóstico extra 2026 de taller', 'Finalizado', 35700, 70.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7203TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'sonia.campos@torquelab.com')),
+('2026-01-28 18:05:00', '2026-01-28 20:05:00', 'Instalación', 'Instalación extra 2026 de taller', 'Finalizado', 38550, 260.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7204TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
+('2026-02-03 10:15:00', NULL, 'Revisión', 'Revisión extra 2026 de taller', 'En proceso', 41400, 130.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7205TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'cristina.molina@torquelab.com')),
+('2026-02-11 12:30:00', '2026-02-11 14:30:00', 'Mantenimiento', 'Mantenimiento extra 2026 de taller', 'Finalizado', 44250, 95.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7206TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2026-02-19 17:45:00', '2026-02-19 19:45:00', 'Reparación', 'Reparación extra 2026 de taller', 'Finalizado', 47100, 180.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7207TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'raul.herrera@torquelab.com')),
+('2026-02-26 09:50:00', '2026-02-26 11:50:00', 'Diagnóstico', 'Diagnóstico extra 2026 de taller', 'Finalizado', 49950, 70.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7208TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'sonia.campos@torquelab.com')),
+('2026-03-02 13:20:00', NULL, 'Instalación', 'Instalación extra 2026 de taller', 'En proceso', 52800, 260.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7209TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
+('2026-03-09 15:35:00', '2026-03-09 17:35:00', 'Revisión', 'Revisión extra 2026 de taller', 'Finalizado', 55650, 130.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7210TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'cristina.molina@torquelab.com')),
+('2026-03-18 10:45:00', '2026-03-18 12:45:00', 'Mantenimiento', 'Mantenimiento extra 2026 de taller', 'Finalizado', 58500, 95.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7211TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2026-03-27 19:00:00', '2026-03-27 21:00:00', 'Reparación', 'Reparación extra 2026 de taller', 'Finalizado', 61350, 180.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7212TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'raul.herrera@torquelab.com')),
+('2026-04-04 08:55:00', NULL, 'Diagnóstico', 'Diagnóstico extra 2026 de taller', 'En proceso', 64200, 70.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7213TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'sonia.campos@torquelab.com')),
+('2026-04-13 14:10:00', '2026-04-13 16:10:00', 'Instalación', 'Instalación extra 2026 de taller', 'Finalizado', 67050, 260.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7214TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
+('2026-04-22 16:25:00', '2026-04-22 18:25:00', 'Revisión', 'Revisión extra 2026 de taller', 'Finalizado', 69900, 130.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7215TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'cristina.molina@torquelab.com')),
+('2026-04-30 11:40:00', '2026-04-30 13:40:00', 'Mantenimiento', 'Mantenimiento extra 2026 de taller', 'Finalizado', 72750, 95.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7216TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'ivan.romero@torquelab.com')),
+('2026-05-06 09:30:00', NULL, 'Reparación', 'Reparación extra 2026 de taller', 'En proceso', 75600, 180.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7217TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'raul.herrera@torquelab.com')),
+('2026-05-14 12:45:00', '2026-05-14 14:45:00', 'Diagnóstico', 'Diagnóstico extra 2026 de taller', 'Finalizado', 78450, 70.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7218TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'sonia.campos@torquelab.com')),
+('2026-05-23 18:15:00', '2026-05-23 20:15:00', 'Instalación', 'Instalación extra 2026 de taller', 'Finalizado', 81300, 260.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7219TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'adrian.pena@torquelab.com')),
+('2026-05-31 10:05:00', '2026-05-31 12:05:00', 'Revisión', 'Revisión extra 2026 de taller', 'Finalizado', 84150, 130.00, (SELECT id_vehiculo FROM oltp_tecnico.vehiculo WHERE matricula = '7220TEX'), (SELECT id_empleado FROM oltp_tecnico.empleado WHERE email = 'cristina.molina@torquelab.com'));
+
+INSERT INTO oltp_tecnico.servicio_componente (cantidad, precio_unitario, id_servicio, id_componente) VALUES
+(1, 42.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-01-05 09:10:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Aceite 5W30 Castrol 5L')),
+(2, 69.90, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-01-12 11:25:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Juego de pastillas Brembo P85020')),
+(1, 115.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-01-20 16:40:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Amortiguador Sachs Super Touring')),
+(1, 124.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-01-28 18:05:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
+(1, 355.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-02-03 10:15:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus')),
+(1, 42.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-02-11 12:30:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Aceite 5W30 Castrol 5L')),
+(2, 69.90, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-02-19 17:45:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Juego de pastillas Brembo P85020')),
+(1, 115.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-02-26 09:50:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Amortiguador Sachs Super Touring')),
+(1, 124.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-03-02 13:20:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
+(1, 355.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-03-09 15:35:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus')),
+(1, 42.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-03-18 10:45:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Aceite 5W30 Castrol 5L')),
+(2, 69.90, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-03-27 19:00:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Juego de pastillas Brembo P85020')),
+(1, 115.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-04-04 08:55:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Amortiguador Sachs Super Touring')),
+(1, 124.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-04-13 14:10:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
+(1, 355.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-04-22 16:25:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus')),
+(1, 42.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-04-30 11:40:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Aceite 5W30 Castrol 5L')),
+(2, 69.90, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-05-06 09:30:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Juego de pastillas Brembo P85020')),
+(1, 115.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-05-14 12:45:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Amortiguador Sachs Super Touring')),
+(1, 124.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-05-23 18:15:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Batería Bosch S4 70Ah')),
+(1, 355.00, (SELECT id_servicio FROM oltp_tecnico.servicio WHERE fecha_apertura = '2026-05-31 10:05:00'), (SELECT id_componente FROM oltp_tecnico.componente WHERE nombre = 'Silencioso trasero Remus'));
+
+
+-- =========================================================
+-- DATOS EXTRA 2026 (OLTP_ADMINISTRACION)
+-- =========================================================
+INSERT INTO oltp_administracion.cliente (dni, nombre, apellidos, email, telefonocontacto, pais, region, provincia, ciudad, direccion) VALUES
+('A20000001', 'Joel', 'Suárez Blanco', 'joel.1.a2@demo.com', '675000001', 'España', 'Andalucía', 'Sevilla', 'Dos Hermanas', 'Dirección extra admin 2026 1'),
+('A20000002', 'Inés', 'Pardo Soler', 'inés.2.a2@demo.com', '675000002', 'España', 'Andalucía', 'Málaga', 'Marbella', 'Dirección extra admin 2026 2'),
+('A20000003', 'Dario', 'Calero Vega', 'dario.3.a2@demo.com', '675000003', 'España', 'Madrid', 'Madrid', 'Getafe', 'Dirección extra admin 2026 3'),
+('A20000004', 'Nadia', 'Iglesias Ramos', 'nadia.4.a2@demo.com', '675000004', 'España', 'Madrid', 'Madrid', 'Leganés', 'Dirección extra admin 2026 4'),
+('A20000005', 'Teo', 'Pascual Torres', 'teo.5.a2@demo.com', '675000005', 'España', 'Cataluña', 'Barcelona', 'Terrassa', 'Dirección extra admin 2026 5'),
+('A20000006', 'Alba', 'Sierra López', 'alba.6.a2@demo.com', '675000006', 'España', 'Cataluña', 'Barcelona', 'Badalona', 'Dirección extra admin 2026 6'),
+('A20000007', 'Gael', 'Núñez Prieto', 'gael.7.a2@demo.com', '675000007', 'España', 'Comunidad Valenciana', 'Valencia', 'Torrent', 'Dirección extra admin 2026 7'),
+('A20000008', 'Lola', 'Rey Campos', 'lola.8.a2@demo.com', '675000008', 'España', 'Comunidad Valenciana', 'Alicante', 'Elche', 'Dirección extra admin 2026 8'),
+('A20000009', 'Enzo', 'Blasco Mora', 'enzo.9.a2@demo.com', '675000009', 'España', 'Galicia', 'Pontevedra', 'Vigo', 'Dirección extra admin 2026 9'),
+('A20000010', 'Miriam', 'Cruz Bueno', 'miriam.10.a2@demo.com', '675000010', 'España', 'Galicia', 'A Coruña', 'Santiago de Compostela', 'Dirección extra admin 2026 10'),
+('A20000011', 'Álex', 'Román Lara', 'álex.11.a2@demo.com', '675000011', 'España', 'País Vasco', 'Vizcaya', 'Bilbao', 'Dirección extra admin 2026 11'),
+('A20000012', 'Carla', 'Ibáñez Rey', 'carla.12.a2@demo.com', '675000012', 'España', 'País Vasco', 'Guipúzcoa', 'Irún', 'Dirección extra admin 2026 12'),
+('A20000013', 'Leo', 'Pastor Gil', 'leo.13.a2@demo.com', '675000013', 'España', 'Aragón', 'Zaragoza', 'Zaragoza', 'Dirección extra admin 2026 13'),
+('A20000014', 'Emma', 'Vera Cano', 'emma.14.a2@demo.com', '675000014', 'España', 'Murcia', 'Murcia', 'Cartagena', 'Dirección extra admin 2026 14'),
+('A20000015', 'Bruno', 'Ríos Vidal', 'bruno.15.a2@demo.com', '675000015', 'España', 'Castilla y León', 'Burgos', 'Burgos', 'Dirección extra admin 2026 15'),
+('A20000016', 'Valeria', 'Soto Marín', 'valeria.16.a2@demo.com', '675000016', 'España', 'Castilla-La Mancha', 'Ciudad Real', 'Ciudad Real', 'Dirección extra admin 2026 16'),
+('A20000017', 'Lucas', 'Peña Ortiz', 'lucas.17.a2@demo.com', '675000017', 'España', 'Extremadura', 'Badajoz', 'Mérida', 'Dirección extra admin 2026 17'),
+('A20000018', 'Ainhoa', 'Molina Sanz', 'ainhoa.18.a2@demo.com', '675000018', 'España', 'Navarra', 'Navarra', 'Pamplona', 'Dirección extra admin 2026 18'),
+('A20000019', 'Mateo', 'Costa Ruiz', 'mateo.19.a2@demo.com', '675000019', 'España', 'Asturias', 'Asturias', 'Gijón', 'Dirección extra admin 2026 19'),
+('A20000020', 'Nerea', 'Luna Pérez', 'nerea.20.a2@demo.com', '675000020', 'España', 'Baleares', 'Illes Balears', 'Palma', 'Dirección extra admin 2026 20');
+
+INSERT INTO oltp_administracion.vehiculo (matricula, tipo_vehiculo, marca, modelo, anio, num_bastidor, id_cliente) VALUES
+('8201ADX', 'SUV', 'Toyota', 'RAV4', 2021, 'TLBADMINY0000000001', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000001')),
+('8202ADX', 'SUV', 'Nissan', 'Qashqai', 2020, 'TLBADMINY0000000002', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000002')),
+('8203ADX', 'Sedan', 'Mercedes', 'Clase C', 2019, 'TLBADMINY0000000003', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000003')),
+('8204ADX', 'Deportivo', 'Toyota', 'GR86', 2022, 'TLBADMINY0000000004', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000004')),
+('8205ADX', 'Compacto', 'Hyundai', 'i30 N', 2021, 'TLBADMINY0000000005', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000005')),
+('8206ADX', 'SUV', 'Kia', 'Sportage', 2023, 'TLBADMINY0000000006', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000006')),
+('8207ADX', 'Sedan', 'Audi', 'A4', 2020, 'TLBADMINY0000000007', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000007')),
+('8208ADX', 'Compacto', 'Renault', 'Megane RS', 2018, 'TLBADMINY0000000008', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000008')),
+('8209ADX', 'SUV', 'Cupra', 'Formentor', 2022, 'TLBADMINY0000000009', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000009')),
+('8210ADX', 'Compacto', 'Opel', 'Astra', 2021, 'TLBADMINY0000000010', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000010')),
+('8211ADX', 'Sedan', 'Tesla', 'Model 3', 2023, 'TLBADMINY0000000011', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000011')),
+('8212ADX', 'Deportivo', 'Mazda', 'MX-5', 2020, 'TLBADMINY0000000012', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000012')),
+('8213ADX', 'SUV', 'Volvo', 'XC40', 2022, 'TLBADMINY0000000013', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000013')),
+('8214ADX', 'Compacto', 'Skoda', 'Octavia RS', 2021, 'TLBADMINY0000000014', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000014')),
+('8215ADX', 'Sedan', 'Lexus', 'IS 300h', 2019, 'TLBADMINY0000000015', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000015')),
+('8216ADX', 'SUV', 'BMW', 'X3', 2022, 'TLBADMINY0000000016', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000016')),
+('8217ADX', 'Compacto', 'Honda', 'Civic Type R', 2020, 'TLBADMINY0000000017', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000017')),
+('8218ADX', 'Deportivo', 'Porsche', 'Cayman', 2018, 'TLBADMINY0000000018', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000018')),
+('8219ADX', 'SUV', 'Mercedes', 'GLA', 2021, 'TLBADMINY0000000019', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000019')),
+('8220ADX', 'Sedan', 'Alfa Romeo', 'Giulia', 2020, 'TLBADMINY0000000020', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000020'));
+
+INSERT INTO oltp_administracion.servicio (fecha_apertura, fecha_cierre, tipo, descripcion, estado, kilometraje, coste, id_vehiculo, id_cliente, id_empleado) VALUES
+('2026-01-05 09:10:00', '2026-01-05 11:10:00', 'Mantenimiento', 'Mantenimiento administrativo extra 2026', 'Finalizado', 26000, 120.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8201ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000001'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2026-01-12 11:25:00', '2026-01-12 13:25:00', 'Reparación', 'Reparación administrativo extra 2026', 'Finalizado', 29100, 210.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8202ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000002'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '16161616Y')),
+('2026-01-20 16:40:00', NULL, 'Diagnóstico', 'Diagnóstico administrativo extra 2026', 'Pendiente', 32200, 85.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8203ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000003'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '14141414W')),
+('2026-01-28 18:05:00', '2026-01-28 20:05:00', 'Instalación', 'Instalación administrativo extra 2026', 'Finalizado', 35300, 310.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8204ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000004'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '15151515X')),
+('2026-02-03 10:15:00', '2026-02-03 12:15:00', 'Revisión', 'Revisión administrativo extra 2026', 'Finalizado', 38400, 150.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8205ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000005'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '13131313V')),
+('2026-02-11 12:30:00', '2026-02-11 14:30:00', 'Mantenimiento', 'Mantenimiento administrativo extra 2026', 'Finalizado', 41500, 120.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8206ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000006'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2026-02-19 17:45:00', '2026-02-19 19:45:00', 'Reparación', 'Reparación administrativo extra 2026', 'Finalizado', 44600, 210.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8207ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000007'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '16161616Y')),
+('2026-02-26 09:50:00', NULL, 'Diagnóstico', 'Diagnóstico administrativo extra 2026', 'Pendiente', 47700, 85.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8208ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000008'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '14141414W')),
+('2026-03-02 13:20:00', '2026-03-02 15:20:00', 'Instalación', 'Instalación administrativo extra 2026', 'Finalizado', 50800, 310.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8209ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000009'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '15151515X')),
+('2026-03-09 15:35:00', '2026-03-09 17:35:00', 'Revisión', 'Revisión administrativo extra 2026', 'Finalizado', 53900, 150.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8210ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000010'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '13131313V')),
+('2026-03-18 10:45:00', '2026-03-18 12:45:00', 'Mantenimiento', 'Mantenimiento administrativo extra 2026', 'Finalizado', 57000, 120.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8211ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000011'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2026-03-27 19:00:00', '2026-03-27 21:00:00', 'Reparación', 'Reparación administrativo extra 2026', 'Finalizado', 60100, 210.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8212ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000012'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '16161616Y')),
+('2026-04-04 08:55:00', NULL, 'Diagnóstico', 'Diagnóstico administrativo extra 2026', 'Pendiente', 63200, 85.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8213ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000013'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '14141414W')),
+('2026-04-13 14:10:00', '2026-04-13 16:10:00', 'Instalación', 'Instalación administrativo extra 2026', 'Finalizado', 66300, 310.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8214ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000014'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '15151515X')),
+('2026-04-22 16:25:00', '2026-04-22 18:25:00', 'Revisión', 'Revisión administrativo extra 2026', 'Finalizado', 69400, 150.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8215ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000015'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '13131313V')),
+('2026-04-30 11:40:00', '2026-04-30 13:40:00', 'Mantenimiento', 'Mantenimiento administrativo extra 2026', 'Finalizado', 72500, 120.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8216ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000016'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '12121212T')),
+('2026-05-06 09:30:00', '2026-05-06 11:30:00', 'Reparación', 'Reparación administrativo extra 2026', 'Finalizado', 75600, 210.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8217ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000017'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '16161616Y')),
+('2026-05-14 12:45:00', NULL, 'Diagnóstico', 'Diagnóstico administrativo extra 2026', 'Pendiente', 78700, 85.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8218ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000018'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '14141414W')),
+('2026-05-23 18:15:00', '2026-05-23 20:15:00', 'Instalación', 'Instalación administrativo extra 2026', 'Finalizado', 81800, 310.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8219ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000019'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '15151515X')),
+('2026-05-31 10:05:00', '2026-05-31 12:05:00', 'Revisión', 'Revisión administrativo extra 2026', 'Finalizado', 84900, 150.00, (SELECT id_vehiculo FROM oltp_administracion.vehiculo WHERE matricula = '8220ADX'), (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000020'), (SELECT id_empleado FROM oltp_administracion.empleado WHERE dni = '13131313V'));
+
+INSERT INTO oltp_administracion.servicio_componente (cantidad, precio_unitario, id_servicio, id_componente) VALUES
+(1, 24.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-01-05 09:10:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-01-12 11:25:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-01-20 16:40:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(1, 158.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-01-28 18:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-02-03 10:15:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(3, 24.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-02-11 12:30:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(1, 68.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-02-19 17:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(2, 140.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-02-26 09:50:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(3, 158.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-03-02 13:20:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(2, 820.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-03-09 15:35:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(2, 24.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-03-18 10:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(3, 68.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-03-27 19:00:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-04-04 08:55:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(2, 158.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-04-13 14:10:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-04-22 16:25:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-04-30 11:40:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-05-06 09:30:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(2, 140.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-05-14 12:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(1, 158.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-05-23 18:15:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(2, 820.00, (SELECT id_servicio FROM oltp_administracion.servicio WHERE fecha_apertura = '2026-05-31 10:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line'));
+
+INSERT INTO oltp_administracion.pedido (fecha_pedido, estado, total, metodo_pago, direccion_envio, id_cliente) VALUES
+('2026-01-05 09:10:00', 'Entregado', 24.00, 'Tarjeta', 'Dirección extra admin 2026 1', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000001')),
+('2026-01-12 11:25:00', 'Enviado', 136.00, 'PayPal', 'Dirección extra admin 2026 2', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000002')),
+('2026-01-20 16:40:00', 'Preparación', 140.00, 'Bizum', 'Dirección extra admin 2026 3', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000003')),
+('2026-01-28 18:05:00', 'Entregado', 158.00, 'Transferencia', 'Dirección extra admin 2026 4', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000004')),
+('2026-02-03 10:15:00', 'Entregado', 820.00, 'Financiación', 'Dirección extra admin 2026 5', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000005')),
+('2026-02-11 12:30:00', 'Entregado', 72.00, 'Tarjeta', 'Dirección extra admin 2026 6', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000006')),
+('2026-02-19 17:45:00', 'Enviado', 68.00, 'PayPal', 'Dirección extra admin 2026 7', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000007')),
+('2026-02-26 09:50:00', 'Preparación', 280.00, 'Bizum', 'Dirección extra admin 2026 8', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000008')),
+('2026-03-02 13:20:00', 'Entregado', 474.00, 'Transferencia', 'Dirección extra admin 2026 9', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000009')),
+('2026-03-09 15:35:00', 'Entregado', 1640.00, 'Financiación', 'Dirección extra admin 2026 10', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000010')),
+('2026-03-18 10:45:00', 'Entregado', 48.00, 'Tarjeta', 'Dirección extra admin 2026 11', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000011')),
+('2026-03-27 19:00:00', 'Enviado', 204.00, 'PayPal', 'Dirección extra admin 2026 12', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000012')),
+('2026-04-04 08:55:00', 'Preparación', 140.00, 'Bizum', 'Dirección extra admin 2026 13', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000013')),
+('2026-04-13 14:10:00', 'Entregado', 316.00, 'Transferencia', 'Dirección extra admin 2026 14', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000014')),
+('2026-04-22 16:25:00', 'Entregado', 820.00, 'Financiación', 'Dirección extra admin 2026 15', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000015')),
+('2026-04-30 11:40:00', 'Entregado', 24.00, 'Tarjeta', 'Dirección extra admin 2026 16', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000016')),
+('2026-05-06 09:30:00', 'Enviado', 136.00, 'PayPal', 'Dirección extra admin 2026 17', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000017')),
+('2026-05-14 12:45:00', 'Preparación', 280.00, 'Bizum', 'Dirección extra admin 2026 18', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000018')),
+('2026-05-23 18:15:00', 'Entregado', 158.00, 'Transferencia', 'Dirección extra admin 2026 19', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000019')),
+('2026-05-31 10:05:00', 'Entregado', 1640.00, 'Financiación', 'Dirección extra admin 2026 20', (SELECT id_cliente FROM oltp_administracion.cliente WHERE dni = 'A20000020'));
+
+INSERT INTO oltp_administracion.detalle_pedido (cantidad, precio_unitario, subtotal, id_pedido, id_componente) VALUES
+(1, 24.00, 24.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-01-05 09:10:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, 136.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-01-12 11:25:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, 140.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-01-20 16:40:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(1, 158.00, 158.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-01-28 18:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, 820.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-02-03 10:15:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(3, 24.00, 72.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-02-11 12:30:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(1, 68.00, 68.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-02-19 17:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(2, 140.00, 280.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-02-26 09:50:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(3, 158.00, 474.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-03-02 13:20:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(2, 820.00, 1640.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-03-09 15:35:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(2, 24.00, 48.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-03-18 10:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(3, 68.00, 204.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-03-27 19:00:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(1, 140.00, 140.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-04-04 08:55:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(2, 158.00, 316.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-04-13 14:10:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(1, 820.00, 820.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-04-22 16:25:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line')),
+(1, 24.00, 24.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-04-30 11:40:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Filtro de aire Bosch S3491')),
+(2, 68.00, 136.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-05-06 09:30:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Juego de pastillas Valeo 301245')),
+(2, 140.00, 280.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-05-14 12:45:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Amortiguador delantero Brembo Touring')),
+(1, 158.00, 158.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-05-23 18:15:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Batería Varta Silver Dynamic 77Ah')),
+(2, 820.00, 1640.00, (SELECT id_pedido FROM oltp_administracion.pedido WHERE fecha_pedido = '2026-05-31 10:05:00'), (SELECT id_componente FROM oltp_administracion.componente WHERE nombre = 'Escape deportivo Akrapovic Evolution Line'));
 
 COMMIT;
+
